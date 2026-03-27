@@ -1,6 +1,6 @@
 # Sus Message Bot
 
-Open-source Telegram Bot that is designed to protect the community by banning bad actors who send spam / scam messages.
+Open-source Telegram AI Moderation Bot that is designed to protect the community by banning bad actors who send spam / scam messages.
 
 ## Technical Implementation:
 
