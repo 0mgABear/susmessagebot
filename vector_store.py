@@ -34,7 +34,7 @@ def add_example(message: str, label: str) -> None:
     label: "SAFE" or "BAN"
   """
   embedding = embedding_model.encode(message).tolist()
-  collection.add(
+  collection.upsert(
     embeddings = [embedding],
     documents = [message],
     metadatas=[{"label": label}],
