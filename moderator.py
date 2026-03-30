@@ -1,7 +1,10 @@
-import ollama
-from config import OLLAMA_MODEL
+from groq import Groq
+from config import GROQ_API_KEY, GROQ_MODEL
+from vector_store import get_similar_examples
 
-def classify_message(message: str, examples: str = "") -> str:
+client = Groq(api_key=GROQ_API_KEY)
+
+def classify_message(message: str) -> str:
     """
     Classifies a Telegram message as SAFE or BAN.
     
@@ -11,6 +14,7 @@ def classify_message(message: str, examples: str = "") -> str:
     Returns:
         "BAN" if the message is a scam/spam, "SAFE" otherwise
     """
+    examples = get_similar_examples(message)
     system_prompt = """
     You are a moderator for Telegram group chats.
     Your job is to classify messages as SAFE or BAN.
@@ -32,15 +36,15 @@ def classify_message(message: str, examples: str = "") -> str:
     Here are some examples for your reference: {examples}
     """
 
-    response = ollama.chat(
-        model=OLLAMA_MODEL,
+    response = client.chat.completions.create(
+        model=GROQ_MODEL,
         messages=[
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": system_prompt.format(examples=examples)},
             {"role": "user", "content": f"<message>{message}</message>"}
         ]
     )
 
-    result = response.message.content.strip().upper()
+    result = response.choices[0].message.content.strip().upper()
     if result not in ["SAFE", "BAN"]:
         return "SAFE"
     return result

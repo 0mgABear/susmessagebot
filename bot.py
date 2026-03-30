@@ -28,8 +28,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     result = classify_message(text)
 
     if result == "BAN":
-        await context.bot.delete_message(chat_id=chat_id, message_id=message_id)
-        await context.bot.send_message(chat_id=chat_id, text="⚠️ Suspicious message detected and removed.")
+        try:
+            await context.bot.delete_message(chat_id=chat_id, message_id=message_id)
+            await context.bot.send_message(chat_id=chat_id, text="⚠️ Suspicious message detected and removed.")
+        except Exception as e:
+            pass
 
 def main():
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()

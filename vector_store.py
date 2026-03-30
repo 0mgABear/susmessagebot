@@ -6,6 +6,20 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 from config import EMBEDDING_MODEL, SIMILARITY_THRESHOLD, MAX_EXAMPLES
 
+import os
+import warnings
+import logging
+import transformers
+from huggingface_hub import logging as hf_logging
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["HF_HUB_DISABLE_IMPLICIT_TOKEN"] = "1"
+os.environ["TRANSFORMERS_VERBOSITY"] = "error"
+warnings.filterwarnings("ignore")
+logging.getLogger("sentence_transformers").setLevel(logging.ERROR)
+transformers.logging.set_verbosity_error()
+hf_logging.set_verbosity_error()
+
+
 # Initialise embedding model and ChromaDB
 embedding_model = SentenceTransformer(EMBEDDING_MODEL)
 chroma_client = chromadb.PersistentClient(path="./chroma_db")
