@@ -1,6 +1,7 @@
-python-telegram-bot
+python-telegram-bot[webhooks]
 groq
 chromadb
 sentence-transformers
 python-dotenv
 pysqlite3-binary
+requests

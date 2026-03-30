@@ -3,6 +3,7 @@ from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filt
 from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN
 from moderator import classify_message
+from github_sync import sync_example_to_github
 
 import logging
 logging.basicConfig(
@@ -79,12 +80,14 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     if action == "correct":
         from vector_store import add_example
         add_example(banned_info["text"], "BAN")
+        sync_example_to_github(banned_info["text"], "BAN")
         await query.edit_message_text("✅ Ban confirmed. Added to training examples.")
         
     elif action == "false":
         banned_user_id = int(data[3])
         from vector_store import add_example
         add_example(banned_info["text"], "SAFE")
+        sync_example_to_github(banned_info["text"], "SAFE")
         await context.bot.unban_chat_member(chat_id=chat_id, user_id=banned_user_id)
         await query.edit_message_text("❌ False positive confirmed. User unbanned and added to examples.")
 
