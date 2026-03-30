@@ -28,6 +28,7 @@ def classify_message(message: str) -> str:
     - Academic cheating services (assignment help, homework for hire)
     - Deliberate typos or character substitutions to evade filters (e.g. "gi ving", "stiII", "v!rg!n!ty")
     - Links to unknown suspicious domains promising rewards, services or money
+    
 
     SAFE if the message contains:
     - Normal conversation of any topic (health, finance, technology)
