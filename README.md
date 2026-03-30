@@ -1,28 +1,46 @@
 # Branch: groq-approach
 
+## Branding
+
+This is proudly a @commonertech product.
+
 Contingency Plan in the event that there is insufficient capacity on Oracle to provision a VPS.
 
 # Technical Implementation:
 
-1. bot.py will scan any incoming text message (Version 1).
-2. Incoming text is sent to moderator.py, where it's first converted into embedding (defined in vector_store.py).
+1. `bot.py` scans every incoming text message (Version 1 — exploring image moderation in V2).
+2. Incoming text is sent to `moderator.py`, where it is first converted into an embedding (defined in `vector_store.py`).
 3. Input text embedding is then compared with current existing labelled examples to retrieve most similar examples. (Retrieval-Augmented Generation)
-4. Examples and system prompt are in tandem fed to Groq, which will return a singular classification: BAN or SAFE.
-5. BAN or SAFE will be passed on to bot.py
+4. Examples and system prompt are in tandem fed to Groq, which will return a singular classification: `BAN` or `SAFE`.
+5. `bot.py` acts on the classification — deleting the message and banning the user if `BAN`, doing nothing if `SAFE`.
+6. On every ban, admins are notified in the group with two inline buttons: **✅ Correct Ban** or **❌ Wrong Ban**.
+7. Admin feedback is used to update ChromaDB in real time and sync `seeds.py` to the GitHub repository via the GitHub API — keeping the repository as the source of truth for all labelled examples. (Human-in-the-Loop)
 
 # Tech Stack:
 
-1. Groq Model/LLM: llama-3.1-8b-instant
-2. ChromaDB (vector storage)
-3. Google free VPS - e2 micro instance
-4. Webhooks (via python-telegram-bot built-in)
+1. **LLM:** Groq (`llama-3.1-8b-instant`)
+2. **Vector Store:** ChromaDB
+3. **Embeddings:** sentence-transformers (`all-MiniLM-L6-v2`)
+4. **Bot Framework:** python-telegram-bot
+5. **Hosting:** Google Cloud Free Tier (e2-micro instance)
+6. **Webhooks:** python-telegram-bot built-in + Cloudflare (HTTPS termination)
+7. **Example Sync:** GitHub API
+
+## Human-in-the-Loop (HITL) Feedback System
+
+Every time the bot bans a user, admins are presented with two buttons in the group:
+
+- **✅ Correct Ban** — confirms the ban and adds the message as a `BAN` example to ChromaDB and `seeds.py`
+- **❌ Wrong Ban** — marks it as a false positive, unbans the user, and adds the message as a `SAFE` example to ChromaDB and `seeds.py`
+
+This means the bot gets smarter over time with every admin correction, without any manual retraining.
+
+_Credit: This HITL feedback idea was proposed by Dr Mo Yin, a very close and treasured friend of mine. Thank you for the the friendship!_
 
 ## Additional Details:
 
 As of date of creation (30 March 2026), I have yet been unable to provision an Oracle Cloud VPS Instance due to consistently meeting "Host Out of Capacity" errors.
-
 This is expected as it's understandable that everyone would want to sign up for their generous free tier.
-
 As such, this is an interim workaround to use Groq API instead of self-hosting an LLM (which will be attempted until succeeding).
 
 ## Pros:
@@ -41,8 +59,21 @@ As such, this is an interim workaround to use Groq API instead of self-hosting a
 
 - Replace `OLLAMA_MODEL` and `OLLAMA_HOST` in config with `GROQ_API_KEY` and `GROQ_MODEL`
 - No `ollama pull` step required
-- Add `GROQ_API_KEY` to your `.env` file (obtain from console.groq.com)
+- Add the following to your `.env` file:
+  - `GROQ_API_KEY` — obtain from [console.groq.com](https://console.groq.com)
+  - `GITHUB_TOKEN` — GitHub Personal Access Token with `Contents: Read and Write` permission
+  - `GITHUB_REPO` — your forked repository (e.g. `yourusername/susmessagebot`)
+  - `GITHUB_BRANCH` — branch to sync examples to (e.g. `groq-approach`)
 
 ## Model Used:
 
 `llama-3.1-8b-instant` — chosen for its best balance of rate limits (14,400 requests/day) and classification capability on Groq's free tier.
+
+## Sponsorship
+
+Running this bot at scale requires paid infrastructure. If this project has been useful to you and you'd like to help cover hosting costs or support further development, consider sponsoring:
+
+- **GitHub Sponsors:** [Link]
+- **Ko-fi:** [ko-fi.com/commonertech]
+
+Every contribution helps keep the bot running and the project maintained. Thank you! 🙏
