@@ -11,7 +11,6 @@ examples = [
     ("Hi, im looking for a black wallet at either LT38, around icube or the bus stop. If found please pm me thank you.", "SAFE"),
     ("Check out this open source project: https://github.com/0mgABear/susmessagebot", "SAFE"),
     ("https://github.com/0mgABear/susmessagebot", "SAFE"),
-
 ]
 
 if __name__ == "__main__":
