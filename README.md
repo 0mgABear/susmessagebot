@@ -73,7 +73,10 @@ As such, this is an interim workaround to use Groq API instead of self-hosting a
 
 Running this bot at scale requires paid infrastructure. If this project has been useful to you and you'd like to help cover hosting costs or support further development, consider sponsoring:
 
-- **GitHub Sponsors:** [Link]
-- **Ko-fi:** [ko-fi.com/commonertech]
+- ⭐ Star the repo to show support
+- ❤️ [GitHub Sponsors](https://github.com/sponsors/0mgABear)
+- 💬 Reach out via Telegram: @commonertech
+- 📧 Contact: hello@commonertech.dev
+- ☕ [Ko-fi](https://ko-fi.com/commonertech)
 
 Every contribution helps keep the bot running and the project maintained. Thank you! 🙏
