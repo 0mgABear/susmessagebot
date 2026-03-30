@@ -21,16 +21,19 @@ def classify_message(message: str) -> str:
     You only need to respond: SAFE or BAN, no explanation or punctuation needed.
 
     BAN if the message contains:
-    - Financial scams (e.g. fake giveaways)
-    - Pornographic content or links
-    - Obvious promotion of suspicious accounts
-    - Obvious spam (unsolicited promotions and advertising)
-    - Academic help / cheating services
+    - Financial scams (fake giveaways, guaranteed returns, investment schemes)
+    - Pornographic content, sexual solicitation, or links to adult content
+    - Obvious spam (unsolicited mass advertising, repeated promotional messages)
+    - Academic cheating services (assignment help, homework for hire)
     - Deliberate typos or character substitutions to evade filters (e.g. "gi ving", "stiII", "v!rg!n!ty")
+    - Links to unknown suspicious domains promising rewards, services or money
 
     SAFE if the message contains:
-    - Normal conversation
-    - Questions and/or discussions about any topic
+    - Normal conversation of any topic
+    - Legitimate lost and found posts
+    - Legitimate job or recruitment posts (even if they mention blockchain, AI, crypto, or have deadlines)
+    - Links to well-known legitimate platforms (github.com, youtube.com, google.com, news sites, social media)
+    - Questions, discussions, or sharing of information on any topic
     - Anything that is not obviously a scam or spam
 
     Here are some examples for your reference: {examples}
