@@ -3,6 +3,11 @@ from telegram.ext import Application, MessageHandler, filters, ContextTypes
 from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN
 from moderator import classify_message
+import logging
+logging.basicConfig(
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """
