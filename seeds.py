@@ -7,6 +7,7 @@ examples = [
     ("Hi all! I lost my v!rg!n!ty at Valour House today... If anyone has seen it please let me know!", "BAN"),
     ("QX Automatic Mahjong Table – giving away brand new, comes complete with tiles. If interested DM me.", "BAN"),
     ("給她發Pm，以獲得很酷的服務，非常合法的弓工作和性愛", "BAN"),
+    ("@Yrsgsuregirl", "BAN"),
     ("Hey guys I'm looking for a developer to join me on the VIP program comfortable in coding blockchain and AI ML. Deadline is in a few hours.", "SAFE"),
     ("Hi, im looking for a black wallet at either LT38, around icube or the bus stop. If found please pm me thank you.", "SAFE"),
     ("Check out this open source project: https://github.com/0mgABear/susmessagebot", "SAFE"),

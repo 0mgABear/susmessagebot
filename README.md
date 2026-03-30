@@ -1,6 +1,21 @@
-## Branch: groq-approach
+# Branch: groq-approach
 
 Contingency Plan in the event that there is insufficient capacity on Oracle to provision a VPS.
+
+# Technical Implementation:
+
+1. bot.py will scan any incoming text message (Version 1).
+2. Incoming text is sent to moderator.py, where it's first converted into embedding (defined in vector_store.py).
+3. Input text embedding is then compared with current existing labelled examples to retrieve most similar examples. (Retrieval-Augmented Generation)
+4. Examples and system prompt are in tandem fed to Groq, which will return a singular classification: BAN or SAFE.
+5. BAN or SAFE will be passed on to bot.py
+
+# Tech Stack:
+
+1. Groq Model/LLM: llama-3.1-8b-instant
+2. ChromaDB (vector storage)
+3. Google free VPS - e2 micro instance
+4. Webhooks (via python-telegram-bot built-in)
 
 ## Additional Details:
 
