@@ -1,13 +1,16 @@
-from telegram import Update
-from telegram.ext import Application, MessageHandler, filters, ContextTypes
+from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
+from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN
 from moderator import classify_message
+
 import logging
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
+
+banned_messages = {}
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """
@@ -34,19 +37,64 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
+        banned_messages[message_id] = {"user_id": user_id, "text": text}
+
         try:
             await context.bot.delete_message(chat_id=chat_id, message_id=message_id)
             await context.bot.ban_chat_member(chat_id=chat_id, user_id=user_id)
+            keyboard = InlineKeyboardMarkup([
+                [
+                    InlineKeyboardButton("✅ Correct Ban", callback_data=f"correct|{message_id}|{chat_id}"),
+                    InlineKeyboardButton("❌ Wrong Ban", callback_data=f"false|{message_id}|{chat_id}|{user_id}")
+                ]
+            ])
             await context.bot.send_message(
                 chat_id=chat_id,
-                text=f"⚠️ A suspicious message was detected and removed. The user has been banned. If this was a mistake, please contact an admin."
+                text=f"⚠️ Suspicious message detected and removed. Admin review required:",
+                reply_markup=keyboard
             )
         except Exception as e:
             logging.error(f"Error: {e}")
 
+async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    query = update.callback_query
+    user_id = query.from_user.id
+    chat_id = query.message.chat_id
+
+    # check if clicker is admin
+    chat_member = await context.bot.get_chat_member(chat_id, user_id)
+    if chat_member.status not in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
+        await query.answer("Only admins can do this.")
+        return
+
+    data = query.data.split("|")
+    action = data[0]
+    message_id = int(data[1])
+    
+    banned_info = banned_messages.get(message_id)
+    if not banned_info:
+        await query.answer("Action expired.")
+        return
+
+    if action == "correct":
+        from vector_store import add_example
+        add_example(banned_info["text"], "BAN")
+        await query.edit_message_text("✅ Ban confirmed. Added to training examples.")
+        
+    elif action == "false":
+        banned_user_id = int(data[3])
+        from vector_store import add_example
+        add_example(banned_info["text"], "SAFE")
+        await context.bot.unban_chat_member(chat_id=chat_id, user_id=banned_user_id)
+        await query.edit_message_text("❌ False positive confirmed. User unbanned and added to examples.")
+
+    del banned_messages[message_id]
+    await query.answer()
+
 def main():
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(CallbackQueryHandler(handle_callback))
     app.run_webhook(
         listen="0.0.0.0",
         port=80,
