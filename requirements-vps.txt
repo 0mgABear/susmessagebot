@@ -1,0 +1,6 @@
+python-telegram-bot
+groq
+chromadb
+sentence-transformers
+python-dotenv
+pysqlite3-binary
