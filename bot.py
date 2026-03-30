@@ -30,7 +30,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if result == "BAN":
         try:
             await context.bot.delete_message(chat_id=chat_id, message_id=message_id)
-            await context.bot.send_message(chat_id=chat_id, text="⚠️ Suspicious message detected and removed.")
+            await context.bot.ban_chat_member(chat_id=chat_id, user_id=user_id)
         except Exception as e:
             pass
 
