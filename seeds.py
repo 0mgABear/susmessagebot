@@ -15,6 +15,8 @@ examples = [
     ("Looking for 1–3 people for remote earnings . Everything can be done from your phone. Income — €1,500 per week. Message 👉 @realewan", "BAN")
 ]
 
+    ('i can send it if u want?', "SAFE"),
+
 if __name__ == "__main__":
     for message, label in examples:
         add_example(message, label)
