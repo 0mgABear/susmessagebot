@@ -2,8 +2,6 @@
 
 An AI-powered Telegram moderation bot that detects and bans scammers in real time using semantic understanding, RAG, and a Human-in-the-Loop feedback system.
 
-# Branch: groq-approach
-
 ## Branding
 
 This is proudly a @commonertech product.
