@@ -25,6 +25,7 @@ Contingency Plan in the event that there is insufficient capacity on Oracle to p
 5. **Hosting:** Google Cloud Free Tier (e2-micro instance)
 6. **Webhooks:** python-telegram-bot built-in + Cloudflare (HTTPS termination)
 7. **Example Sync:** GitHub API
+8. **Observability & Monitoring:** Prometheus (`prometheus_client`) + Grafana Alloy + Grafana Cloud
 
 ## Human-in-the-Loop (HITL) Feedback System
 
@@ -54,6 +55,11 @@ As such, this is an interim workaround to use Groq API instead of self-hosting a
 1. Not fully self-hosted - messages are sent to Groq's servers (potential privacy consideration)
 2. Dependency on Groq's availability and free tier continuity
 3. Not suitable for high-volume multi-group deployments
+
+## Key Caveat:
+
+As this bot is in the initial deployment stages, please do expect a fair number of false positives. As more people use the bot and admins participate in the HITL review, the accuracy of the bot will increase over time.
+I seek your kind understanding for any teething issues.
 
 ## Setup Differences from Main Branch:
 

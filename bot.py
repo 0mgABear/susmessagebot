@@ -4,12 +4,19 @@ from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN
 from moderator import classify_message
 from github_sync import sync_example_to_github
+from prometheus_client import Counter, start_http_server
 
 import logging
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
+
+# Prometheus metrics
+MESSAGES_CLASSIFIED = Counter('messages_classified_total', 'Messages classified by the bot', ['result'])
+BANS_CONFIRMED = Counter('bans_confirmed_total', 'Admin-confirmed correct bans')
+FALSE_POSITIVES = Counter('false_positives_total', 'Admin-confirmed false positives')
+
 
 banned_messages = {}
 
@@ -35,6 +42,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         return
 
     result = classify_message(text)
+    MESSAGES_CLASSIFIED.labels(result=result).inc()
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
@@ -81,6 +89,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         from vector_store import add_example
         add_example(banned_info["text"], "BAN")
         sync_example_to_github(banned_info["text"], "BAN")
+        BANS_CONFIRMED.inc()
         await query.edit_message_text("✅ Ban confirmed. Added to training examples.")
         
     elif action == "false":
@@ -88,6 +97,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         from vector_store import add_example
         add_example(banned_info["text"], "SAFE")
         sync_example_to_github(banned_info["text"], "SAFE")
+        FALSE_POSITIVES.inc()
         await context.bot.unban_chat_member(chat_id=chat_id, user_id=banned_user_id)
         await query.edit_message_text("❌ False positive confirmed. User unbanned and added to examples.")
 
@@ -95,6 +105,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     await query.answer()
 
 def main():
+    start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(CallbackQueryHandler(handle_callback))
