@@ -1,10 +1,12 @@
+# susmessagebot
+
+An AI-powered Telegram moderation bot that detects and bans scammers in real time using semantic understanding, RAG, and a Human-in-the-Loop feedback system.
+
 # Branch: groq-approach
 
 ## Branding
 
 This is proudly a @commonertech product.
-
-Contingency Plan in the event that there is insufficient capacity on Oracle to provision a VPS.
 
 # Technical Implementation:
 
@@ -15,6 +17,7 @@ Contingency Plan in the event that there is insufficient capacity on Oracle to p
 5. `bot.py` acts on the classification — deleting the message and banning the user if `BAN`, doing nothing if `SAFE`.
 6. On every ban, admins are notified in the group with two inline buttons: **✅ Correct Ban** or **❌ Wrong Ban**.
 7. Admin feedback is used to update ChromaDB in real time and sync `seeds.py` to the GitHub repository via the GitHub API — keeping the repository as the source of truth for all labelled examples. (Human-in-the-Loop)
+8. Every classification, ban, and false positive is tracked as a Prometheus metric, scraped by Grafana Alloy, and visualized in a live Grafana Cloud dashboard.
 
 # Tech Stack:
 
@@ -38,11 +41,14 @@ This means the bot gets smarter over time with every admin correction, without a
 
 _Credit: This HITL feedback idea was proposed by Dr Mo Yin, a very close and treasured friend of mine. Thank you for the the friendship!_
 
+## Live Monitoring Dashboard
+
+[susmessagebot.commonertech.dev/dashboard](https://susmessagebot.commonertech.dev/dashboard)
+
 ## Additional Details:
 
-As of date of creation (30 March 2026), I have yet been unable to provision an Oracle Cloud VPS Instance due to consistently meeting "Host Out of Capacity" errors.
-This is expected as it's understandable that everyone would want to sign up for their generous free tier.
-As such, this is an interim workaround to use Groq API instead of self-hosting an LLM (which will be attempted until succeeding).
+As of date of creation (30 March 2026), I have yet to provision an Oracle Cloud VPS Instance due to consistently meeting "Host Out of Capacity" errors. This is expected as it's understandable that everyone would want to sign up for their generous free tier.
+But sometimes, a brick wall is not the end of the road - you just have to find a path around it.
 
 ## Pros:
 
