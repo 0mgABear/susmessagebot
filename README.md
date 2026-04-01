@@ -6,6 +6,12 @@ An AI-powered Telegram moderation bot that detects and bans scammers in real tim
 
 This is proudly a @commonertech product.
 
+## Architecture
+
+## Architecture
+
+![Architecture Diagram](assets/architecture.png)
+
 # Technical Implementation:
 
 1. `bot.py` scans every incoming text message (Version 1 — exploring image moderation in V2).
