@@ -6,6 +6,10 @@ An AI-powered Telegram moderation bot that detects and bans scammers in real tim
 
 This is proudly a @commonertech product.
 
+## Why
+
+Singaporeans lost a record S$1.1 billion to scams in 2024 and S$913.1 million in 2025 (Singapore Police Force). Telegram is explicitly named by SPF as one of the top platforms exploited by scammers. Existing moderation tools rely on static keyword rules that scammers trivially bypass with character substitution and deliberate typos. This bot was built to fight back using semantic understanding instead of keyword matching.
+
 ## Architecture
 
 ![Architecture Diagram](assets/architecture.png)
