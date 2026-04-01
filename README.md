@@ -6,7 +6,7 @@ Open-source Telegram AI Moderation Bot that is designed to protect the community
 
 ## Why
 
-Singaporeans lost a record S$1.1 billion to scams in 2024 and $916 million in 2025. Telegram is also explicitly named by SPF as one of the top platforms exploited by scammers. Existing moderation tools rely on static keyword rules that scammers trivially bypass with character substitution and deliberate typos. This bot was built to fight back using semantic understanding instead of keyword matching.
+Singaporeans lost a record S$1.1 billion to scams in 2024 and $913.1 million in 2025. Telegram is also explicitly named by SPF as one of the top platforms exploited by scammers. Existing moderation tools rely on static keyword rules that scammers trivially bypass with character substitution and deliberate typos. This bot was built to fight back using semantic understanding instead of keyword matching.
 
 ## Technical Implementation:
 
