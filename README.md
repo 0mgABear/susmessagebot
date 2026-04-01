@@ -8,8 +8,6 @@ This is proudly a @commonertech product.
 
 ## Architecture
 
-## Architecture
-
 ![Architecture Diagram](assets/architecture.png)
 
 # Technical Implementation:
