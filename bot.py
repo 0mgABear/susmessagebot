@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from telegram.constants import ChatMemberStatus
-from config import TELEGRAM_BOT_TOKEN
+from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL
 from moderator import classify_message
 from github_sync import sync_example_to_github
 from prometheus_client import Counter, start_http_server
@@ -105,6 +105,9 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     await query.answer()
 
 def main():
+    if not TELEGRAM_BOT_TOKEN:
+        print("TELEGRAM_BOT_TOKEN is not set. Exiting.")
+        return
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
@@ -112,7 +115,7 @@ def main():
     app.run_webhook(
         listen="0.0.0.0",
         port=80,
-        webhook_url=f"https://susmessagebot.commonertech.dev"
+        webhook_url=WEBHOOK_URL
     )
 
 if __name__ == "__main__":
