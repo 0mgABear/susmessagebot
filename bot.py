@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from telegram.constants import ChatMemberStatus
-from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL
+from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
 from github_sync import sync_example_to_github
 from prometheus_client import Counter, start_http_server
@@ -112,11 +112,16 @@ def main():
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(CallbackQueryHandler(handle_callback))
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=80,
-        webhook_url=WEBHOOK_URL
-    )
+    if USE_POLLING:
+        logging.info("Starting bot in polling mode (local development)")
+        app.run_polling(drop_pending_updates=True)
+    else:
+        logging.info("Starting bot in webhook mode")
+        app.run_webhook(
+            listen="0.0.0.0",
+            port=80,
+            webhook_url=WEBHOOK_URL
+        )
 
 if __name__ == "__main__":
     main()
