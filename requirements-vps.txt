@@ -3,6 +3,6 @@ groq
 chromadb
 sentence-transformers
 python-dotenv
-pysqlite3-binary
+pysqlite3-binary; sys_platform == "linux"
 requests
 prometheus_client
