@@ -12,10 +12,9 @@ examples = [
     ("Hi, im looking for a black wallet at either LT38, around icube or the bus stop. If found please pm me thank you.", "SAFE"),
     ("Check out this open source project: https://github.com/0mgABear/susmessagebot", "SAFE"),
     ("https://github.com/0mgABear/susmessagebot", "SAFE"),
-    ("Looking for 1–3 people for remote earnings . Everything can be done from your phone. Income — €1,500 per week. Message 👉 @realewan", "BAN")
-]
-
+    ("Looking for 1–3 people for remote earnings . Everything can be done from your phone. Income — €1,500 per week. Message 👉 @realewan", "BAN"),
     ('i can send it if u want?', "SAFE"),
+]
 
 if __name__ == "__main__":
     for message, label in examples:
