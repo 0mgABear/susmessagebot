@@ -38,8 +38,16 @@ class HealthHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.end_headers()
     
+    def do_HEAD(self):
+        if self.path == '/health':
+            self.send_response(200)
+            self.end_headers()
+        else:
+            self.send_response(404)
+            self.end_headers()
+    
     def log_message(self, format, *args):
-        pass  # suppress logs
+        pass
 
 def start_health_server():
     server = HTTPServer(('0.0.0.0', 8001), HealthHandler)
