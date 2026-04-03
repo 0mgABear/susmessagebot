@@ -4,7 +4,8 @@ from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
 from github_sync import sync_example_to_github
-from prometheus_client import Counter, start_http_server
+from prometheus_client import Gauge, start_http_server
+from stats import init_db, get_stat, increment_stat
 
 import logging
 logging.basicConfig(
@@ -13,9 +14,17 @@ logging.basicConfig(
 )
 
 # Prometheus metrics for Grafana 
-MESSAGES_CLASSIFIED = Counter('messages_classified_total', 'Messages classified by the bot', ['result'])
-BANS_CONFIRMED = Counter('bans_confirmed_total', 'Admin-confirmed correct bans')
-FALSE_POSITIVES = Counter('false_positives_total', 'Admin-confirmed false positives')
+MESSAGES_CLASSIFIED_SAFE = Gauge('messages_classified_safe_total', 'SAFE classifications')
+MESSAGES_CLASSIFIED_BAN = Gauge('messages_classified_ban_total', 'BAN classifications')
+BANS_CONFIRMED = Gauge('bans_confirmed_total', 'Admin-confirmed correct bans')
+FALSE_POSITIVES = Gauge('false_positives_total', 'Admin-confirmed false positives')
+
+def init_metrics():
+    """Load persisted values from SQLite into Prometheus gauges."""
+    MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
+    MESSAGES_CLASSIFIED_BAN.set(get_stat('messages_ban'))
+    BANS_CONFIRMED.set(get_stat('bans_confirmed'))
+    FALSE_POSITIVES.set(get_stat('false_positives'))
 
 
 banned_messages = {}
@@ -42,10 +51,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         return
 
     result = classify_message(text)
-    MESSAGES_CLASSIFIED.labels(result=result).inc()
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
+        increment_stat('messages_ban')
+        MESSAGES_CLASSIFIED_BAN.set(get_stat('messages_ban'))
         banned_messages[message_id] = {"user_id": user_id, "text": text}
 
         try:
@@ -64,6 +74,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             )
         except Exception as e:
             logging.error(f"Error: {e}")
+    else:
+        increment_stat('messages_safe')
+        MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
 
 async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
@@ -89,7 +102,8 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         from vector_store import add_example
         add_example(banned_info["text"], "BAN")
         sync_example_to_github(banned_info["text"], "BAN")
-        BANS_CONFIRMED.inc()
+        increment_stat('bans_confirmed')
+        BANS_CONFIRMED.set(get_stat('bans_confirmed'))
         await query.edit_message_text("✅ Ban confirmed. Added to training examples.")
         
     elif action == "false":
@@ -97,7 +111,8 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         from vector_store import add_example
         add_example(banned_info["text"], "SAFE")
         sync_example_to_github(banned_info["text"], "SAFE")
-        FALSE_POSITIVES.inc()
+        increment_stat('false_positives')
+        FALSE_POSITIVES.set(get_stat('false_positives'))
         await context.bot.unban_chat_member(chat_id=chat_id, user_id=banned_user_id)
         await query.edit_message_text("❌ False positive confirmed. User unbanned and added to examples.")
 
@@ -108,6 +123,8 @@ def main():
     if not TELEGRAM_BOT_TOKEN:
         print("TELEGRAM_BOT_TOKEN is not set. Exiting.")
         return
+    init_db() 
+    init_metrics()
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
