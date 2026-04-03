@@ -6,6 +6,8 @@ from moderator import classify_message
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
 from stats import init_db, get_stat, increment_stat
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
 
 import logging
 logging.basicConfig(
@@ -26,6 +28,24 @@ def init_metrics():
     BANS_CONFIRMED.set(get_stat('bans_confirmed'))
     FALSE_POSITIVES.set(get_stat('false_positives'))
 
+class HealthHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/health':
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b'OK')
+        else:
+            self.send_response(404)
+            self.end_headers()
+    
+    def log_message(self, format, *args):
+        pass  # suppress logs
+
+def start_health_server():
+    server = HTTPServer(('0.0.0.0', 8001), HealthHandler)
+    thread = threading.Thread(target=server.serve_forever)
+    thread.daemon = True
+    thread.start()
 
 banned_messages = {}
 
@@ -125,6 +145,7 @@ def main():
         return
     init_db() 
     init_metrics()
+    start_health_server()
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
