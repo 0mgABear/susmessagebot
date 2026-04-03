@@ -16,6 +16,8 @@ examples = [
     ('i can send it if u want?', "SAFE"),
 ]
 
+    ("We are looking for reliable partners for long-term collaboration!\nNo risks or shady deals!\nEarn between $1400 and 1600$ per week\nConsistent income—can also be done remotely!\n\nIf you're interested, contact @Anna_Lour", "SAFE"),
+
 if __name__ == "__main__":
     for message, label in examples:
         add_example(message, label)
