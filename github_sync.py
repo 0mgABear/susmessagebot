@@ -28,11 +28,12 @@ def sync_example_to_github(message: str, label: str) -> None:
     sha = data["sha"]
     current_content = base64.b64decode(data["content"]).decode("utf-8")
 
-    # Append new example before the closing bracket
+    # Append new example inside the examples list, before the closing ]
     new_line = f'    ({repr(message)}, "{label}"),\n'
     updated_content = current_content.replace(
-        'if __name__ == "__main__":',
-        f'{new_line}\nif __name__ == "__main__":'
+        '\n]\n',
+        f'\n{new_line}]\n',
+        1
     )
 
     # Push updated file back to GitHub

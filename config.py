@@ -8,7 +8,8 @@ GITHUB_REPO = os.getenv("GITHUB_REPO")
 GITHUB_BRANCH = os.getenv("GITHUB_BRANCH")
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-WEBHOOK_URL = "https://susmessagebot.commonertech.dev"
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "https://susmessagebot.commonertech.dev")
+USE_POLLING = os.getenv("USE_POLLING", "false").lower() == "true"
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = "llama-3.1-8b-instant"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

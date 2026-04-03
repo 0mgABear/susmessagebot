@@ -1,6 +1,9 @@
-__import__('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+try:
+    __import__('pysqlite3')
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass  # Use built-in sqlite3 (for macos where pysqlite3-binary not available)
 
 import chromadb
 from sentence_transformers import SentenceTransformer
