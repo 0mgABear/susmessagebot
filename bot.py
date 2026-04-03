@@ -12,7 +12,7 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-# Prometheus metrics
+# Prometheus metrics for Grafana
 MESSAGES_CLASSIFIED = Counter('messages_classified_total', 'Messages classified by the bot', ['result'])
 BANS_CONFIRMED = Counter('bans_confirmed_total', 'Admin-confirmed correct bans')
 FALSE_POSITIVES = Counter('false_positives_total', 'Admin-confirmed false positives')
