@@ -15,6 +15,7 @@ examples = [
     ("Looking for 1–3 people for remote earnings . Everything can be done from your phone. Income — €1,500 per week. Message 👉 @realewan", "BAN"),
     ('i can send it if u want?', "SAFE"),
     ("We are looking for reliable partners for long-term collaboration!\nNo risks or shady deals!\nEarn between $1400 and 1600$ per week\nConsistent income—can also be done remotely!\n\nIf you're interested, contact @Anna_Lour", "BAN")
+    ('i can send that message too and see if my bot bans me haha', "SAFE"),
 ]
 
 
