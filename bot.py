@@ -99,7 +99,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
             ])
             await context.bot.send_message(
                 chat_id=chat_id,
-                text=f"⚠️ Suspicious message detected and removed. Admin review required:",
+                text=f"⚠️ Suspicious message detected and removed.\n\n"
+                    f"👤 User: {update.message.from_user.full_name}"
+                    f"{f' (@{update.message.from_user.username})' if update.message.from_user.username else ''}\n"
+                    f"🆔 ID: {user_id}\n\n"
+                    f"📝 Message:\n{text[:200]}{'...' if len(text) > 200 else ''}",
                 reply_markup=keyboard
             )
         except Exception as e:
