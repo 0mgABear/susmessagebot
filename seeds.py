@@ -21,6 +21,7 @@ examples = [
     ('info. @ra_Cyt', "BAN"),
     ('Quickie @ra_Cyt', "BAN"),
     ('@slimsgGirl', "BAN"),
+    ('She’s allowed? @ra_Cyt', "BAN"),
 ]
 
 
