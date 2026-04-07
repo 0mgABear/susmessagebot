@@ -20,6 +20,7 @@ examples = [
     ('Australia 🇦🇺 | Canada 🇨🇦 | UK | Denmark 🇩🇰 | 🇬🇧USA 🇺🇸 + Toll Free and Local Number is available\n\n𝗦𝗜𝗣 𝗧𝗿𝘂𝗻𝗸𝘀 & 𝗗𝗜𝗗𝘀 – 𝗥𝗲𝗮𝗱𝘆\n 𝗜𝗻𝘀𝘁𝗮𝗻𝘁 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗼𝗻 𝗩𝗲𝗿𝗶𝗳𝗶𝗲𝗱 𝗥𝗼𝘂𝘁𝗲𝘀 \n\nUp to 20 channels \n🛎️ message me now to get yours\n@Cloudcallvoip', "BAN"),
     ('info. @ra_Cyt', "BAN"),
     ('Quickie @ra_Cyt', "BAN"),
+    ('@slimsgGirl', "BAN"),
 ]
 
 
