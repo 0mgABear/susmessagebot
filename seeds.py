@@ -23,6 +23,7 @@ examples = [
     ('@slimsgGirl', "BAN"),
     ('She’s allowed? @ra_Cyt', "BAN"),
     ('noooo not my thing, if anyones giving away free openai credits, then send them my way :D /j', "SAFE"),
+    ('yesss let it be reinforced :DD', "SAFE"),
 ]
 
 
