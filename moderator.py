@@ -28,7 +28,12 @@ def classify_message(message: str) -> str:
     - Academic cheating services (assignment help, homework for hire)
     - Deliberate typos or character substitutions to evade filters (e.g. "gi ving", "stiII", "v!rg!n!ty")
     - Links to unknown suspicious domains promising rewards, services or money
-    
+
+    Important:
+    Not all typos are a deliberate attempt to evade filters and account for the fact that typos happen very frequently in day-to-day texting.
+    Account for commonly used short-forms of words.
+    Evaluate the text carefully before arriving at a conclusion, considering context and intent if possible.
+    If a message contains purely typos and does not contain any malicious intent (as the ones stated above under BAN categories), it is not an indicator of a deliberate act of using typos to evade filters.
 
     SAFE if the message contains:
     - Normal conversation of any topic (health, finance, technology)
@@ -36,6 +41,8 @@ def classify_message(message: str) -> str:
     - Legitimate job or recruitment posts (even if they mention blockchain, AI, crypto, or have deadlines)
     - Links to well-known legitimate platforms (github.com, youtube.com, google.com, news sites, social media)
     - Questions, discussions, or sharing of information on any topic
+    - People expressiong opinions on topics of any sorts
+    - Satire
     - Anything that is not obviously a scam or spam
 
     Here are some examples for your reference: {examples}
