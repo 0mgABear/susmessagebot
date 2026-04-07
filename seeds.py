@@ -37,6 +37,7 @@ examples = [
     ('FRRRR (this is gonna get banned ngl)', "SAFE"),
     ("iut's open sourcce gais", "SAFE"),
     ('Ah icic', "SAFE"),
+    ('oh but 50 requests a day :<', "SAFE"),
 ]
 
 
