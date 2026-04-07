@@ -27,6 +27,7 @@ examples = [
     ('ikik', "SAFE"),
     ('info. @aaravmal', "SAFE"),
     ('issok', "SAFE"),
+    ('It’s all credits', "SAFE"),
 ]
 
 
