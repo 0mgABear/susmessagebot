@@ -36,6 +36,7 @@ examples = [
     ('ah ykw', "SAFE"),
     ('FRRRR (this is gonna get banned ngl)', "SAFE"),
     ("iut's open sourcce gais", "SAFE"),
+    ('Ah icic', "SAFE"),
 ]
 
 
