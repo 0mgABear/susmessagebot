@@ -29,6 +29,7 @@ examples = [
     ('issok', "SAFE"),
     ('It’s all credits', "SAFE"),
     ('oh WHAT', "SAFE"),
+    ('as i was ssaying', "SAFE"),
 ]
 
 
