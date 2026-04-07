@@ -5,8 +5,9 @@ from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
-from stats import init_db, get_stat, increment_stat
 from http.server import HTTPServer, BaseHTTPRequestHandler
+from stats import init_db, get_stat, increment_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
+import asyncio
 import threading
 
 import logging
@@ -21,6 +22,9 @@ MESSAGES_CLASSIFIED_BAN = Gauge('messages_classified_ban_total', 'BAN classifica
 BANS_CONFIRMED = Gauge('bans_confirmed_total', 'Admin-confirmed correct bans')
 FALSE_POSITIVES = Gauge('false_positives_total', 'Admin-confirmed false positives')
 FALSE_NEGATIVES = Gauge('false_negatives_total', 'Admin-reported false negatives')
+# Other Generic Stats
+GROUPS_COUNT = Gauge('groups_count_total', 'Number of groups bot is in')
+MEMBERS_PROTECTED = Gauge('members_protected_total', 'Total members protected')
 
 def init_metrics():
     """Load persisted values from SQLite into Prometheus gauges."""
@@ -29,6 +33,8 @@ def init_metrics():
     BANS_CONFIRMED.set(get_stat('bans_confirmed'))
     FALSE_POSITIVES.set(get_stat('false_positives'))
     FALSE_NEGATIVES.set(get_stat('false_negatives'))
+    GROUPS_COUNT.set(get_groups_count())
+    MEMBERS_PROTECTED.set(get_total_members())
 
 class HealthHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -79,6 +85,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     chat_member = await context.bot.get_chat_member(chat_id, user_id)
     if chat_member.status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
         return
+    # Track new groups
+    member_count = await context.bot.get_chat_member_count(chat_id)
+    is_new = add_group(chat_id, member_count)
+    if is_new:
+        GROUPS_COUNT.set(get_groups_count())
+        MEMBERS_PROTECTED.set(get_total_members())
+
 
     result = classify_message(text)
 
@@ -255,6 +268,44 @@ async def handle_report_callback(update: Update, context: ContextTypes.DEFAULT_T
     del reported_messages[message_id]
     await query.answer()
 
+async def update_member_counts(context: ContextTypes.DEFAULT_TYPE):
+    """Background task to update member counts daily."""
+    group_ids = get_all_group_ids()
+    for chat_id in group_ids:
+        try:
+            count = await context.bot.get_chat_member_count(chat_id)
+            update_group_member_count(chat_id, count)
+        except Exception as e:
+            logging.error(f"Error updating member count for {chat_id}: {e}")
+    MEMBERS_PROTECTED.set(get_total_members())
+    logging.info("Updated member counts for all groups")
+
+async def handle_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handles /stats command — admins only."""
+    if not update.message:
+        return
+
+    chat_id = update.message.chat_id
+    user_id = update.message.from_user.id
+
+    chat_member = await context.bot.get_chat_member(chat_id, user_id)
+    if chat_member.status not in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
+        await update.message.reply_text("Only admins can use this command.")
+        return
+
+    total_bans = get_stat('bans_confirmed') + get_stat('false_positives')
+    accuracy = (get_stat('bans_confirmed') / total_bans * 100) if total_bans > 0 else 0
+
+    await update.message.reply_text(
+        f"📊 Sus Message Bot Stats\n\n"
+        f"👥 Groups protected: {get_groups_count()}\n"
+        f"🛡️ Members protected: {get_total_members():,}\n"
+        f"📨 Messages scanned: {get_stat('messages_safe') + get_stat('messages_ban'):,}\n"
+        f"🚫 Total bans: {total_bans}\n"
+        f"✅ Accuracy rate: {accuracy:.1f}%\n"
+        f"⚠️ False negatives reported: {get_stat('false_negatives')}"
+    )
+
 def main():
     if not TELEGRAM_BOT_TOKEN:
         print("TELEGRAM_BOT_TOKEN is not set. Exiting.")
@@ -268,6 +319,8 @@ def main():
     app.add_handler(CallbackQueryHandler(handle_callback, pattern="^(correct|false)"))
     app.add_handler(CallbackQueryHandler(handle_report_callback, pattern="^(report_confirm|report_dismiss)"))
     app.add_handler(CommandHandler("report", handle_report))
+    app.add_handler(CommandHandler("stats", handle_stats))
+    app.job_queue.run_repeating(update_member_counts, interval=86400, first=86400)
     if USE_POLLING:
         logging.info("Starting bot in polling mode (local development)")
         app.run_polling(drop_pending_updates=True)
