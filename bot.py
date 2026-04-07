@@ -1,5 +1,5 @@
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
-from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes
+from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes, CommandHandler
 from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
@@ -20,6 +20,7 @@ MESSAGES_CLASSIFIED_SAFE = Gauge('messages_classified_safe_total', 'SAFE classif
 MESSAGES_CLASSIFIED_BAN = Gauge('messages_classified_ban_total', 'BAN classifications')
 BANS_CONFIRMED = Gauge('bans_confirmed_total', 'Admin-confirmed correct bans')
 FALSE_POSITIVES = Gauge('false_positives_total', 'Admin-confirmed false positives')
+FALSE_NEGATIVES = Gauge('false_negatives_total', 'Admin-reported false negatives')
 
 def init_metrics():
     """Load persisted values from SQLite into Prometheus gauges."""
@@ -27,6 +28,7 @@ def init_metrics():
     MESSAGES_CLASSIFIED_BAN.set(get_stat('messages_ban'))
     BANS_CONFIRMED.set(get_stat('bans_confirmed'))
     FALSE_POSITIVES.set(get_stat('false_positives'))
+    FALSE_NEGATIVES.set(get_stat('false_negatives'))
 
 class HealthHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -147,6 +149,108 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     del banned_messages[message_id]
     await query.answer()
 
+reported_messages = {}
+
+async def handle_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """
+    Handles /report command.
+    Admins: immediately ban and add to training.
+    Non-admins: send to admins for review via inline keyboard.
+    """
+    if not update.message:
+        return
+
+    chat_id = update.message.chat_id
+    user_id = update.message.from_user.id
+
+    # Check if it's a reply
+    if not update.message.reply_to_message or not update.message.reply_to_message.text:
+        await update.message.reply_text("Please reply to the scam message with /report.")
+        return
+
+    reported_text = update.message.reply_to_message.text
+    reported_user_id = update.message.reply_to_message.from_user.id
+    reported_message_id = update.message.reply_to_message.message_id
+
+    chat_member = await context.bot.get_chat_member(chat_id, user_id)
+    is_admin = chat_member.status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]
+
+    if is_admin:
+        # Act immediately
+        from vector_store import add_example
+        add_example(reported_text, "BAN")
+        sync_example_to_github(reported_text, "BAN")
+        increment_stat('false_negatives')
+        FALSE_NEGATIVES.set(get_stat('false_negatives'))
+        try:
+            await context.bot.delete_message(chat_id=chat_id, message_id=reported_message_id)
+            await context.bot.ban_chat_member(chat_id=chat_id, user_id=reported_user_id)
+            await update.message.reply_text("✅ User banned and message added to training examples.")
+        except Exception as e:
+            logging.error(f"Error banning reported user: {e}")
+            await update.message.reply_text("✅ Message added to training examples. Could not ban user.")
+    else:
+        # Store and send to admins for review
+        reported_messages[reported_message_id] = {
+            "text": reported_text,
+            "user_id": reported_user_id,
+            "chat_id": chat_id,
+            "message_id": reported_message_id,
+            "reported_by": update.message.from_user.username or str(user_id)
+        }
+        keyboard = InlineKeyboardMarkup([
+            [
+                InlineKeyboardButton("✅ Confirm Ban", callback_data=f"report_confirm|{reported_message_id}|{chat_id}"),
+                InlineKeyboardButton("❌ Dismiss", callback_data=f"report_dismiss|{reported_message_id}|{chat_id}")
+            ]
+        ])
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text=f"🚨 Scam report by @{reported_messages[reported_message_id]['reported_by']}. Admin review required:",
+            reply_markup=keyboard
+        )
+
+async def handle_report_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handles admin confirmation/dismissal of user-reported scams."""
+    query = update.callback_query
+    user_id = query.from_user.id
+    chat_id = query.message.chat_id
+
+    # Check if admin
+    chat_member = await context.bot.get_chat_member(chat_id, user_id)
+    if chat_member.status not in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
+        await query.answer("Only admins can do this.")
+        return
+
+    data = query.data.split("|")
+    action = data[0]
+    message_id = int(data[1])
+
+    report_info = reported_messages.get(message_id)
+    if not report_info:
+        await query.answer("Report expired.")
+        return
+
+    if action == "report_confirm":
+        from vector_store import add_example
+        add_example(report_info["text"], "BAN")
+        sync_example_to_github(report_info["text"], "BAN")
+        increment_stat('false_negatives')
+        FALSE_NEGATIVES.set(get_stat('false_negatives'))
+        try:
+            await context.bot.delete_message(chat_id=chat_id, message_id=report_info["message_id"])
+            await context.bot.ban_chat_member(chat_id=chat_id, user_id=report_info["user_id"])
+            await query.edit_message_text("✅ Report confirmed. User banned and added to training examples.")
+        except Exception as e:
+            logging.error(f"Error banning reported user: {e}")
+            await query.edit_message_text("✅ Message added to training examples. Could not ban user.")
+
+    elif action == "report_dismiss":
+        await query.edit_message_text("❌ Report dismissed.")
+
+    del reported_messages[message_id]
+    await query.answer()
+
 def main():
     if not TELEGRAM_BOT_TOKEN:
         print("TELEGRAM_BOT_TOKEN is not set. Exiting.")
@@ -157,7 +261,9 @@ def main():
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    app.add_handler(CallbackQueryHandler(handle_callback))
+    app.add_handler(CallbackQueryHandler(handle_callback, pattern="^(correct|false)"))
+    app.add_handler(CallbackQueryHandler(handle_report_callback, pattern="^(report_confirm|report_dismiss)"))
+    app.add_handler(CommandHandler("report", handle_report))
     if USE_POLLING:
         logging.info("Starting bot in polling mode (local development)")
         app.run_polling(drop_pending_updates=True)

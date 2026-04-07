@@ -12,7 +12,7 @@ def init_db():
             value INTEGER DEFAULT 0
         )
     ''')
-    for key in ['messages_safe', 'messages_ban', 'bans_confirmed', 'false_positives']:
+    for key in ['messages_safe', 'messages_ban', 'bans_confirmed', 'false_positives', 'false_negatives']:
         cursor.execute('INSERT OR IGNORE INTO stats (key, value) VALUES (?, 0)', (key,))
     conn.commit()
     conn.close()
