@@ -91,8 +91,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if is_new:
         GROUPS_COUNT.set(get_groups_count())
         MEMBERS_PROTECTED.set(get_total_members())
-
-
     result = classify_message(text)
 
     if result == "BAN":
@@ -181,8 +179,38 @@ async def handle_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     user_id = update.message.from_user.id
 
     # Check if it's a reply
-    if not update.message.reply_to_message or not update.message.reply_to_message.text:
+    if not update.message.reply_to_message:
         await update.message.reply_text("Please reply to the scam message with /report.")
+        return
+    # Handle non-text messages
+    if not update.message.reply_to_message.text:
+        reported_user = update.message.reply_to_message.from_user
+        reported_message_id = update.message.reply_to_message.message_id
+        
+        # Store minimal info for callback
+        reported_messages[reported_message_id] = {
+            "text": None,
+            "user_id": reported_user.id,
+            "chat_id": chat_id,
+            "message_id": reported_message_id,
+            "reported_by": update.message.from_user.username or str(user_id)
+        }
+        
+        keyboard = InlineKeyboardMarkup([
+            [
+                InlineKeyboardButton("✅ Ban", callback_data=f"report_confirm|{reported_message_id}|{chat_id}|{reported_user.id}"),
+                InlineKeyboardButton("❌ Dismiss", callback_data=f"report_dismiss|{reported_message_id}|{chat_id}")
+            ]
+        ])
+        await context.bot.send_message(
+            chat_id=chat_id,
+            text=f"🚨 Non-text report by @{update.message.from_user.username or str(user_id)}\n\n"
+                f"👤 Reported user: {reported_user.full_name}"
+                f"{f' (@{reported_user.username})' if reported_user.username else ''}\n"
+                f"🆔 ID: {reported_user.id}\n\n"
+                f"⚠️ Admin review required.",
+            reply_markup=keyboard
+        )
         return
 
     reported_text = update.message.reply_to_message.text
@@ -245,22 +273,23 @@ async def handle_report_callback(update: Update, context: ContextTypes.DEFAULT_T
 
     report_info = reported_messages.get(message_id)
     if not report_info:
-        await query.answer("Report expired.")
+        await query.answer("Report expired — bot may have restarted. Please /report again.")
         return
 
     if action == "report_confirm":
-        from vector_store import add_example
-        add_example(report_info["text"], "BAN")
-        sync_example_to_github(report_info["text"], "BAN")
-        increment_stat('false_negatives')
-        FALSE_NEGATIVES.set(get_stat('false_negatives'))
+        if report_info["text"] is not None:
+            from vector_store import add_example
+            add_example(report_info["text"], "BAN")
+            sync_example_to_github(report_info["text"], "BAN")
+            increment_stat('false_negatives')
+            FALSE_NEGATIVES.set(get_stat('false_negatives'))
         try:
             await context.bot.delete_message(chat_id=chat_id, message_id=report_info["message_id"])
             await context.bot.ban_chat_member(chat_id=chat_id, user_id=report_info["user_id"])
-            await query.edit_message_text("✅ Report confirmed. User banned and added to training examples.")
+            await query.edit_message_text("✅ Report confirmed. User banned.")
         except Exception as e:
             logging.error(f"Error banning reported user: {e}")
-            await query.edit_message_text("✅ Message added to training examples. Could not ban user.")
+            await query.edit_message_text("✅ Could not ban user — they may have already left.")
 
     elif action == "report_dismiss":
         await query.edit_message_text("❌ Report dismissed.")
