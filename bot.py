@@ -322,7 +322,7 @@ async def handle_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         await update.message.reply_text("Only admins can use this command.")
         return
 
-    total_bans = get_stat('bans_confirmed') + get_stat('false_positives')
+    total_bans = get_stat('bans_confirmed') + get_stat('false_positives') + get_stat('false_negatives')
     accuracy = (get_stat('bans_confirmed') / total_bans * 100) if total_bans > 0 else 0
 
     await update.message.reply_text(
