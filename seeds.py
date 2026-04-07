@@ -30,6 +30,7 @@ examples = [
     ('It’s all credits', "SAFE"),
     ('oh WHAT', "SAFE"),
     ('as i was ssaying', "SAFE"),
+    ('they say 99%', "SAFE"),
 ]
 
 
