@@ -25,6 +25,7 @@ Singaporeans lost a record S$1.1 billion to scams in 2024 and S$913.1 million in
 7. Admin feedback is used to update ChromaDB in real time and sync `seeds.py` to the GitHub repository via the GitHub API — keeping the repository as the source of truth for all labelled examples. (Human-in-the-Loop)
 8. Every classification, ban, and false positive is tracked as a Prometheus metric, scraped by Grafana Alloy, and visualized in a live Grafana Cloud dashboard.
 9. Admins (or users pending admin approval) can use `/report` to flag missed scams — adding them to ChromaDB, syncing to GitHub, and tracking as false negatives in the monitoring dashboard.
+10. Group and member counts are tracked automatically — every new group the bot is added to is recorded, with member counts updated daily.
 
 # Tech Stack:
 
@@ -56,6 +57,17 @@ If the bot misses a scam (false negative), it can be manually reported:
 - **Non-admins** — reply with `/report` to flag for admin review. Admins are notified with **✅ Confirm Ban** or **❌ Dismiss** buttons.
 
 False negatives are tracked separately in the monitoring dashboard.
+
+## /stats Command
+
+Admins can type `/stats` in any group to get a summary:
+
+- Groups protected
+- Members protected
+- Messages scanned
+- Total bans
+- Accuracy rate
+- False negatives reported
 
 ## Live Monitoring Dashboard
 
