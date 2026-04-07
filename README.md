@@ -24,6 +24,7 @@ Singaporeans lost a record S$1.1 billion to scams in 2024 and S$913.1 million in
 6. On every ban, admins are notified in the group with two inline buttons: **✅ Correct Ban** or **❌ Wrong Ban**.
 7. Admin feedback is used to update ChromaDB in real time and sync `seeds.py` to the GitHub repository via the GitHub API — keeping the repository as the source of truth for all labelled examples. (Human-in-the-Loop)
 8. Every classification, ban, and false positive is tracked as a Prometheus metric, scraped by Grafana Alloy, and visualized in a live Grafana Cloud dashboard.
+9. Admins (or users pending admin approval) can use `/report` to flag missed scams — adding them to ChromaDB, syncing to GitHub, and tracking as false negatives in the monitoring dashboard.
 
 # Tech Stack:
 
@@ -46,6 +47,15 @@ Every time the bot bans a user, admins are presented with two buttons in the gro
 This means the bot gets smarter over time with every admin correction, without any manual retraining.
 
 _Credit: This HITL feedback idea was proposed by Dr Mo Yin, a very close and treasured friend of mine. Thank you for the the friendship!_
+
+## /report Command
+
+If the bot misses a scam (false negative), it can be manually reported:
+
+- **Admins** — reply to the scam message with `/report`. The user is immediately banned and the message is added to training examples.
+- **Non-admins** — reply with `/report` to flag for admin review. Admins are notified with **✅ Confirm Ban** or **❌ Dismiss** buttons.
+
+False negatives are tracked separately in the monitoring dashboard.
 
 ## Live Monitoring Dashboard
 
