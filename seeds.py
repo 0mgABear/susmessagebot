@@ -26,6 +26,7 @@ examples = [
     ('yesss let it be reinforced :DD', "SAFE"),
     ('ikik', "SAFE"),
     ('info. @aaravmal', "SAFE"),
+    ('issok', "SAFE"),
 ]
 
 
