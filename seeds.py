@@ -28,6 +28,7 @@ examples = [
     ('info. @aaravmal', "SAFE"),
     ('issok', "SAFE"),
     ('It’s all credits', "SAFE"),
+    ('oh WHAT', "SAFE"),
 ]
 
 
