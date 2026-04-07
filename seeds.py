@@ -32,6 +32,7 @@ examples = [
     ('as i was ssaying', "SAFE"),
     ('they say 99%', "SAFE"),
     ('Fr', "SAFE"),
+    ('Sjksfngasf', "SAFE"),
 ]
 
 
