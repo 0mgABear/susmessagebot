@@ -66,8 +66,10 @@ Admins can type `/stats` in any group to get a summary:
 - Members protected
 - Messages scanned
 - Total bans
-- Accuracy rate
-- False negatives reported
+- Accuracy rate (based on human-in-the-loop feedback)
+
+Accuracy is calculated as: confirmed correct classifications / (correct + false positives + false negatives).
+All safe classifications are assumed correct until an admin uses /report to flag a missed scam.
 
 ## Live Monitoring Dashboard
 
