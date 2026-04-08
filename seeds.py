@@ -41,6 +41,7 @@ examples = [
     ('Urgent wrk paynow 1.9k , check my story if you do pm', "BAN"),
     ('how is the human trafficking from sg to jb now', "SAFE"),
     ('Heyyy\n☺️☺️', "BAN"),
+    ('woodlands any vep check?', "SAFE"),
 ]
 
 
