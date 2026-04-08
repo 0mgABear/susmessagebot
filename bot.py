@@ -369,7 +369,8 @@ def main():
         app.run_webhook(
             listen="0.0.0.0",
             port=80,
-            webhook_url=WEBHOOK_URL
+            webhook_url=WEBHOOK_URL,
+            bootstrap_retries=-1
         )
 
 if __name__ == "__main__":
