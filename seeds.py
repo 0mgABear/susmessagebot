@@ -38,6 +38,7 @@ examples = [
     ('Ah icic', "SAFE"),
     ('oh but 50 requests a day :<', "SAFE"),
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
+    ('Urgent wrk paynow 1.9k , check my story if you do pm', "BAN"),
 ]
 
 
