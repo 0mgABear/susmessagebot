@@ -6,7 +6,7 @@ from moderator import classify_message
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from stats import init_db, get_stat, increment_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
+from stats import init_db, get_stat, increment_stat, decrement_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
 import asyncio
 import threading
 
@@ -26,6 +26,8 @@ FALSE_NEGATIVES = Gauge('false_negatives_total', 'Admin-reported false negatives
 GROUPS_COUNT = Gauge('groups_count_total', 'Number of groups bot is in')
 MEMBERS_PROTECTED = Gauge('members_protected_total', 'Total members protected')
 
+ACCURATE_CLASSIFICATIONS = Gauge('accurate_classifications_total', 'Accurately classified messages')
+
 def init_metrics():
     """Load persisted values from SQLite into Prometheus gauges."""
     MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
@@ -35,6 +37,7 @@ def init_metrics():
     FALSE_NEGATIVES.set(get_stat('false_negatives'))
     GROUPS_COUNT.set(get_groups_count())
     MEMBERS_PROTECTED.set(get_total_members())
+    ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
 
 class HealthHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -122,6 +125,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     else:
         increment_stat('messages_safe')
         MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
+        increment_stat('accurate_classifications')
+        ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
 
 async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
@@ -149,7 +154,9 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         sync_example_to_github(banned_info["text"], "BAN")
         increment_stat('bans_confirmed')
         BANS_CONFIRMED.set(get_stat('bans_confirmed'))
-        await query.edit_message_text("✅ Ban confirmed. Added to training examples.")
+        increment_stat('accurate_classifications')
+        ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
+        await query.edit_message_text("✅ Ban confirmed.")
         
     elif action == "false":
         banned_user_id = int(data[3])
@@ -159,7 +166,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         increment_stat('false_positives')
         FALSE_POSITIVES.set(get_stat('false_positives'))
         await context.bot.unban_chat_member(chat_id=chat_id, user_id=banned_user_id)
-        await query.edit_message_text("❌ False positive confirmed. User unbanned and added to examples.")
+        await query.edit_message_text("❌ False positive confirmed.")
 
     del banned_messages[message_id]
     await query.answer()
@@ -227,10 +234,12 @@ async def handle_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         sync_example_to_github(reported_text, "BAN")
         increment_stat('false_negatives')
         FALSE_NEGATIVES.set(get_stat('false_negatives'))
+        decrement_stat('accurate_classifications')
+        ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
         try:
             await context.bot.delete_message(chat_id=chat_id, message_id=reported_message_id)
             await context.bot.ban_chat_member(chat_id=chat_id, user_id=reported_user_id)
-            await update.message.reply_text("✅ User banned and message added to training examples.")
+            await update.message.reply_text("✅ User banned.")
         except Exception as e:
             logging.error(f"Error banning reported user: {e}")
             await update.message.reply_text("✅ Message added to training examples. Could not ban user.")
@@ -283,6 +292,8 @@ async def handle_report_callback(update: Update, context: ContextTypes.DEFAULT_T
             sync_example_to_github(report_info["text"], "BAN")
             increment_stat('false_negatives')
             FALSE_NEGATIVES.set(get_stat('false_negatives'))
+            decrement_stat('accurate_classifications')
+            ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
         try:
             await context.bot.delete_message(chat_id=chat_id, message_id=report_info["message_id"])
             await context.bot.ban_chat_member(chat_id=chat_id, user_id=report_info["user_id"])
@@ -322,17 +333,17 @@ async def handle_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         await update.message.reply_text("Only admins can use this command.")
         return
 
-    total_bans = get_stat('bans_confirmed') + get_stat('false_positives') + get_stat('false_negatives')
-    accuracy = (get_stat('bans_confirmed') / total_bans * 100) if total_bans > 0 else 0
+    accurate = get_stat('accurate_classifications')
+    total = accurate + get_stat('false_positives') + get_stat('false_negatives')
+    accuracy = (accurate / total * 100) if total > 0 else 0
 
     await update.message.reply_text(
         f"📊 Sus Message Bot Stats\n\n"
         f"👥 Groups protected: {get_groups_count()}\n"
         f"🛡️ Members protected: {get_total_members():,}\n"
         f"📨 Messages scanned: {get_stat('messages_safe') + get_stat('messages_ban'):,}\n"
-        f"🚫 Total bans: {total_bans}\n"
+        f"🚫 Total bans: {get_stat('bans_confirmed') + get_stat('false_positives')}\n"
         f"✅ Accuracy rate: {accuracy:.1f}%\n"
-        f"⚠️ False negatives reported: {get_stat('false_negatives')}"
     )
 
 def main():

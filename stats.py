@@ -12,7 +12,7 @@ def init_db():
             value INTEGER DEFAULT 0
         )
     ''')
-    for key in ['messages_safe', 'messages_ban', 'bans_confirmed', 'false_positives', 'false_negatives']:
+    for key in ['messages_safe', 'messages_ban', 'bans_confirmed', 'false_positives', 'false_negatives', 'accurate_classifications']:
         cursor.execute('INSERT OR IGNORE INTO stats (key, value) VALUES (?, 0)', (key,))
     conn.commit()
     conn.close()
@@ -94,3 +94,13 @@ def get_all_group_ids() -> list:
     ids = [row[0] for row in cursor.fetchall()]
     conn.close()
     return ids
+
+def decrement_stat(key: str) -> int:
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute('UPDATE stats SET value = MAX(0, value - 1) WHERE key = ?', (key,))
+    cursor.execute('SELECT value FROM stats WHERE key = ?', (key,))
+    new_value = cursor.fetchone()[0]
+    conn.commit()
+    conn.close()
+    return new_value
