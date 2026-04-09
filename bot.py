@@ -85,6 +85,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     message_id = update.message.message_id
     text = update.message.text or update.message.caption
 
+
     chat_member = await context.bot.get_chat_member(chat_id, user_id)
     if chat_member.status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
         return
@@ -374,4 +375,4 @@ def main():
         )
 
 if __name__ == "__main__":
-    main()
+    main() 
