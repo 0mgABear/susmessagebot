@@ -43,6 +43,7 @@ examples = [
     ('Heyyy\n☺️☺️', "BAN"),
     ('woodlands any vep check?', "SAFE"),
     ('any new abt jb to sg? @Rac_yy', "BAN"),
+    ('@qzvxlp', "BAN"),
 ]
 
 
