@@ -42,6 +42,8 @@ examples = [
     ('how is the human trafficking from sg to jb now', "SAFE"),
     ('Heyyy\n☺️☺️', "BAN"),
     ('woodlands any vep check?', "SAFE"),
+    ('any new abt jb to sg? @Rac_yy', "BAN"),
+    ('@qzvxlp', "BAN"),
 ]
 
 
