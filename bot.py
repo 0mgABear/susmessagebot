@@ -77,13 +77,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         update: The incoming Telegram update
         context: The bot context
     """
-    if not update.message or not update.message.text:
+    if not update.message or (not update.message.text and not update.message.caption):
         return
 
     chat_id = update.message.chat_id
     user_id = update.message.from_user.id
     message_id = update.message.message_id
-    text = update.message.text
+    text = update.message.text or update.message.caption
 
     chat_member = await context.bot.get_chat_member(chat_id, user_id)
     if chat_member.status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
