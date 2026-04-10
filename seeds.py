@@ -44,6 +44,7 @@ examples = [
     ('woodlands any vep check?', "SAFE"),
     ('any new abt jb to sg? @Rac_yy', "BAN"),
     ('@qzvxlp', "BAN"),
+    ('💯JOM 𝗩𝗖❤️\nVC BOGEL☑️\nVIDEO PRVCY☑️\nGROUP VIDEO☑️\n\n𝗡𝗔𝗞 𝗢𝗥𝗗𝗘𝗥 𝗠𝗘𝗦𝗘𝗝 𝗜 𝗕𝗕𝗬 @AnisaZahra69 💦', "BAN"),
 ]
 
 
