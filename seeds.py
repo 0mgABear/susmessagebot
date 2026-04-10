@@ -48,6 +48,7 @@ examples = [
     ('qwen 3.5 0.8b will be', "SAFE"),
     ('it did my 1521 homework', "SAFE"),
     ('Any news? @ra_cy7', "BAN"),
+    ('Same experience walked at 815 reached in 20mins. Quite dangerous tho', "SAFE"),
 ]
 
 
