@@ -50,6 +50,7 @@ examples = [
     ('Any news? @ra_cy7', "BAN"),
     ('Same experience walked at 815 reached in 20mins. Quite dangerous tho', "SAFE"),
     ('Giv ing away my 15-inch MacBook Air (M4) — bareIy used and stiII in exceIIent condition.', "BAN"),
+    ('wait so u can claim the free oracle vps and still be refunded?', "SAFE"),
 ]
 
 
