@@ -49,6 +49,7 @@ examples = [
     ('it did my 1521 homework', "SAFE"),
     ('Any news? @ra_cy7', "BAN"),
     ('Same experience walked at 815 reached in 20mins. Quite dangerous tho', "SAFE"),
+    ('Giv ing away my 15-inch MacBook Air (M4) — bareIy used and stiII in exceIIent condition.', "BAN"),
 ]
 
 
