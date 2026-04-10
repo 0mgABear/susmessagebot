@@ -47,6 +47,7 @@ examples = [
     ('💯JOM 𝗩𝗖❤️\nVC BOGEL☑️\nVIDEO PRVCY☑️\nGROUP VIDEO☑️\n\n𝗡𝗔𝗞 𝗢𝗥𝗗𝗘𝗥 𝗠𝗘𝗦𝗘𝗝 𝗜 𝗕𝗕𝗬 @AnisaZahra69 💦', "BAN"),
     ('qwen 3.5 0.8b will be', "SAFE"),
     ('it did my 1521 homework', "SAFE"),
+    ('Any news? @ra_cy7', "BAN"),
 ]
 
 
