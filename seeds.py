@@ -53,6 +53,7 @@ examples = [
     ('wait so u can claim the free oracle vps and still be refunded?', "SAFE"),
     ('Hi I can offer you $5000 a week working from home, contact @moneymaker', "BAN"),
     ('pm me for fr3e ip0ne', "BAN"),
+    ('anyone interested making 2k-8k\nnot singpass \nLegal\nWorking adult only', "BAN"),
 ]
 
 
