@@ -39,6 +39,23 @@ def init_blocklist():
     load_blocklist()
     logging.info("Malware blocklist loaded.")
 
+def warmup_ollama():
+    """Warm up Ollama model on startup."""
+    try:
+        logging.info("Warming up Ollama model...")
+        requests.post(
+            f"{OLLAMA_HOST}/api/chat",
+            json={
+                "model": OLLAMA_MODEL,
+                "messages": [{"role": "user", "content": "hi"}],
+                "stream": False
+            },
+            timeout=120
+        )
+        logging.info("Ollama model warmed up.")
+    except Exception as e:
+        logging.error(f"Ollama warmup failed: {e}")
+
 def init_metrics():
     """Load persisted values from SQLite into Prometheus gauges."""
     MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
