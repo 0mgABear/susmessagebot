@@ -16,7 +16,6 @@ def classify_image(image_bytes: bytes) -> str:
     """
     try:
         img = Image.open(io.BytesIO(image_bytes))
-        img.thumbnail((1200, 1200))
         text = pytesseract.image_to_string(img).strip()
 
         if not text:
