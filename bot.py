@@ -3,6 +3,7 @@ from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filt
 from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
+from image_moderator import classify_image
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -120,6 +121,57 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
                     f"🆔 ID: {user_id}\n\n"
                     f"📝 Message:\n{text[:200]}{'...' if len(text) > 200 else ''}",
                 reply_markup=keyboard
+            )
+        except Exception as e:
+            logging.error(f"Error: {e}")
+    else:
+        increment_stat('messages_safe')
+        MESSAGES_CLASSIFIED_SAFE.set(get_stat('messages_safe'))
+        increment_stat('accurate_classifications')
+        ACCURATE_CLASSIFICATIONS.set(get_stat('accurate_classifications'))
+
+async def handle_image(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """
+    Handles incoming image messages.
+    Classifies them and bans the user if the image is a scam/spam.
+    """
+    if not update.message or not update.message.photo:
+        return
+
+    chat_id = update.message.chat_id
+    user_id = update.message.from_user.id
+    message_id = update.message.message_id
+
+    chat_member = await context.bot.get_chat_member(chat_id, user_id)
+    if chat_member.status in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
+        return
+
+    # Track new groups
+    member_count = await context.bot.get_chat_member_count(chat_id)
+    is_new = add_group(chat_id, member_count)
+    if is_new:
+        GROUPS_COUNT.set(get_groups_count())
+        MEMBERS_PROTECTED.set(get_total_members())
+
+    photo = update.message.photo[-1]  # highest resolution
+    file = await context.bot.get_file(photo.file_id)
+    image_bytes = await file.download_as_bytearray()
+    result = classify_image(bytes(image_bytes))
+
+    if result == "BAN":
+        logging.info(f"BAN action taken on image from user {user_id}")
+        increment_stat('messages_ban')
+        MESSAGES_CLASSIFIED_BAN.set(get_stat('messages_ban'))
+        try:
+            await context.bot.delete_message(chat_id=chat_id, message_id=message_id)
+            await context.bot.ban_chat_member(chat_id=chat_id, user_id=user_id)
+            await context.bot.send_message(
+                chat_id=chat_id,
+                text=f"⚠️ Suspicious image detected and removed.\n\n"
+                    f"👤 User: {update.message.from_user.full_name}"
+                    f"{f' (@{update.message.from_user.username})' if update.message.from_user.username else ''}\n"
+                    f"🆔 ID: {user_id}\n\n"
+                    f"ℹ️ To reverse this ban, use Telegram's admin controls."
             )
         except Exception as e:
             logging.error(f"Error: {e}")
@@ -357,6 +409,7 @@ def main():
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.PHOTO, handle_image))
     app.add_handler(CallbackQueryHandler(handle_callback, pattern="^(correct|false)"))
     app.add_handler(CallbackQueryHandler(handle_report_callback, pattern="^(report_confirm|report_dismiss)"))
     app.add_handler(CommandHandler("report", handle_report))
