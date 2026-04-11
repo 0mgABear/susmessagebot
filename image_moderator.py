@@ -1,12 +1,12 @@
 from PIL import Image
 import io
-import requests
-import base64
-from config import OLLAMA_HOST, OLLAMA_MODEL
+import pytesseract
+from moderator import classify_message
 
 def classify_image(image_bytes: bytes) -> str:
     """
-    Classifies a Telegram image as SAFE or BAN using Ollama's multimodal capabilities.
+    Classifies a Telegram image as SAFE or BAN.
+    Extracts text via OCR then uses the text classifier.
 
     Args:
         image_bytes: Raw image bytes downloaded from Telegram
@@ -14,46 +14,15 @@ def classify_image(image_bytes: bytes) -> str:
     Returns:
         "BAN" if the image is a scam/spam, "SAFE" otherwise
     """
-    img = Image.open(io.BytesIO(image_bytes))
-    img.thumbnail((800, 800))
-    buffer = io.BytesIO()
-    img.save(buffer, format="JPEG", quality=85)
-    image_bytes = buffer.getvalue()
-    image_b64 = base64.b64encode(image_bytes).decode("utf-8")
+    try:
+        img = Image.open(io.BytesIO(image_bytes))
+        img.thumbnail((1200, 1200))
+        text = pytesseract.image_to_string(img).strip()
 
-    prompt = """You are a moderator for Telegram group chats.
+        if not text:
+            return "SAFE"
 
-Classify this image as either SAFE or BAN. Respond with exactly one word: SAFE or BAN. No explanation, punctuation, or additional text.
+        return classify_message(text)
 
-Classify as BAN if the image contains:
-- Scam job offers or fake income schemes
-- Sexual or explicit content
-- QR codes or links to suspicious sites
-- Fake receipts or payment proofs used in scams
-- Unsolicited advertisements or spam
-- Content promoting sexual services
-
-Default to SAFE if unsure. A false positive (banning a legitimate user) is worse than a false negative.
-
-Respond with exactly one word: SAFE or BAN"""
-
-    response = requests.post(
-        f"{OLLAMA_HOST}/api/chat",
-        json={
-            "model": OLLAMA_MODEL,
-            "think": False,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": prompt,
-                    "images": [image_b64]
-                }
-            ],
-            "stream": False
-        },
-        timeout=60
-    )
-    result = response.json()["message"]["content"].strip().upper()
-    if result not in ["SAFE", "BAN"]:
+    except Exception:
         return "SAFE"
-    return result
