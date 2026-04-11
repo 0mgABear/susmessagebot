@@ -73,7 +73,7 @@ Respond with exactly one word: SAFE or BAN"""
             ],
             "stream": False
         },
-        timeout=30
+        timeout=120
     )
     result = response.json()["message"]["content"].strip().upper()
     return result if result in ["SAFE", "BAN"] else "SAFE"
