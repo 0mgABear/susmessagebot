@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes, CommandHandler
 from telegram.constants import ChatMemberStatus
-from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
+from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING, OLLAMA_HOST, OLLAMA_MODEL
 from moderator import classify_message
 from image_moderator import classify_image
 from url_moderator import analyze_urls, load_blocklist
@@ -13,6 +13,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from stats import init_db, get_stat, increment_stat, decrement_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
 import asyncio
 import threading
+
+import requests
 
 import logging
 logging.basicConfig(
@@ -447,6 +449,7 @@ def main():
     init_db() 
     init_metrics()
     init_blocklist()
+    warmup_ollama()
     start_health_server()
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
