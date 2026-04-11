@@ -45,3 +45,35 @@ def _scrape_tme_profile(username: str) -> tuple:
         return name, bio
     except Exception:
         return "", ""
+    
+def _classify_username(username: str, name: str, bio: str) -> str:
+    """Use Gemma4 to classify a Telegram user based on their profile."""
+    response = requests.post(
+        f"{OLLAMA_HOST}/api/chat",
+        json={
+            "model": OLLAMA_MODEL,
+            "think": False,
+            "messages": [
+                {
+                    "role": "user",
+                    "content": f"""You are a Telegram moderator. Classify this user profile as SAFE or BAN.
+
+Classify as BAN if the profile promotes:
+- Sexual services or adult content
+- Scam job offers or fake income schemes
+- Cryptocurrency scams or fake investment returns
+- Phishing or malicious links
+
+Username: @{username}
+Display name: {name}
+Bio: {bio}
+
+Respond with exactly one word: SAFE or BAN"""
+                }
+            ],
+            "stream": False
+        },
+        timeout=30
+    )
+    result = response.json()["message"]["content"].strip().upper()
+    return result if result in ["SAFE", "BAN"] else "SAFE"
