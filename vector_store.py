@@ -1,10 +1,27 @@
-__import__('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+try:
+    __import__('pysqlite3')
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass  # Use built-in sqlite3 (for macos where pysqlite3-binary not available)
 
 import chromadb
 from sentence_transformers import SentenceTransformer
 from config import EMBEDDING_MODEL, SIMILARITY_THRESHOLD, MAX_EXAMPLES
+
+import os
+import warnings
+import logging
+import transformers
+from huggingface_hub import logging as hf_logging
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["HF_HUB_DISABLE_IMPLICIT_TOKEN"] = "1"
+os.environ["TRANSFORMERS_VERBOSITY"] = "error"
+warnings.filterwarnings("ignore")
+logging.getLogger("sentence_transformers").setLevel(logging.ERROR)
+transformers.logging.set_verbosity_error()
+hf_logging.set_verbosity_error()
+
 
 # Initialise embedding model and ChromaDB
 embedding_model = SentenceTransformer(EMBEDDING_MODEL)
@@ -20,7 +37,7 @@ def add_example(message: str, label: str) -> None:
     label: "SAFE" or "BAN"
   """
   embedding = embedding_model.encode(message).tolist()
-  collection.add(
+  collection.upsert(
     embeddings = [embedding],
     documents = [message],
     metadatas=[{"label": label}],
