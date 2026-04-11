@@ -52,6 +52,7 @@ examples = [
     ('Giv ing away my 15-inch MacBook Air (M4) — bareIy used and stiII in exceIIent condition.', "BAN"),
     ('wait so u can claim the free oracle vps and still be refunded?', "SAFE"),
     ('Hi I can offer you $5000 a week working from home, contact @moneymaker', "BAN"),
+    ('pm me for fr3e ip0ne', "BAN"),
 ]
 
 
