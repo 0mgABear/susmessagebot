@@ -38,10 +38,10 @@ def _scrape_tme_profile(username: str) -> tuple:
             headers={"User-Agent": "Mozilla/5.0"}
         )
         soup = BeautifulSoup(response.text, "html.parser")
-        name = soup.find("meta", property="og:title")
-        bio = soup.find("meta", property="og:description")
-        name = name["content"] if name else ""
-        bio = bio["content"] if bio else ""
+        name = soup.find(class_="tgme_page_title")
+        bio = soup.find(class_="tgme_page_description")
+        name = name.get_text(strip=True) if name else ""
+        bio = bio.get_text(strip=True) if bio else ""
         return name, bio
     except Exception:
         return "", ""
