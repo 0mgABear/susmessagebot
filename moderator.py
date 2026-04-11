@@ -93,15 +93,19 @@ def classify_message(message: str) -> str:
     Respond with exactly one word: SAFE or BAN
     """
 
-    response = client.chat.completions.create(
-        model=GROQ_MODEL,
-        messages=[
-            {"role": "system", "content": system_prompt.format(examples=examples)},
-            {"role": "user", "content": f"<message>{message}</message>"}
-        ]
+    response = requests.post(
+        f"{OLLAMA_HOST}/api/chat",
+        json={
+            "model": OLLAMA_MODEL,
+            "think": False,
+            "messages": [
+                {"role": "system", "content": system_prompt.format(examples=examples)},
+                {"role": "user", "content": f"<message>{message}</message>"}
+            ],
+            "stream": False
+        }
     )
-
-    result = response.choices[0].message.content.strip().upper()
+    result = response.json()["message"]["content"].strip().upper()
     if result not in ["SAFE", "BAN"]:
         return "SAFE"
     return result
