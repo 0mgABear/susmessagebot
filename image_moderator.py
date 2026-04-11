@@ -1,3 +1,5 @@
+from PIL import Image
+import io
 import requests
 import base64
 from config import OLLAMA_HOST, OLLAMA_MODEL
@@ -12,6 +14,11 @@ def classify_image(image_bytes: bytes) -> str:
     Returns:
         "BAN" if the image is a scam/spam, "SAFE" otherwise
     """
+    img = Image.open(io.BytesIO(image_bytes))
+    img.thumbnail((800, 800))
+    buffer = io.BytesIO()
+    img.save(buffer, format="JPEG", quality=85)
+    image_bytes = buffer.getvalue()
     image_b64 = base64.b64encode(image_bytes).decode("utf-8")
 
     prompt = """You are a moderator for Telegram group chats.
@@ -43,7 +50,8 @@ Respond with exactly one word: SAFE or BAN"""
                 }
             ],
             "stream": False
-        }
+        },
+        timeout=60
     )
     result = response.json()["message"]["content"].strip().upper()
     if result not in ["SAFE", "BAN"]:
