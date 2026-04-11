@@ -369,7 +369,7 @@ def main():
         logging.info("Starting bot in webhook mode")
         app.run_webhook(
             listen="0.0.0.0",
-            port=80,
+            port=8443,
             webhook_url=WEBHOOK_URL,
             bootstrap_retries=-1
         )
