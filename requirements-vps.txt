@@ -6,3 +6,4 @@ requests
 prometheus_client
 Pillow
 pytesseract
+beautifulsoup4
