@@ -1,8 +1,6 @@
-from groq import Groq
-from config import GROQ_API_KEY, GROQ_MODEL
+import requests
+from config import OLLAMA_HOST, OLLAMA_MODEL
 from vector_store import get_similar_examples
-
-client = Groq(api_key=GROQ_API_KEY)
 
 def classify_message(message: str) -> str:
     """
