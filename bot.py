@@ -4,11 +4,12 @@ from telegram.constants import ChatMemberStatus
 from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING
 from moderator import classify_message
 from image_moderator import classify_image
+from url_moderator import analyze_urls, load_blocklist
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from stats import init_db, get_stat, increment_stat, decrement_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
-import asyncio
+import asyncio as _asyncio
 import threading
 
 import logging
@@ -28,6 +29,13 @@ GROUPS_COUNT = Gauge('groups_count_total', 'Number of groups bot is in')
 MEMBERS_PROTECTED = Gauge('members_protected_total', 'Total members protected')
 
 ACCURATE_CLASSIFICATIONS = Gauge('accurate_classifications_total', 'Accurately classified messages')
+
+def init_blocklist():
+    """Load malware blocklist on startup."""
+    import logging
+    logging.info("Loading malware blocklist...")
+    load_blocklist()
+    logging.info("Malware blocklist loaded.")
 
 def init_metrics():
     """Load persisted values from SQLite into Prometheus gauges."""
@@ -96,7 +104,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if is_new:
         GROUPS_COUNT.set(get_groups_count())
         MEMBERS_PROTECTED.set(get_total_members())
-    result = classify_message(text)
+    url_future = _asyncio.get_event_loop().run_in_executor(None, analyze_urls, text)
+    text_future = _asyncio.get_event_loop().run_in_executor(None, classify_message, text)
+    url_result, text_result = await _asyncio.gather(url_future, text_future)
+    result = "BAN" if url_result == "BAN" or text_result == "BAN" else "SAFE"
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
@@ -399,12 +410,20 @@ async def handle_stats(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         f"✅ Accuracy rate: {accuracy:.1f}%\n"
     )
 
+async def refresh_blocklist(context: ContextTypes.DEFAULT_TYPE):
+    """Refresh malware blocklist daily."""
+    load_blocklist()
+    logging.info("Malware blocklist refreshed.")
+
+
+
 def main():
     if not TELEGRAM_BOT_TOKEN:
         print("TELEGRAM_BOT_TOKEN is not set. Exiting.")
         return
     init_db() 
     init_metrics()
+    init_blocklist()
     start_health_server()
     start_http_server(8000)  # Prometheus metrics endpoint on port 8000
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
@@ -415,6 +434,7 @@ def main():
     app.add_handler(CommandHandler("report", handle_report))
     app.add_handler(CommandHandler("stats", handle_stats))
     app.job_queue.run_repeating(update_member_counts, interval=86400, first=86400)
+    app.job_queue.run_repeating(refresh_blocklist, interval=86400, first=86400)
     if USE_POLLING:
         logging.info("Starting bot in polling mode (local development)")
         app.run_polling(drop_pending_updates=True)
