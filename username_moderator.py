@@ -13,7 +13,7 @@ async def analyze_usernames(text: str, bot) -> str:
 
     for username in usernames:
         try:
-            chat = await bot.get_chat(f"@{username}")
+            chat = await bot.get_chat(f"@{username}") 
             bio = chat.bio or ""
             name = chat.full_name or ""
         except Exception:
