@@ -58,6 +58,7 @@ examples = [
     ('news from jb to sg? @ra_cy7', "BAN"),
     ('@admin', "BAN"),
     ('contact @Kulwinder_kaur_Gill_company for jobs (testing)', "BAN"),
+    ('enough sg? @ra_cy7', "BAN"),
 ]
 
 
