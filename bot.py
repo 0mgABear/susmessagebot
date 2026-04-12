@@ -127,11 +127,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         MEMBERS_PROTECTED.set(get_total_members())
     url_future = asyncio.get_event_loop().run_in_executor(None, analyze_urls, text)
     text_future = asyncio.get_event_loop().run_in_executor(None, classify_message, text)
-    url_result, text_result, username_result = await asyncio.gather(
-        url_future,
-        text_future,
-        analyze_usernames(text, context.bot)
-    )
+    text_result = classify_message(text)
+    url_result = analyze_urls(text)
+    username_result = await analyze_usernames(text, context.bot)
+    result = "BAN" if text_result == "BAN" or url_result == "BAN" or username_result == "BAN" else "SAFE"
     result = "BAN" if url_result == "BAN" or text_result == "BAN" or username_result == "BAN" else "SAFE"
 
     if result == "BAN":

@@ -2,6 +2,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from config import OLLAMA_HOST, OLLAMA_MODEL
+import logging
 
 USERNAME_PATTERN = re.compile(r'@([a-zA-Z0-9_]{4,32})')
 
@@ -32,6 +33,7 @@ async def analyze_usernames(text: str, bot) -> str:
 def _scrape_tme_profile(username: str) -> tuple:
     """Scrape name and bio from t.me/username as fallback."""
     try:
+        logging.info(f"Scraping t.me/{username}...")
         response = requests.get(
             f"https://t.me/{username}",
             timeout=5,
@@ -42,8 +44,10 @@ def _scrape_tme_profile(username: str) -> tuple:
         bio = soup.find(class_="tgme_page_description")
         name = name.get_text(strip=True) if name else ""
         bio = bio.get_text(strip=True) if bio else ""
+        logging.info(f"Scraped @{username} — name: '{name}', bio: '{bio}'")
         return name, bio
-    except Exception:
+    except Exception as e:
+        logging.error(f"Failed to scrape t.me/{username}: {e}")
         return "", ""
     
 def _classify_username(username: str, name: str, bio: str) -> str:
