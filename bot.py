@@ -5,13 +5,12 @@ from config import TELEGRAM_BOT_TOKEN, WEBHOOK_URL, USE_POLLING, OLLAMA_HOST, OL
 from moderator import classify_message
 from image_moderator import classify_image
 from url_moderator import analyze_urls, load_blocklist
-from username_moderator import analyze_usernames
+from username_moderator import analyze_usernames, USERNAME_PATTERN
 
 from github_sync import sync_example_to_github
 from prometheus_client import Gauge, start_http_server
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from stats import init_db, get_stat, increment_stat, decrement_stat, add_group, update_group_member_count, get_groups_count, get_total_members, get_all_group_ids
-import asyncio
 import threading
 
 import requests
@@ -125,13 +124,15 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if is_new:
         GROUPS_COUNT.set(get_groups_count())
         MEMBERS_PROTECTED.set(get_total_members())
-    url_future = asyncio.get_event_loop().run_in_executor(None, analyze_urls, text)
-    text_future = asyncio.get_event_loop().run_in_executor(None, classify_message, text)
-    text_result = classify_message(text)
-    url_result = analyze_urls(text)
-    username_result = await analyze_usernames(text, context.bot)
-    result = "BAN" if text_result == "BAN" or url_result == "BAN" or username_result == "BAN" else "SAFE"
-    result = "BAN" if url_result == "BAN" or text_result == "BAN" or username_result == "BAN" else "SAFE"
+
+    usernames = USERNAME_PATTERN.findall(text)
+
+    if usernames:
+        result = await analyze_usernames(text, context.bot)
+    else:
+        text_result = classify_message(text)
+        url_result = analyze_urls(text)
+        result = "BAN" if text_result == "BAN" or url_result == "BAN" else "SAFE"
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
