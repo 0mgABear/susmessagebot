@@ -128,7 +128,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     usernames = USERNAME_PATTERN.findall(text)
 
     if usernames:
-        result = await analyze_usernames(text, context.bot)
+        username_result = await analyze_usernames(text, context.bot)
+        if username_result == "BAN":
+            result = "BAN"
+        else:
+            text_result = classify_message(text)
+            url_result = analyze_urls(text)
+            result = "BAN" if text_result == "BAN" or url_result == "BAN" else "SAFE"
     else:
         text_result = classify_message(text)
         url_result = analyze_urls(text)
