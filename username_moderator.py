@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from config import OLLAMA_HOST, OLLAMA_MODEL
 import logging
+import asyncio
 
 USERNAME_PATTERN = re.compile(r'@([a-zA-Z0-9_]{4,32})')
 
@@ -13,21 +14,22 @@ async def analyze_usernames(text: str, bot) -> str:
 
     for username in usernames:
         try:
-            chat = await bot.get_chat(f"@{username}") 
+            chat = await bot.get_chat(f"@{username}")
             bio = chat.bio or ""
             name = chat.full_name or ""
         except Exception:
-            # Fallback: scrape t.me page
             name, bio = _scrape_tme_profile(username)
 
         if not bio and not name:
             continue
 
-        result = _classify_username(username, name, bio)
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, _classify_username, username, name, bio)
         if result == "BAN":
             return "BAN"
 
     return "SAFE"
+
 
 
 def _scrape_tme_profile(username: str) -> tuple:
@@ -60,19 +62,23 @@ def _classify_username(username: str, name: str, bio: str) -> str:
             "messages": [
                 {
                     "role": "user",
-                    "content": f"""You are a Telegram moderator. Classify this user profile as SAFE or BAN.
+                    "content": f"""You are a moderator for Singapore Telegram group chats protecting members from scams.
 
-Classify as BAN if the profile promotes:
-- Sexual services or adult content
-- Scam job offers or fake income schemes
-- Cryptocurrency scams or fake investment returns
-- Phishing or malicious links
+                In Singapore, common scam patterns include fake investment schemes, trading signal scams, and job scams. Be conservative — when in doubt, classify as BAN.
 
-Username: @{username}
-Display name: {name}
-Bio: {bio}
+                Classify as BAN if the profile promotes:
+                - Investment trading, forex, crypto, or financial returns
+                - Sexual services or adult content  
+                - Job offers or income schemes
+                - Any unsolicited commercial service
 
-Respond with exactly one word: SAFE or BAN"""
+                Classify as SAFE only if the profile is clearly a personal account, legitimate business, or community group with no commercial solicitation.
+
+                Username: @{username}
+                Display name: {name}
+                Bio: {bio}
+
+                Respond with exactly one word: SAFE or BAN"""
                 }
             ],
             "stream": False
