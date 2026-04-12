@@ -56,6 +56,7 @@ examples = [
     ('anyone interested making 2k-8k\nnot singpass \nLegal\nWorking adult only', "BAN"),
     ('@tangons', "BAN"),
     ('news from jb to sg? @ra_cy7', "BAN"),
+    ('@admin', "BAN"),
 ]
 
 
