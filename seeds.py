@@ -46,6 +46,7 @@ examples = [
     ('@qzvxlp', "BAN"),
     ('Fast hop 9.9k pm', "BAN"),
     ('hi has anyone seen a navy blue Polo Ralph Lauren hoodie in as6-04-21? i lost it there saturday. if anyone has seen it please dm me @chenkeia. Thankss!', "SAFE"),
+    ('I’m looking for two people\n\n• No need to go to an office\n• No need to use a computer\n• Fully flexible schedule\n• From day one: €315 per week\n\nRequirements:\n✅ Age between 18 and 65\n✅ No previous experience required\n\nInterested?\nSend me a private message with “+” 👉 @ashhley_1', "BAN"),
 ]
 
 
