@@ -44,6 +44,7 @@ examples = [
     ('woodlands any vep check?', "SAFE"),
     ('any new abt jb to sg? @Rac_yy', "BAN"),
     ('@qzvxlp', "BAN"),
+    ('Fast hop 9.9k pm', "BAN"),
 ]
 
 
