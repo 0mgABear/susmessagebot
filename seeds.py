@@ -45,6 +45,7 @@ examples = [
     ('any new abt jb to sg? @Rac_yy', "BAN"),
     ('@qzvxlp', "BAN"),
     ('Fast hop 9.9k pm', "BAN"),
+    ('hi has anyone seen a navy blue Polo Ralph Lauren hoodie in as6-04-21? i lost it there saturday. if anyone has seen it please dm me @chenkeia. Thankss!', "SAFE"),
 ]
 
 
