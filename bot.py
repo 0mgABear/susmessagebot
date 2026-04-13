@@ -127,18 +127,16 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     usernames = USERNAME_PATTERN.findall(text)
 
-    if usernames:
+    text_result = classify_message(text)
+    url_result = analyze_urls(text)
+
+    if text_result == "BAN" or url_result == "BAN":
+        result = "BAN"
+    elif usernames:
         username_result = await analyze_usernames(text, context.bot)
-        if username_result == "BAN":
-            result = "BAN"
-        else:
-            text_result = classify_message(text)
-            url_result = analyze_urls(text)
-            result = "BAN" if text_result == "BAN" or url_result == "BAN" else "SAFE"
+        result = username_result
     else:
-        text_result = classify_message(text)
-        url_result = analyze_urls(text)
-        result = "BAN" if text_result == "BAN" or url_result == "BAN" else "SAFE"
+        result = "SAFE"
 
     if result == "BAN":
         logging.info(f"BAN action taken on user {user_id}")
