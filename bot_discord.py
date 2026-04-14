@@ -1,10 +1,12 @@
 import discord
-from discord.ext import commands
+from discord import app_commands
 from moderator import classify_message
 from image_moderator import classify_image
 from url_moderator import analyze_urls, load_blocklist
-from stats import init_db, get_stat, increment_stat, get_groups_count, get_total_members
+from stats import init_db, get_stat, increment_stat
 from config import DISCORD_BOT_TOKEN
+from github_sync import sync_example_to_github
+from vector_store import add_example
 import logging
 import asyncio
 
@@ -17,53 +19,91 @@ intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 
-bot = commands.Bot(command_prefix="!", intents=intents)
+class SusMessageBot(discord.Client):
+    def __init__(self):
+        super().__init__(intents=intents)
+        self.tree = app_commands.CommandTree(self)
 
-@bot.event
+    async def setup_hook(self):
+        synced = await self.tree.sync()
+        logging.info(f"Synced {len(synced)} commands globally")
+
+client = SusMessageBot()
+
+@client.event
 async def on_ready():
     load_blocklist()
-    logging.info(f"Bot ready — logged in as {bot.user}")
-    for guild in bot.guilds:
+    logging.info(f"Bot ready — logged in as {client.user}")
+    for guild in client.guilds:
         logging.info(f"Connected to server: {guild.name} ({guild.id})")
 
-@bot.event
+@client.event
 async def on_message(message: discord.Message):
-    logging.info(f"Message received from {message.author}: {message.content}")
-    logging.info(f"Attachments: {message.attachments}")
     if message.author.bot:
         return
 
-    # Skip if author is admin/mod
+    # Handle @SusMessageBot mentions as reports
+    if client.user in message.mentions and message.reference:
+        reported_msg = await message.channel.fetch_message(message.reference.message_id)
+        is_admin = message.author.guild_permissions.administrator
+
+        if is_admin:
+            text = reported_msg.content or "[image]"
+            add_example(text, "BAN")
+            sync_example_to_github(text, "BAN")
+            increment_stat('false_negatives')
+            try:
+                await reported_msg.delete()
+                await reported_msg.author.ban(reason="Reported by admin")
+                await message.channel.send("✅ User banned and added to training examples.")
+            except Exception as e:
+                logging.error(f"Error banning reported user: {e}")
+        else:
+            text = reported_msg.content or "[image]"
+            view = ReportReviewView(
+                user_id=reported_msg.author.id,
+                username=str(reported_msg.author),
+                text=text,
+                message_id=reported_msg.id,
+                channel_id=reported_msg.channel.id
+            )
+            await message.channel.send(
+                f"🚨 Scam report by {message.author.mention}\n\n"
+                f"👤 Reported user: {reported_msg.author} (`{reported_msg.author.id}`)\n"
+                f"📝 Content: {text[:200]}",
+                view=view
+            )
+        return
+
     if message.author.guild_permissions.administrator:
         return
 
-    text = message.content
-
     # Image moderation
     if message.attachments:
-      for attachment in message.attachments:
-          if attachment.filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp')):
-              logging.info(f"Processing image: {attachment.filename}") 
-              image_bytes = await attachment.read()
-              logging.info(f"Image downloaded, size: {len(image_bytes)} bytes")
-              loop = asyncio.get_event_loop()
-              result = await loop.run_in_executor(None, classify_image, bytes(image_bytes))
-              if result == "BAN":
-                  await _ban_user(message, reason="Suspicious image")
-                  return
+        for attachment in message.attachments:
+            if attachment.filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.webp')):
+                loop = asyncio.get_event_loop()
+                image_bytes = await attachment.read()
+                result = await loop.run_in_executor(None, classify_image, bytes(image_bytes))
+                if result == "BAN":
+                    await _ban_user(message, reason="Suspicious image")
+                    return
 
-    if not text:
+    if not message.content:
         return
 
     # Text + URL classification
-    text_result = classify_message(text)
-    url_result = analyze_urls(text)
+    text = message.content
+    loop = asyncio.get_event_loop()
+    text_result = await loop.run_in_executor(None, classify_message, text)
+    url_result = await loop.run_in_executor(None, analyze_urls, text)
     result = "BAN" if text_result == "BAN" or url_result == "BAN" else "SAFE"
 
     if result == "BAN":
         await _ban_user(message, reason="Suspicious message")
     else:
         increment_stat('messages_safe')
+
 
 async def _ban_user(message: discord.Message, reason: str):
     """Delete message, ban user, notify admins with HITL buttons."""
@@ -74,16 +114,16 @@ async def _ban_user(message: discord.Message, reason: str):
         await message.delete()
         await message.author.ban(reason=reason)
 
-        # Send HITL notification with buttons
         view = HITLView(
             user_id=message.author.id,
             username=str(message.author),
-            text=message.content[:200]
+            text=message.content[:200] if message.content else "[image]"
         )
         await message.channel.send(
             f"⚠️ Suspicious content detected and removed.\n\n"
             f"👤 User: {message.author} (`{message.author.id}`)\n\n"
-            f"📝 Content: {message.content[:200]}{'...' if len(message.content) > 200 else ''}",
+            f"📝 Content: {message.content[:200] if message.content else '[image]'}"
+            f"{'...' if message.content and len(message.content) > 200 else ''}",
             view=view
         )
     except Exception as e:
@@ -91,8 +131,6 @@ async def _ban_user(message: discord.Message, reason: str):
 
 
 class HITLView(discord.ui.View):
-    """HITL inline buttons for admin review."""
-
     def __init__(self, user_id: int, username: str, text: str):
         super().__init__(timeout=None)
         self.user_id = user_id
@@ -104,8 +142,6 @@ class HITLView(discord.ui.View):
         if not interaction.user.guild_permissions.administrator:
             await interaction.response.send_message("Only admins can do this.", ephemeral=True)
             return
-        from vector_store import add_example
-        from github_sync import sync_example_to_github
         add_example(self.text, "BAN")
         sync_example_to_github(self.text, "BAN")
         increment_stat('bans_confirmed')
@@ -116,12 +152,9 @@ class HITLView(discord.ui.View):
         if not interaction.user.guild_permissions.administrator:
             await interaction.response.send_message("Only admins can do this.", ephemeral=True)
             return
-        from vector_store import add_example
-        from github_sync import sync_example_to_github
         add_example(self.text, "SAFE")
         sync_example_to_github(self.text, "SAFE")
         increment_stat('false_positives')
-        # Unban
         try:
             await interaction.guild.unban(discord.Object(id=self.user_id))
         except Exception as e:
@@ -129,9 +162,83 @@ class HITLView(discord.ui.View):
         await interaction.response.edit_message(content="❌ False positive confirmed. User unbanned.", view=None)
 
 
+@client.tree.context_menu(name="Report to SusMessageBot")
+async def report_context_menu(interaction: discord.Interaction, message: discord.Message):
+    await _handle_report(interaction, message)
+
+
+async def _handle_report(interaction: discord.Interaction, message: discord.Message):
+    await interaction.response.defer(ephemeral=True)
+    is_admin = interaction.user.guild_permissions.administrator
+
+    if is_admin:
+        text = message.content or "[image]"
+        add_example(text, "BAN")
+        sync_example_to_github(text, "BAN")
+        increment_stat('false_negatives')
+        try:
+            await message.delete()
+            await message.author.ban(reason="Reported by admin")
+            await interaction.followup.send("✅ User banned and message added to training examples.", ephemeral=True)
+        except Exception as e:
+            logging.error(f"Error banning reported user: {e}")
+            await interaction.followup.send("✅ Added to training examples. Could not ban user.", ephemeral=True)
+    else:
+        text = message.content or "[image]"
+        view = ReportReviewView(
+            user_id=message.author.id,
+            username=str(message.author),
+            text=text,
+            message_id=message.id,
+            channel_id=message.channel.id
+        )
+        await interaction.followup.send(
+            f"🚨 Scam report by {interaction.user.mention}\n\n"
+            f"👤 Reported user: {message.author} (`{message.author.id}`)\n"
+            f"📝 Content: {text[:200]}",
+            view=view
+        )
+
+
+class ReportReviewView(discord.ui.View):
+    def __init__(self, user_id: int, username: str, text: str, message_id: int, channel_id: int):
+        super().__init__(timeout=None)
+        self.user_id = user_id
+        self.username = username
+        self.text = text
+        self.message_id = message_id
+        self.channel_id = channel_id
+
+    @discord.ui.button(label="✅ Confirm Ban", style=discord.ButtonStyle.green)
+    async def confirm_ban(self, interaction: discord.Interaction, button: discord.ui.Button):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("Only admins can do this.", ephemeral=True)
+            return
+        add_example(self.text, "BAN")
+        sync_example_to_github(self.text, "BAN")
+        increment_stat('false_negatives')
+        try:
+            channel = interaction.guild.get_channel(self.channel_id)
+            if channel:
+                msg = await channel.fetch_message(self.message_id)
+                await msg.delete()
+            await interaction.guild.ban(discord.Object(id=self.user_id), reason="Confirmed by admin")
+            await interaction.response.edit_message(content="✅ Report confirmed. User banned.", view=None)
+        except Exception as e:
+            logging.error(f"Error banning reported user: {e}")
+            await interaction.response.edit_message(content="✅ Could not ban user — they may have already left.", view=None)
+
+    @discord.ui.button(label="❌ Dismiss", style=discord.ButtonStyle.red)
+    async def dismiss(self, interaction: discord.Interaction, button: discord.ui.Button):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("Only admins can do this.", ephemeral=True)
+            return
+        await interaction.response.edit_message(content="❌ Report dismissed.", view=None)
+
+
 def main():
     init_db()
-    bot.run(DISCORD_BOT_TOKEN)
+    client.run(DISCORD_BOT_TOKEN)
 
 if __name__ == "__main__":
     main()

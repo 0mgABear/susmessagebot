@@ -7,3 +7,4 @@ prometheus_client
 Pillow
 pytesseract
 beautifulsoup4
+discord.py
