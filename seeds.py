@@ -48,6 +48,8 @@ examples = [
     ('hi has anyone seen a navy blue Polo Ralph Lauren hoodie in as6-04-21? i lost it there saturday. if anyone has seen it please dm me @chenkeia. Thankss!', "SAFE"),
     ('I’m looking for two people\n\n• No need to go to an office\n• No need to use a computer\n• Fully flexible schedule\n• From day one: €315 per week\n\nRequirements:\n✅ Age between 18 and 65\n✅ No previous experience required\n\nInterested?\nSend me a private message with “+” 👉 @ashhley_1', "BAN"),
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
+    ('Pm me 9.9k', "BAN"),
+    ('🗺️ Tired of guessing Singapore rents?\n\nWe built a free community rent map where real tenants pin what they actually pay — HDB rooms, condos, landed, all areas.\n\n✅ 100% free\n✅ No sign-up needed\n✅ Pin your rent in 30 seconds\n✅ See real rents near any MRT or neighbourhood\n\nHelp your fellow Singaporeans make smarter rental decisions, please pin your rent👇\n\nsingaporerent dot sg', "BAN"),
 ]
 
 
