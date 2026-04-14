@@ -62,6 +62,7 @@ examples = [
     ('Earn $5000 a week working from home! DM me now for details', "BAN"),
     ('', "BAN"),
     ('Check this out: http://malware.wicar.org', "BAN"),
+    ('hihi this is legit message', "BAN"),
 ]
 
 
