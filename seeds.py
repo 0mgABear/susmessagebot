@@ -63,6 +63,7 @@ examples = [
     ('', "BAN"),
     ('Check this out: http://malware.wicar.org', "BAN"),
     ('hihi this is legit message', "BAN"),
+    ('final test', "BAN"),
 ]
 
 
