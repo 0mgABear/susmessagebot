@@ -24,5 +24,6 @@ jobs:
             source venv/bin/activate
             pip install -r requirements-vps.txt -q
             sudo systemctl restart susmessagebot
+            sudo systemctl restart susmessagebot-discord
             sleep 60
             curl --max-time 10 http://localhost:8001/health || exit 1

@@ -1,6 +1,6 @@
 # SusMessageBot
 
-Open-source Telegram AI Moderation Bot that is designed to protect the community by banning bad actors who send spam / scam messages.
+Open-source AI Moderation Bot for **Telegram** and **Discord**, designed to protect communities by detecting and banning scammers using semantic AI — not keyword rules.
 
 > ⚠️ This branch runs a **fully self-hosted LLM via Ollama** and requires a capable VPS (recommended: Oracle Cloud free ARM instance — 4 OCPUs, 24GB RAM). If you are unable to provision one, see the [groq-approach](https://github.com/0mgABear/susmessagebot/tree/groq-approach) branch which uses Groq's free API instead and runs on a lightweight e2-micro instance.
 
@@ -20,76 +20,97 @@ Singaporeans lost a record S$1.1 billion to scams in 2024 and S$913.1 million in
 
 coming soon
 
-## Technical Implementation:
+## Platform Support
 
-1. `bot.py` scans every incoming text message.
-2. Incoming text is sent to `moderator.py`, where it is first converted into an embedding (defined in `vector_store.py`).
-3. Input text embedding is then compared with existing labelled examples in ChromaDB to retrieve the most similar ones. (Retrieval-Augmented Generation)
-4. Retrieved examples and the system prompt are fed together to the local Ollama LLM, which returns a single classification: `BAN` or `SAFE`.
-5. URLs in the message are extracted and checked against a live malware blocklist (URLhaus) by `url_moderator.py`. Unknown domains are classified by the LLM.
-6. If text and URL checks pass, any `@usernames` in the message are scraped from `t.me` by `username_moderator.py` and their bios classified by the LLM.
-7. `bot.py` acts on the final classification — deleting the message and banning the user if `BAN`, doing nothing if `SAFE`.
-8. Images are handled separately by `image_moderator.py` — text is extracted via OCR (pytesseract) and passed to the same text classifier. Scammers who post screenshots don't get a free pass.
-9. On every ban, admins are notified in the group with two inline buttons: ✅ Correct Ban or ❌ Wrong Ban.
-10. Admin feedback is used to update ChromaDB in real time and sync `seeds.py` to the GitHub repository via the GitHub API — keeping the repository as the source of truth for all labelled examples. (Human-in-the-Loop)
-11. Every classification, ban, and false positive is tracked as a Prometheus metric, scraped by Grafana Alloy, and visualized in a live Grafana Cloud dashboard.
-12. Admins (or users pending admin approval) can use `/report` to flag missed scams — adding them to ChromaDB, syncing to GitHub, and tracking as false negatives in the monitoring dashboard.
-13. Group and member counts are tracked automatically — every new group the bot is added to is recorded, with member counts updated daily.
+| Feature                   | ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white) | ![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white) |
+| ------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Text moderation           | ✅                                                                                      | ✅                                                                                   |
+| Image moderation (OCR)    | ✅                                                                                      | ✅                                                                                   |
+| URL analysis              | ✅                                                                                      | ✅                                                                                   |
+| Username/profile analysis | ✅                                                                                      | ❌                                                                                   |
+| HITL feedback buttons     | ✅                                                                                      | ✅                                                                                   |
+| /report command           | ✅                                                                                      | ✅ (@ mention + context menu)                                                        |
+| /stats command            | ✅                                                                                      | ❌                                                                                   |
+| Group/member tracking     | ✅                                                                                      | ✅                                                                                   |
 
-## Tech Stack:
+## Technical Implementation
 
-1. **LLM:** Ollama (`gemma4:e2b`)
-2. **Vector Store:** ChromaDB
-3. **Embeddings:** sentence-transformers (`all-MiniLM-L6-v2`)
-4. **Image OCR:** pytesseract + Pillow
-5. **URL Analysis:** URLhaus blocklist + LLM fallback
-6. **Profile Scraping:** BeautifulSoup (`t.me`)
-7. **Bot Framework:** python-telegram-bot
-8. **Hosting:** Oracle Cloud Free Tier (ARM instance — 4 OCPUs, 24GB RAM)
-9. **Tunnel:** Cloudflare Tunnel
-10. **Example Sync:** GitHub API
-11. **Observability & Monitoring:** Prometheus + Grafana Alloy + Grafana Cloud
-12. **CI/CD:** GitHub Actions
+### Telegram (`bot.py`)
+
+1. Every incoming text message is classified by `moderator.py` — converted into an embedding, compared against labelled examples in ChromaDB (RAG), and fed to the local Ollama LLM for a `BAN` or `SAFE` verdict.
+2. URLs in the message are extracted and checked against a live malware blocklist (URLhaus) by `url_moderator.py`. Unknown domains are classified by the LLM.
+3. If text and URL checks pass, any `@usernames` in the message are scraped from `t.me` by `username_moderator.py` and their bios classified by the LLM.
+4. Images are handled by `image_moderator.py` — text is extracted via OCR (pytesseract) and passed to the same text classifier.
+5. On every ban, admins are notified with ✅ Correct Ban or ❌ Wrong Ban buttons.
+6. Admin feedback updates ChromaDB in real time and syncs `seeds.py` to GitHub via the GitHub API (Human-in-the-Loop).
+7. Every classification, ban, and false positive is tracked as a Prometheus metric and visualized in a live Grafana Cloud dashboard.
+
+### Discord (`bot_discord.py`)
+
+1. Every incoming message is classified using the same text, image, and URL classifiers as the Telegram bot.
+2. Admins can report missed scams by replying to a message and tagging `@SusMessageBot`, or via right-click → Apps → **Report to SusMessageBot**.
+3. HITL feedback buttons (✅ Correct Ban / ❌ Wrong Ban) are sent on every ban for admin review.
+4. On joining a new server, the bot sends a setup message with required permissions.
+
+## Tech Stack
+
+| Component              | Technology                                       |
+| ---------------------- | ------------------------------------------------ |
+| LLM                    | Ollama (`gemma4:e2b`)                            |
+| Vector Store           | ChromaDB                                         |
+| Embeddings             | sentence-transformers (`all-MiniLM-L6-v2`)       |
+| Image OCR              | pytesseract + Pillow                             |
+| URL Analysis           | URLhaus blocklist + LLM fallback                 |
+| Profile Scraping       | BeautifulSoup (`t.me`)                           |
+| Telegram Bot Framework | python-telegram-bot                              |
+| Discord Bot Framework  | discord.py                                       |
+| Hosting                | Oracle Cloud Free Tier (ARM — 4 OCPUs, 24GB RAM) |
+| Tunnel                 | Cloudflare Tunnel                                |
+| Example Sync           | GitHub API                                       |
+| Observability          | Prometheus + Grafana Alloy + Grafana Cloud       |
+| CI/CD                  | GitHub Actions                                   |
 
 ## Human-in-the-Loop (HITL) Feedback System
 
-Every time the bot bans a user, admins are presented with two buttons in the group:
+Every time the bot bans a user, admins are presented with two buttons:
 
 - ✅ **Correct Ban** — confirms the ban and adds the message as a BAN example to ChromaDB and `seeds.py`
 - ❌ **Wrong Ban** — marks it as a false positive, unbans the user, and adds the message as a SAFE example to ChromaDB and `seeds.py`
 
-This means the bot gets smarter over time with every admin correction, without any manual retraining.
+The bot gets smarter over time with every admin correction — no manual retraining needed.
 
 Credit: This HITL feedback idea was proposed by Dr Mo Yin, a very close and treasured friend of mine. Thank you for the friendship!
 
-## /report Command
-
-If the bot misses a scam (false negative), it can be manually reported:
+## Telegram: /report Command
 
 - **Admins** — reply to the scam message with `/report`. The user is immediately banned and the message is added to training examples.
 - **Non-admins** — reply with `/report` to flag for admin review. Admins are notified with ✅ Confirm Ban or ❌ Dismiss buttons.
 
-False negatives are tracked separately in the monitoring dashboard.
+## Discord: Reporting
 
-## /stats Command
+- **Reply + @SusMessageBot** — reply to any suspicious message and tag `@SusMessageBot`. Admins get an immediate ban; non-admins trigger an admin review.
+- **Right-click → Apps → Report to SusMessageBot** — context menu report for any message.
 
-Admins can type `/stats` in any group to get a summary:
+## /stats Command (Telegram only)
+
+Admins can type `/stats` in any group to get a live summary:
 
 - Groups protected
 - Members protected
 - Messages scanned
 - Total bans
-- Accuracy rate (based on human-in-the-loop feedback)
+- Accuracy rate (based on HITL feedback)
 
-Accuracy is calculated as: confirmed correct classifications / (correct + false positives + false negatives). All safe classifications are assumed correct until an admin uses `/report` to flag a missed scam.
+Accuracy is calculated as: confirmed correct classifications / (correct + false positives + false negatives).
 
 ## Pros
 
 1. Fully self-hosted — messages never leave your server
 2. No API costs or rate limits
-3. Multimodal — detects scams in text, images, URLs, and user profiles
-4. Self-improving via HITL feedback
-5. Full control over the model and infrastructure
+3. Multi-platform — Telegram and Discord
+4. Multimodal — detects scams in text, images, and URLs
+5. Self-improving via HITL feedback
+6. Full control over the model and infrastructure
 
 ## Cons
 
@@ -103,73 +124,81 @@ As this bot is in the initial deployment stages, please expect a fair number of 
 
 ## Data Privacy
 
-All message content is processed entirely on your own server. No message text is ever sent to any third-party API or external service. The LLM runs locally via Ollama, embeddings are generated locally via sentence-transformers, and all data stays within your infrastructure.
+All message content is processed entirely on your own server. No message text is ever sent to any third-party API or external service.
 
 The only external calls made are:
 
-- Telegram API (to receive and act on messages — inherent to any Telegram bot)
+- Telegram/Discord API (to receive and act on messages — inherent to any bot)
 - GitHub API (to sync labelled examples to your own repository)
-- Grafana Cloud (metrics only — message content is never included in metrics)
+- Grafana Cloud (metrics only — message content is never included)
 - URLhaus (domain blocklist download only — no message content sent)
 - `t.me` (public profile scraping for username analysis — username only, no message content)
 
-## Pre-Requisite:
+## Pre-Requisites
 
 - Python 3.12+
 - [Ollama](https://ollama.com) installed and running
 - A Telegram Bot Token from [@BotFather](https://t.me/BotFather)
+- A Discord Bot Token from the [Discord Developer Portal](https://discord.com/developers/applications)
 - `tesseract-ocr` installed on your system (`sudo apt install tesseract-ocr`)
 
 ## Setup
 
 1. Clone the repository.
 
-2. Create and activate venv
+2. Create and activate venv:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. Install dependencies
+3. Install dependencies:
 
 ```bash
 pip install -r requirements-vps.txt
 ```
 
-4. Configure environment variables
+4. Configure environment variables:
 
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` and add your credentials:
+Edit `.env`:
 
 ```
 TELEGRAM_BOT_TOKEN=your_token_here
+DISCORD_BOT_TOKEN=your_token_here
 GITHUB_TOKEN=your_github_pat_here
 GITHUB_REPO=yourusername/susmessagebot
 GITHUB_BRANCH=main
-OLLAMA_HOST=http://localhost:port
+OLLAMA_HOST=http://localhost:11434
 OLLAMA_MODEL=gemma4:e2b
 ```
 
-5. Pull the LLM model
+5. Pull the LLM model:
 
 ```bash
 ollama pull gemma4:e2b
 ```
 
-6. Seed ChromaDB with initial examples
+6. Seed ChromaDB with initial examples:
 
 ```bash
 python seeds.py
 ```
 
-7. Run the bot
+7. Run the Telegram bot:
 
 ```bash
 python bot.py
+```
+
+8. Run the Discord bot:
+
+```bash
+python bot_discord.py
 ```
 
 ## Roadmap
@@ -181,12 +210,12 @@ python bot.py
 - [x] Image moderation via OCR
 - [x] URL analysis with malware blocklist
 - [x] Username/profile analysis via t.me scraping
+- [x] Discord support
 - [ ] Voice message moderation
 - [ ] Multi-language support
 - [ ] Video moderation
 - [ ] Full multimodal image RAG
 - [ ] Agentic workflows with native function calling
-- [ ] Discord support
 
 ## Contributing
 
@@ -200,7 +229,7 @@ Please ensure:
 
 ## Sponsorship
 
-Running this bot at scale requires paid infrastructure. If this project has been useful to you and you'd like to help cover hosting costs or support further development, consider sponsoring:
+Running this bot at scale requires paid infrastructure. If this project has been useful to you, consider supporting:
 
 - ⭐ Star the repo to show support
 - ❤️ [GitHub Sponsors](https://github.com/sponsors/0mgABear)

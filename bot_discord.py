@@ -3,12 +3,13 @@ from discord import app_commands
 from moderator import classify_message
 from image_moderator import classify_image
 from url_moderator import analyze_urls, load_blocklist
-from stats import init_db, get_stat, increment_stat
 from config import DISCORD_BOT_TOKEN
 from github_sync import sync_example_to_github
 from vector_store import add_example
 import logging
 import asyncio
+from prometheus_client import Gauge
+from stats import init_db, get_stat, increment_stat, add_group, get_groups_count, get_total_members
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -29,13 +30,39 @@ class SusMessageBot(discord.Client):
         logging.info(f"Synced {len(synced)} commands globally")
 
 client = SusMessageBot()
+GROUPS_COUNT = Gauge('discord_groups_count_total', 'Number of Discord servers bot is in')
+MEMBERS_PROTECTED = Gauge('discord_members_protected_total', 'Total Discord members protected')
 
 @client.event
 async def on_ready():
     load_blocklist()
-    logging.info(f"Bot ready — logged in as {client.user}")
     for guild in client.guilds:
-        logging.info(f"Connected to server: {guild.name} ({guild.id})")
+        add_group(guild.id, guild.member_count)
+    GROUPS_COUNT.set(get_groups_count())
+    MEMBERS_PROTECTED.set(get_total_members())
+    logging.info(f"Bot ready — logged in as {client.user}")
+
+@client.event
+async def on_guild_join(guild: discord.Guild):
+    add_group(guild.id, guild.member_count)
+    GROUPS_COUNT.set(get_groups_count())
+    MEMBERS_PROTECTED.set(get_total_members())
+    logging.info(f"Joined new server: {guild.name} ({guild.id}) with {guild.member_count} members")
+
+    channel = guild.system_channel or next(
+        (c for c in guild.text_channels if c.permissions_for(guild.me).send_messages), None
+    )
+    if channel:
+        await channel.send(
+            "👋 Thanks for adding SusMessageBot! I am an AI Anti-Scam Moderation Bot!\n\n"
+            "Please ensure I have these permissions:\n"
+            "✅ Ban Members\n"
+            "✅ Manage Messages\n"
+            "✅ View Channels\n"
+            "✅ Send Messages\n"
+            "✅ Read Message History\n\n"
+            "Once set up, I'll automatically moderate scam messages and protect your group!"
+        )
 
 @client.event
 async def on_message(message: discord.Message):
@@ -55,7 +82,7 @@ async def on_message(message: discord.Message):
             try:
                 await reported_msg.delete()
                 await reported_msg.author.ban(reason="Reported by admin")
-                await message.channel.send("✅ User banned and added to training examples.")
+                await message.channel.send("✅ User banned.")
             except Exception as e:
                 logging.error(f"Error banning reported user: {e}")
         else:
@@ -179,7 +206,7 @@ async def _handle_report(interaction: discord.Interaction, message: discord.Mess
         try:
             await message.delete()
             await message.author.ban(reason="Reported by admin")
-            await interaction.followup.send("✅ User banned and message added to training examples.", ephemeral=True)
+            await interaction.followup.send("✅ User banned.", ephemeral=True)
         except Exception as e:
             logging.error(f"Error banning reported user: {e}")
             await interaction.followup.send("✅ Added to training examples. Could not ban user.", ephemeral=True)
