@@ -16,6 +16,8 @@ Singaporeans lost a record S$1.1 billion to scams in 2024 and S$913.1 million in
 
 [susmessagebot.commonertech.dev/dashboard](https://susmessagebot.commonertech.dev/dashboard)
 
+Tested and working on Chrome, Edge, Brave, Safari, and Firefox. Requires localStorage to be enabled — privacy-hardened browsers (e.g. LibreWolf) may need to allow localStorage for the dashboard domain.
+
 ## Architecture (Diagram)
 
 coming soon
