@@ -60,6 +60,7 @@ examples = [
     ('contact @Kulwinder_kaur_Gill_company for jobs (testing)', "BAN"),
     ('enough sg? @ra_cy7', "BAN"),
     ('Earn $5000 a week working from home! DM me now for details', "BAN"),
+    ('', "BAN"),
 ]
 
 
