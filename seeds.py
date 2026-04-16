@@ -50,6 +50,7 @@ examples = [
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
     ('Pm me 9.9k', "BAN"),
     ('🗺️ Tired of guessing Singapore rents?\n\nWe built a free community rent map where real tenants pin what they actually pay — HDB rooms, condos, landed, all areas.\n\n✅ 100% free\n✅ No sign-up needed\n✅ Pin your rent in 30 seconds\n✅ See real rents near any MRT or neighbourhood\n\nHelp your fellow Singaporeans make smarter rental decisions, please pin your rent👇\n\nsingaporerent dot sg', "BAN"),
+    ('Job Opportunities \n2 Task;\nPm to make 1100SGD\nQuick and fast deal\nSecond Task:\nNumber for otp also\nEarn $300\nInterested heads only', "BAN"),
 ]
 
 
