@@ -3,6 +3,8 @@ from config import OLLAMA_HOST, OLLAMA_MODEL
 from vector_store import get_similar_examples
 import logging
 from utils import normalize_text
+from utils import normalize_text, pre_filter
+
 
 def classify_message(message: str) -> str:
     """
@@ -15,7 +17,10 @@ def classify_message(message: str) -> str:
         "BAN" if the message is a scam/spam, "SAFE" otherwise
     """
     message = normalize_text(message)
-    logging.info(f"Normalized text: {message[:300]}")
+    if pre_filter(message):
+        logging.info("Pre-filter BAN triggered")
+        return "BAN"
+
     examples = get_similar_examples(message)
     system_prompt = """
 
