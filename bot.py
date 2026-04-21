@@ -20,6 +20,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
+logging.getLogger("httpx").setLevel(logging.WARNING)
+
 
 # Prometheus metrics for Grafana 
 MESSAGES_CLASSIFIED_SAFE = Gauge('messages_classified_safe_total', 'SAFE classifications')

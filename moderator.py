@@ -64,6 +64,12 @@ def classify_message(message: str) -> str:
     - Links to unknown domains promising rewards, prizes, jobs, or services
     - Phishing links disguised as legitimate platforms
     - URL shorteners leading to suspicious destinations
+    
+    **Unsolicited commercial advertising**
+    - Promoting commercial services (VoIP, SMS, telecom, software, bulk messaging) to groups without context
+    - Cold outreach advertising products or services with "DM me" or contact details
+    - Services commonly associated with fraud, scam infrastructure, or law enforcement evasion — such as bulk SMS, SIP trunking, DID numbers, VoIP resellers, anonymous calling services, or untraceable communication tools
+    - Messages advertising these services even if phrased professionally or as legitimate B2B offers
 
     ## SAFE Categories
     The following must always be classified as SAFE, even if they seem unusual:
