@@ -2,6 +2,7 @@ import requests
 from config import OLLAMA_HOST, OLLAMA_MODEL
 from vector_store import get_similar_examples
 import unicodedata
+import logging
 
 def normalize_text(text: str) -> str:
     return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
