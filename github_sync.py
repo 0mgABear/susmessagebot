@@ -28,6 +28,10 @@ def sync_example_to_github(message: str, label: str) -> None:
     sha = data["sha"]
     current_content = base64.b64decode(data["content"]).decode("utf-8")
 
+    if repr(message) in current_content:
+        print("Example already exists in seeds.py, skipping.")
+        return
+
     # Append new example inside the examples list, before the closing ]
     new_line = f'    ({repr(message)}, "{label}"),\n'
     updated_content = current_content.replace(
