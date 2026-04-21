@@ -103,20 +103,27 @@ def classify_message(message: str) -> str:
     Respond with exactly one word: SAFE or BAN
     """
 
-    response = requests.post(
-        f"{OLLAMA_HOST}/api/chat",
-        json={
-            "model": OLLAMA_MODEL,
-            "think": False,
-            "messages": [
-                {"role": "system", "content": system_prompt.format(examples=examples)},
-                {"role": "user", "content": f"<message>{message}</message>"}
-            ],
-            "stream": False
-        },
-        timeout=60
-    )
-    result = response.json()["message"]["content"].strip().upper()
-    if result not in ["SAFE", "BAN"]:
+    try:
+        response = requests.post(
+            f"{OLLAMA_HOST}/api/chat",
+            json={
+                "model": OLLAMA_MODEL,
+                "think": False,
+                "messages": [
+                    {"role": "system", "content": system_prompt.format(examples=examples)},
+                    {"role": "user", "content": f"<message>{message}</message>"}
+                ],
+                "stream": False
+            },
+            timeout=60
+        )
+        result = response.json()["message"]["content"].strip().upper()
+        if result not in ["SAFE", "BAN"]:
+            return "SAFE"
+        return result
+    except requests.Timeout:
+        logging.warning("Ollama timeout — defaulting to SAFE")
         return "SAFE"
-    return result
+    except Exception as e:
+        logging.error(f"Ollama error: {e}")
+        return "SAFE"
