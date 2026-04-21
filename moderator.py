@@ -16,7 +16,8 @@ def classify_message(message: str) -> str:
     Returns:
         "BAN" if the message is a scam/spam, "SAFE" otherwise
     """
-    message = normalize_text(message)  # add this
+    message = normalize_text(message)
+    logging.info(f"Normalized text: {message[:100]}")
     examples = get_similar_examples(message)
     system_prompt = """
 
