@@ -53,6 +53,7 @@ examples = [
     ('Job Opportunities \n2 Task;\nPm to make 1100SGD\nQuick and fast deal\nSecond Task:\nNumber for otp also\nEarn $300\nInterested heads only', "BAN"),
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
+    ('Pm now if int in 9.9k', "BAN"),
 ]
 
 
