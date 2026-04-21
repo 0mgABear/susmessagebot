@@ -109,6 +109,7 @@ def classify_message(message: str) -> str:
             json={
                 "model": OLLAMA_MODEL,
                 "think": False,
+                "options": {"num_ctx": 8192}, 
                 "messages": [
                     {"role": "system", "content": system_prompt.format(examples=examples)},
                     {"role": "user", "content": f"<message>{message}</message>"}
