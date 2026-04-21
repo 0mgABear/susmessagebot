@@ -1,6 +1,10 @@
 import requests
 from config import OLLAMA_HOST, OLLAMA_MODEL
 from vector_store import get_similar_examples
+import unicodedata
+
+def normalize_text(text: str) -> str:
+    return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('ascii')
 
 def classify_message(message: str) -> str:
     """
@@ -12,6 +16,7 @@ def classify_message(message: str) -> str:
     Returns:
         "BAN" if the message is a scam/spam, "SAFE" otherwise
     """
+    message = normalize_text(message)  # add this
     examples = get_similar_examples(message)
     system_prompt = """
 
