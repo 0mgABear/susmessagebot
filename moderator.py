@@ -113,7 +113,8 @@ def classify_message(message: str) -> str:
                 {"role": "user", "content": f"<message>{message}</message>"}
             ],
             "stream": False
-        }
+        },
+        timeout=60
     )
     result = response.json()["message"]["content"].strip().upper()
     if result not in ["SAFE", "BAN"]:
