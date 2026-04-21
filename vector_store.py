@@ -21,6 +21,7 @@ warnings.filterwarnings("ignore")
 logging.getLogger("sentence_transformers").setLevel(logging.ERROR)
 transformers.logging.set_verbosity_error()
 hf_logging.set_verbosity_error()
+from utils import normalize_text
 
 
 # Initialise embedding model and ChromaDB
@@ -36,6 +37,7 @@ def add_example(message: str, label: str) -> None:
     message: The example text
     label: "SAFE" or "BAN"
   """
+  message = normalize_text(message)
   embedding = embedding_model.encode(message).tolist()
   collection.upsert(
     embeddings = [embedding],
@@ -56,6 +58,7 @@ def get_similar_examples(message:str) -> str:
   """
   if collection.count() == 0:
     return ""
+  message = normalize_text(message)
   embedding = embedding_model.encode(message).tolist()
   results = collection.query(
     query_embeddings=[embedding],
