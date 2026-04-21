@@ -50,6 +50,11 @@ examples = [
     ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
     ('Pm me 9.9k', "BAN"),
     ('🗺️ Tired of guessing Singapore rents?\n\nWe built a free community rent map where real tenants pin what they actually pay — HDB rooms, condos, landed, all areas.\n\n✅ 100% free\n✅ No sign-up needed\n✅ Pin your rent in 30 seconds\n✅ See real rents near any MRT or neighbourhood\n\nHelp your fellow Singaporeans make smarter rental decisions, please pin your rent👇\n\nsingaporerent dot sg', "BAN"),
+    ('Job Opportunities \n2 Task;\nPm to make 1100SGD\nQuick and fast deal\nSecond Task:\nNumber for otp also\nEarn $300\nInterested heads only', "BAN"),
+    ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
+    ('Chop chop chop wrk 5.9k pm free job fast job', "BAN"),
+    ('Pm now if int in 9.9k', "BAN"),
+    ('🔥 𝙉𝙊 𝙉𝙊𝙄𝙎𝙀. 𝙅𝙐𝙎𝙏 𝙍𝙀𝙎𝙐𝙇𝙏𝙎 🔥\n\n𝙏𝙞𝙧𝙚𝙙 𝙤𝙛 𝙗𝙖𝙙 𝙑𝙤𝙄𝙋 𝙧𝙤𝙪𝙩𝙚𝙨 & 𝙪𝙣𝙨𝙩𝙖𝙗𝙡𝙚 𝙎𝙄𝙋?\n𝙎𝙩𝙤𝙥 𝙡𝙤𝙨𝙞𝙣𝙜 𝙘𝙖𝙡𝙡𝙨. 𝙁𝙞𝙭 𝙞𝙩 𝙩𝙤𝙙𝙖𝙮 ⚡️\n\n🌐 𝙎𝙄𝙋 𝙏𝙧𝙪𝙣𝙠 (𝙄𝙣𝙗𝙤𝙪𝙣𝙙/𝙊𝙪𝙩𝙗𝙤𝙪𝙣𝙙)\n\n📡 𝘽𝙪𝙡𝙠 𝙎𝙈𝙎 (𝙒𝙤𝙧𝙡𝙙𝙬𝙞𝙙𝙚)\n\n📞 𝘿𝙄𝘿 𝙉𝙪𝙢𝙗𝙚𝙧𝙨 (𝙐𝙎𝘼/𝙐𝙆/𝘾𝘼 + 𝙢𝙤𝙧𝙚)\n\n👑 𝙄𝙑𝙍 & 𝘾𝙖𝙡𝙡 𝘾𝙚𝙣𝙩𝙚𝙧 𝙎𝙚𝙩𝙪𝙥\n\n\n⚡️ 𝙎𝙩𝙖𝙗𝙡𝙚 | 𝙁𝙖𝙨𝙩 | 𝙍𝙚𝙡𝙞𝙖𝙗𝙡𝙚\n\n📩 𝘿𝙈 @𝙨𝙥𝙤𝙤𝙛𝙞𝙣𝙜_𝙘𝙖𝙡𝙡𝙚𝙧02', "BAN"),
 ]
 
 
