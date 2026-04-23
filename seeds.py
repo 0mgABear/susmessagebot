@@ -57,6 +57,7 @@ examples = [
     ('Sgjbcheckpointgroup', "SAFE"),
     ('@xllyzx1', "BAN"),
     ('bus to sg go? @sicklegurl', "BAN"),
+    ('Check her page @mikay835', "BAN"),
 ]
 
 
