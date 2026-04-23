@@ -58,6 +58,7 @@ examples = [
     ('@xllyzx1', "BAN"),
     ('bus to sg go? @sicklegurl', "BAN"),
     ('Check her page @mikay835', "BAN"),
+    ('I’m looking for two people\n\n• No need to go to an office\n• No need to use a computer\n• Fully flexible schedule\n• From day one: €350 per week\n\nRequirements:\n✅ Age between 18 and 65\n✅ No previous experience required\n\nInterested?\nSend me a private message with “+” 👉 @ashhley_1', "BAN"),
 ]
 
 
