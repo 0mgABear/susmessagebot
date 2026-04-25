@@ -62,6 +62,7 @@ examples = [
     ('offer available  chck my story !!! \nPm if also want', "BAN"),
     ('I’m available for cybersecurity and blackhat work.\nWebsite attacks, website creation & cloning, database extraction, all-country databases, and Office leads.', "BAN"),
     ('Busses still? @sgpeear', "BAN"),
+    ('Fast job 1.2 pm now', "BAN"),
 ]
 
 
