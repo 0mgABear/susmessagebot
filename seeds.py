@@ -63,6 +63,7 @@ examples = [
     ('I’m available for cybersecurity and blackhat work.\nWebsite attacks, website creation & cloning, database extraction, all-country databases, and Office leads.', "BAN"),
     ('Busses still? @sgpeear', "BAN"),
     ('Fast job 1.2 pm now', "BAN"),
+    ('I’m looking for some motivated people.\n\nWhat I offer:\n• 100% online earnings.\n• All you need is a smartphone.\n• Average actual earnings: ~€315 per week.\n\nSpots are very limited - there are only a few left.\n\nWant to know what this is all about?\n→ Just send a private message with “+” to 👉 @ashhley_1', "BAN"),
 ]
 
 
