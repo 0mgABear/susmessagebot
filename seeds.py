@@ -65,6 +65,7 @@ examples = [
     ('Fast job 1.2 pm now', "BAN"),
     ('I’m looking for some motivated people.\n\nWhat I offer:\n• 100% online earnings.\n• All you need is a smartphone.\n• Average actual earnings: ~€315 per week.\n\nSpots are very limited - there are only a few left.\n\nWant to know what this is all about?\n→ Just send a private message with “+” to 👉 @ashhley_1', "BAN"),
     ('Looking for unusual content? 🔥\nJust come in here and those who have already joined will not regret it 😉\nCheck the link in bio now before you miss it', "BAN"),
+    ('Anyone used the KTM bot recently? Have an issue with my ticket purchase and WhatsApp-ed the support number/called since 3 days ago and no replies. Even tried emailing the email address they provided support@theticketbot.com but it says this email is non existent.', "SAFE"),
 ]
 
 
