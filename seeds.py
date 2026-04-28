@@ -69,6 +69,7 @@ examples = [
     ('Check her page @neesaxo', "BAN"),
     ('hello darling , on srvice massage 🫧🫧', "BAN"),
     ('People needed fast Job 7.9k check story if can\n\n @Juel19  urgent pm', "BAN"),
+    ('how’s sg to jb? @BB_pear', "BAN"),
 ]
 
 
