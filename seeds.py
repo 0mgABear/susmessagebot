@@ -73,6 +73,7 @@ examples = [
     ('https://www.tiktok.com/@trustedhandymansg?_r=1&_t=ZS-95uIA5M7Hmf', "BAN"),
     ('that’s ago @URsicklegurl', "BAN"),
     ('Anyone interested in 9.9k pm dm \nFree work \nGood work', "BAN"),
+    ('offer available   Urgent work Payout 2.7k check story   @juh024 Pm if also want !!!!', "BAN"),
 ]
 
 
