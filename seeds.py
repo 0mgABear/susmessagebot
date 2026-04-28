@@ -67,6 +67,7 @@ examples = [
     ('Looking for unusual content? 🔥\nJust come in here and those who have already joined will not regret it 😉\nCheck the link in bio now before you miss it', "BAN"),
     ('Anyone used the KTM bot recently? Have an issue with my ticket purchase and WhatsApp-ed the support number/called since 3 days ago and no replies. Even tried emailing the email address they provided support@theticketbot.com but it says this email is non existent.', "SAFE"),
     ('Check her page @neesaxo', "BAN"),
+    ('hello darling , on srvice massage 🫧🫧', "BAN"),
 ]
 
 
