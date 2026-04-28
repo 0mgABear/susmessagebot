@@ -72,6 +72,7 @@ examples = [
     ('how’s sg to jb? @BB_pear', "BAN"),
     ('https://www.tiktok.com/@trustedhandymansg?_r=1&_t=ZS-95uIA5M7Hmf', "BAN"),
     ('that’s ago @URsicklegurl', "BAN"),
+    ('Anyone interested in 9.9k pm dm \nFree work \nGood work', "BAN"),
 ]
 
 
