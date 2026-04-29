@@ -76,6 +76,7 @@ examples = [
     ('offer available   Urgent work Payout 2.7k check story   @juh024 Pm if also want !!!!', "BAN"),
     ('OBTAIN YOUR FULL DRIVING LICENCE\n\n DRIVING LICENCE DVLA APPROVED \n\nFULL LICENSE ✅💯\nPROVISIONAL✅ 💯\nBAN UPLIFTING✅ 💯\nDVLA APPROVED ✅💯', "BAN"),
     ('Tell me the tool to bypass OTP', "BAN"),
+    ('Tap sg to jb ! @xy_pea', "BAN"),
 ]
 
 
