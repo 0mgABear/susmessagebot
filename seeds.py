@@ -79,6 +79,7 @@ examples = [
     ('Tap sg to jb ! @xy_pea', "BAN"),
     ('Any update on the SG > JB immigration now? Any human traffic queue ?', "SAFE"),
     ('@xllyzx1\n\n\n\n\n\n@xllyzx1', "BAN"),
+    ('@GroupHelpBot hi my friend @WarrenWonder got banned after asking hows the queue like today, possible to get him unbanned?', "SAFE"),
 ]
 
 
