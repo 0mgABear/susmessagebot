@@ -78,6 +78,7 @@ examples = [
     ('Tell me the tool to bypass OTP', "BAN"),
     ('Tap sg to jb ! @xy_pea', "BAN"),
     ('Any update on the SG > JB immigration now? Any human traffic queue ?', "SAFE"),
+    ('@xllyzx1\n\n\n\n\n\n@xllyzx1', "BAN"),
 ]
 
 
