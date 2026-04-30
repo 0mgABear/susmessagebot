@@ -80,6 +80,7 @@ examples = [
     ('Any update on the SG > JB immigration now? Any human traffic queue ?', "SAFE"),
     ('@xllyzx1\n\n\n\n\n\n@xllyzx1', "BAN"),
     ('@GroupHelpBot hi my friend @WarrenWonder got banned after asking hows the queue like today, possible to get him unbanned?', "SAFE"),
+    ('https://www.causewaylink.com.my/cw2-runs-24-hours-starting-from-august-1-2022/ theres 24hours cw bus', "SAFE"),
 ]
 
 
