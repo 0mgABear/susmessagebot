@@ -83,6 +83,7 @@ examples = [
     ('https://www.causewaylink.com.my/cw2-runs-24-hours-starting-from-august-1-2022/ theres 24hours cw bus', "SAFE"),
     ('tap @xy_pea', "BAN"),
     ('I’m looking for some motivated people.\n\nWhat I offer:\n• 100% online earnings.\n• All you need is a smartphone.\n• Average actual earnings: ~€350 per week.\n\nSpots are very limited - there are only a few left.\n\nWant to know what this is all about?\n→ Just send a private message with “+” to 👉 @ashhley_1', "BAN"),
+    ('For Jb to sg @URserii', "BAN"),
 ]
 
 
