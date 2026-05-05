@@ -87,6 +87,7 @@ examples = [
     ('🔠🅰️😊😚,  😊🔡🍓🔠 🤩🔤🤩\n\n🇺🇸 𝐔𝐒𝐀 𝐓𝐨𝐥𝐥-𝐅𝐫𝐞𝐞 𝐍𝐮𝐦𝐛𝐞𝐫𝐬 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 (𝟖𝟎𝟎 / 𝟖𝟖𝟖 / 𝟖𝟕𝟕 / 𝟖𝟔𝟔)\n\n  🚀 𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 & 𝐑𝐞𝐥𝐢𝐚𝐛𝐥𝐞 𝐂𝐚𝐥𝐥𝐢𝐧𝐠 𝐟𝐨𝐫 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬𝐞𝐬\n\n🔥 🇺🇸 𝗨𝗦𝗔 | 🇦🇺 𝗔𝘂𝘀𝘁𝗿𝗮𝗹𝗶𝗮 | 🇬🇧 𝗨𝗞\n🇨🇦 𝗖𝗮𝗻𝗮𝗱𝗮 | 🇳🇱 𝗡𝗲𝘁𝗵𝗲𝗿𝗹𝗮𝗻𝗱𝘀 | 🇵🇱 𝗣𝗼𝗹𝗮𝗻𝗱 | SPAIN🇪🇸\n🇵🇹 𝗣𝗼𝗿𝘁𝘂𝗴𝗮𝗹 | 🇨🇭 𝗦𝘄𝗶𝘁𝘇𝗲𝗿𝗹𝗮𝗻𝗱 | 🇧🇪 𝗕𝗲𝗹𝗴𝗶𝘂𝗺\xa0 🇭🇰 Hong Kong \n\n ✅ 𝐈𝐧𝐛𝐨𝐮𝐧𝐝 & 𝐎𝐮𝐭𝐛𝐨𝐮𝐧𝐝 𝐂𝐚𝐥𝐥𝐢𝐧𝐠\n ✅ 𝐂𝐚𝐥𝐥 𝐂𝐞𝐧𝐭𝐞𝐫 & 𝐓𝐞𝐥𝐞𝐦𝐚𝐫𝐤𝐞𝐭𝐢𝐧𝐠 𝐑𝐞𝐚𝐝\n ✅ 𝐈𝐕𝐑, 𝐒𝐈𝐏 𝐓𝐫𝐮𝐧𝐤 \n ✅ 3CX Configuration \n ✅ 𝐂𝐥𝐞𝐚𝐧 𝐑𝐨𝐮𝐭𝐞𝐬 • 𝐇𝐢𝐠𝐡 𝐀𝐧𝐬𝐰𝐞𝐫 𝐑𝐚𝐭𝐞  \n\n \n📌All PROVIDERS AVAILABLE SUCH AS \n\n👍 TWILIO\n👍 TELNYX \n👍 DIDLOGIC \n👍 VONAGE \n👍 PBX\n👍 SIGNALWIRE\n👍 MESSAGEBIRD AND MORE\n\n 📩 Message me 👇👇\n✅ @proconnect_sip\n✅ @proconnect_sip\nJoin channel @proconnect_hub for more', "BAN"),
     ('Ungrat wrk payout 2.3k look my story can do dm @muj031', "BAN"),
     ('For sg to jb? @URserii', "BAN"),
+    ('https://mothership.sg/2026/05/jb-checkpoint-crack-down-bus-illegal/?fbclid=IwdGRzaARmfdJjbGNrBGZ9y2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHmZt7Mjj3Pv7d9oSk1xh1LB895DSgZSiPhBVrr5Qypi5egcZ34-R1-8XZvhK_aem_TSfNBv-X8aLav7DOzxItuw&sfnsn=mo', "SAFE"),
 ]
 
 
