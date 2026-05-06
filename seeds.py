@@ -89,6 +89,7 @@ examples = [
     ('For sg to jb? @URserii', "BAN"),
     ('https://mothership.sg/2026/05/jb-checkpoint-crack-down-bus-illegal/?fbclid=IwdGRzaARmfdJjbGNrBGZ9y2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHmZt7Mjj3Pv7d9oSk1xh1LB895DSgZSiPhBVrr5Qypi5egcZ34-R1-8XZvhK_aem_TSfNBv-X8aLav7DOzxItuw&sfnsn=mo', "SAFE"),
     ('Hello 👋🏻 everyone I have a legitimate and reliable crypto platform that offers 5%-10% ROI daily of your investment, you can withdraw at any time. And they are really paying their investors here on telegram. Message me privately for more information if it interests you!', "BAN"),
+    ('Name sg to jb ? @URserii', "BAN"),
 ]
 
 
