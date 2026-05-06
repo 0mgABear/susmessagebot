@@ -91,6 +91,7 @@ examples = [
     ('Hello 👋🏻 everyone I have a legitimate and reliable crypto platform that offers 5%-10% ROI daily of your investment, you can withdraw at any time. And they are really paying their investors here on telegram. Message me privately for more information if it interests you!', "BAN"),
     ('Name sg to jb ? @URserii', "BAN"),
     ('Looking for pple who want good job payout now 1.8k dm', "BAN"),
+    ('for? @serixily', "BAN"),
 ]
 
 
