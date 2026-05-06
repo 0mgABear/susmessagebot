@@ -92,6 +92,7 @@ examples = [
     ('Name sg to jb ? @URserii', "BAN"),
     ('Looking for pple who want good job payout now 1.8k dm', "BAN"),
     ('for? @serixily', "BAN"),
+    ('Hows to queue from JB to SG?', "SAFE"),
 ]
 
 
