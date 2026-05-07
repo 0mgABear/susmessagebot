@@ -97,6 +97,7 @@ examples = [
     ('Good morning Jb to sg ? @serixily', "BAN"),
     ('I will tell ICA officer u said this and they’ll pat u down', "SAFE"),
     ("Hi! Not sure if this is allowed, if not allowed pls let me know I'll delete\n\nWill anyone be going KSL next few days? Could I trouble you to help me buy contacts from a store at ground floor? Will pay u first, thank you", "SAFE"),
+    ('🌞🌞🌞🌞🌞🌞🌞🌞\n\nGood morning 🌞🌞🌞🌞 \n\n\nP m \nNow \n\xa0\xa0 Fxxst\n\xa0\xa0\xa0 In \n\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 Come \n\n@Zhixaunpui🌞🌞\n🌞🌞🌞🌞🌞🌞🌞', "BAN"),
 ]
 
 
