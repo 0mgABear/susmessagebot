@@ -94,6 +94,7 @@ examples = [
     ('for? @serixily', "BAN"),
     ('Hows to queue from JB to SG?', "SAFE"),
     ('☄️ 𝐃𝐈𝐃 𝐍𝐮𝐦𝐛𝐞𝐫𝐬 & 𝐒𝐈𝐏 𝐓𝐫𝐮𝐧𝐤𝐬\n\n🌐 𝐆𝐥𝐨𝐛𝐚𝐥 𝐂𝐨𝐯𝐞𝐫𝐚𝐠𝐞: 🇺🇸 USA +1 (800 / 888)\n\n🇬🇧 UK +44\n🇨🇦 Canada +1\n🇦🇺 Austr\nalia +61\n🇳🇱 Netherlands +31\n🇵🇱 Poland +48\n🇨🇭 Switzerland +41\n\n⚡️ Instant Activation\n\n📞 Inbound & Outbound Calling\n\n⭐️ Up to 20 Channels\n\n✔️ Fully Compatible with 3CX\n\n✔️ Reliable • Secure • High-Quality Routes\n\n💬 DM Now: @NexvoDial👩\u200d🚀', "BAN"),
+    ('Good morning Jb to sg ? @serixily', "BAN"),
 ]
 
 
