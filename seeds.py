@@ -100,6 +100,7 @@ examples = [
     ('🌞🌞🌞🌞🌞🌞🌞🌞\n\nGood morning 🌞🌞🌞🌞 \n\n\nP m \nNow \n\xa0\xa0 Fxxst\n\xa0\xa0\xa0 In \n\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 Come \n\n@Zhixaunpui🌞🌞\n🌞🌞🌞🌞🌞🌞🌞', "BAN"),
     ('15+ @basexz', "BAN"),
     ('anyone can paynow me tng ewallet balance', "BAN"),
+    ('good job payout now 2.5k pm if also want !!', "BAN"),
 ]
 
 
