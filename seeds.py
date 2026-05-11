@@ -101,6 +101,7 @@ examples = [
     ('15+ @basexz', "BAN"),
     ('anyone can paynow me tng ewallet balance', "BAN"),
     ('good job payout now 2.5k pm if also want !!', "BAN"),
+    ('@pxly_ling', "BAN"),
 ]
 
 
