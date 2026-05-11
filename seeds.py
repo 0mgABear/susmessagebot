@@ -103,6 +103,7 @@ examples = [
     ('good job payout now 2.5k pm if also want !!', "BAN"),
     ('@pxly_ling', "BAN"),
     ('Have a nice trip to Cambodia. Want to bring more USD cash? You can some at airport. Rates are low. And bring back if rgere are left over', "BAN"),
+    ('open for? @Xp_seRi', "BAN"),
 ]
 
 
