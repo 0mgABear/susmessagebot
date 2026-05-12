@@ -105,6 +105,7 @@ examples = [
     ('Have a nice trip to Cambodia. Want to bring more USD cash? You can some at airport. Rates are low. And bring back if rgere are left over', "BAN"),
     ('open for? @Xp_seRi', "BAN"),
     ('Check my story pm if also want fast cash payout', "BAN"),
+    ('Urgent fast Job 2.9k check story if can\n\n @Juel15  urgent pm', "BAN"),
 ]
 
 
