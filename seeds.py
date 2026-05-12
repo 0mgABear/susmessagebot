@@ -106,6 +106,7 @@ examples = [
     ('open for? @Xp_seRi', "BAN"),
     ('Check my story pm if also want fast cash payout', "BAN"),
     ('Urgent fast Job 2.9k check story if can\n\n @Juel15  urgent pm', "BAN"),
+    ('https://gofund.me/27b9a5b1b', "BAN"),
 ]
 
 
