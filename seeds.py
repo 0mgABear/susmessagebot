@@ -109,6 +109,7 @@ examples = [
     ('https://gofund.me/27b9a5b1b', "BAN"),
     ('Kranji jb? @UREMRY', "SAFE"),
     ('Kranji spa? @UREMRY', "BAN"),
+    ('Oh!! Thank you.\nThat young couple told me just scan credit card lolol. Heng i hv cash!!!', "BAN"),
 ]
 
 
