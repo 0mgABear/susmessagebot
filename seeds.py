@@ -110,6 +110,7 @@ examples = [
     ('Kranji jb? @UREMRY', "SAFE"),
     ('Kranji spa? @UREMRY', "BAN"),
     ('Oh!! Thank you.\nThat young couple told me just scan credit card lolol. Heng i hv cash!!!', "BAN"),
+    ('Ungent work pm me 9.9k', "BAN"),
 ]
 
 
