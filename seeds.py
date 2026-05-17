@@ -112,6 +112,7 @@ examples = [
     ('Oh!! Thank you.\nThat young couple told me just scan credit card lolol. Heng i hv cash!!!', "BAN"),
     ('Ungent work pm me 9.9k', "BAN"),
     ('How to q from jb to sg now?', "BAN"),
+    ('@seen_Xp_seRi', "BAN"),
 ]
 
 
