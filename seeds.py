@@ -113,6 +113,7 @@ examples = [
     ('Ungent work pm me 9.9k', "BAN"),
     ('How to q from jb to sg now?', "BAN"),
     ('@seen_Xp_seRi', "BAN"),
+    ('Sg>jb', "SAFE"),
 ]
 
 
