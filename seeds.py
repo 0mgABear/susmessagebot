@@ -115,6 +115,7 @@ examples = [
     ('@seen_Xp_seRi', "BAN"),
     ('Sg>jb', "SAFE"),
     ('Anyone need bj in sg ?', "BAN"),
+    ('@QX_XLLY\n\n\n\n\n\n        @QX_XLLY', "BAN"),
 ]
 
 
