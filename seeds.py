@@ -116,6 +116,7 @@ examples = [
     ('Sg>jb', "SAFE"),
     ('Anyone need bj in sg ?', "BAN"),
     ('@QX_XLLY\n\n\n\n\n\n        @QX_XLLY', "BAN"),
+    ('check story pm if also want !!', "BAN"),
 ]
 
 
