@@ -114,6 +114,7 @@ examples = [
     ('How to q from jb to sg now?', "BAN"),
     ('@seen_Xp_seRi', "BAN"),
     ('Sg>jb', "SAFE"),
+    ('Anyone need bj in sg ?', "BAN"),
 ]
 
 
