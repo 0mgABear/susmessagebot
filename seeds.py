@@ -119,6 +119,7 @@ examples = [
     ('check story pm if also want !!', "BAN"),
     ('Anyone free @Aurixxty', "BAN"),
     ('^ spam', "SAFE"),
+    ('@Niswanatalia', "BAN"),
 ]
 
 
