@@ -118,6 +118,7 @@ examples = [
     ('@QX_XLLY\n\n\n\n\n\n        @QX_XLLY', "BAN"),
     ('check story pm if also want !!', "BAN"),
     ('Anyone free @Aurixxty', "BAN"),
+    ('^ spam', "SAFE"),
 ]
 
 
