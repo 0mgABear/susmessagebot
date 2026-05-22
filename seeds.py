@@ -121,6 +121,7 @@ examples = [
     ('^ spam', "SAFE"),
     ('@Niswanatalia', "BAN"),
     ('Hi. How’s the bus que to Sg?', "SAFE"),
+    ("Hi, may I know how's sg to jb ?", "SAFE"),
 ]
 
 
