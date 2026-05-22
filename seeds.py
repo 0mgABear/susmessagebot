@@ -124,6 +124,7 @@ examples = [
     ("Hi, may I know how's sg to jb ?", "SAFE"),
     ('Sg to jb', "SAFE"),
     ('Pm 2.7 now if int', "BAN"),
+    ('Wrk urgent fast Job 2.9k check story if can\n\n urgent pm', "BAN"),
 ]
 
 
