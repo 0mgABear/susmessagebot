@@ -123,6 +123,7 @@ examples = [
     ('Hi. How’s the bus que to Sg?', "SAFE"),
     ("Hi, may I know how's sg to jb ?", "SAFE"),
     ('Sg to jb', "SAFE"),
+    ('Pm 2.7 now if int', "BAN"),
 ]
 
 
