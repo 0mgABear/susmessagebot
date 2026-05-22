@@ -120,6 +120,7 @@ examples = [
     ('Anyone free @Aurixxty', "BAN"),
     ('^ spam', "SAFE"),
     ('@Niswanatalia', "BAN"),
+    ('Hi. How’s the bus que to Sg?', "SAFE"),
 ]
 
 
