@@ -126,6 +126,7 @@ examples = [
     ('Pm 2.7 now if int', "BAN"),
     ('Wrk urgent fast Job 2.9k check story if can\n\n urgent pm', "BAN"),
     ('@qui_ling\n\n\n\n\n\n\n@qui_ling', "BAN"),
+    ('Giv ing away my 15-inch MacBook Air (M4) — bareIy used and stiII in exceIIent condition.', "BAN"),
 ]
 
 
