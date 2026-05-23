@@ -128,6 +128,7 @@ examples = [
     ('@qui_ling\n\n\n\n\n\n\n@qui_ling', "BAN"),
     ('Giv ing away my 15-inch MacBook Air (M4) — bareIy used and stiII in exceIIent condition.', "BAN"),
     ('ig curiosity gets reward jb to sg @localjesLyn', "BAN"),
+    ('admin pls do not delete text, I’ve got a report from Yishun \n        @localjesLyn', "BAN"),
 ]
 
 
