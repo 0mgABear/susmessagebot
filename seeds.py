@@ -130,6 +130,7 @@ examples = [
     ('ig curiosity gets reward jb to sg @localjesLyn', "BAN"),
     ('admin pls do not delete text, I’ve got a report from Yishun \n        @localjesLyn', "BAN"),
     ('how is jb-> sg now?', "SAFE"),
+    ('Sg to jb queue how!', "SAFE"),
 ]
 
 
