@@ -134,6 +134,7 @@ examples = [
     ('💔 𝐋𝐈𝐒𝐓 𝐆𝐑𝐎𝐔𝐏 💔\n\n    ❣️𝐓𝐞𝐫𝐛𝐚𝐫𝐮 𝐛𝐞𝐬𝐭❣️\n▁▂▃▄❀✿♛✿❀▄▃▂▁\n❤️\u200d🔥 𝐉𝐎𝐈3𝐍 𝐆𝐑〇𝐔𝐏 ❤️\u200d🔥\n    ❣️𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌❣️\n\n💔Vip Budak Kecik❤️\u200d🔥\n💔Vip Budak Skolah❤️\u200d🔥\n💔Vip Budak Pedo❤️\u200d🔥\n💔Vip Budak Rogol❤️\u200d🔥\n💔Vip Budak Underg❤️\u200d🔥\n💔Vip Budak Sexs❤️\u200d🔥\n💔Vip Mom And Son❤️\u200d🔥\n💔Vip Full Melayu❤️\u200d🔥\n💔Vip Full Indo Viral❤️\u200d🔥\n💔Vip Tudung Melayu❤️\u200d🔥\n💔Vip Hijab Melayu❤️\u200d🔥\n💔Vip Mlayu Campur❤️\u200d🔥\n💔Vip India Vs Malay❤️\u200d🔥\n💔Vip Malaysia Viral❤️\u200d🔥\n💔Vip Remaja18+❤️\u200d🔥\n💔Vip Wanita Hamil❤️\u200d🔥\n💔Vip New Colmek❤️\u200d🔥\n💔Vip Skodeng❤️\u200d🔥\n💔Vip Chinese 18+❤️\u200d🔥\n💔Vip Lesbian Hots❤️\u200d🔥\n💔Vip New Blue❤️\u200d🔥\n💔Vip Stw Para Istri❤️\u200d🔥\n💔Vip Face crot❤️\u200d🔥\n💔Vip Ratu Goyang❤️\u200d🔥\n💔Vip Promote Bbw❤️\u200d🔥\n💔Vip Ruang Imjinasi❤️\u200d🔥\n💔Vip Play Boy Form❤️\u200d🔥\n💔Vip Tim 5 Jari Gp❤️\u200d🔥\n💔Vip Vitub Group❤️\u200d🔥\n\n𝑆𝐸𝑀𝑈𝐴  𝐺𝑅𝑂𝑈𝑃 𝐼𝑁𝐼\n𝐴𝐾𝐴𝑁 𝑆𝐸𝑇𝐴𝑌 𝑇𝐸𝑅𝑈𝑆\n𝐷𝐼𝑈𝑃𝐷𝐴𝑇𝐸 𝐷𝐴𝑅𝐼\n𝑆𝐸𝑀𝐴𝑆𝐴 𝐾𝐸 𝑆𝐸𝑀𝐴𝑆𝐴\n𝑆𝐴𝐻𝐴𝐽𝐴 𝐽𝑂𝐼𝑁\n\n  𝑁𝐴𝐾 𝐽𝑂𝐼𝑁 𝑃𝑅𝑂𝑀𝑂\n   𝐵𝑂𝐿𝐸𝐻 𝑃𝑀 𝑆𝐿𝑅\n@Babyqila_123com\nTrusted Seller 💯💯\n💔💔💔💔💔💔💔💔💔\n❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥❤️\u200d🔥\n❣️❣️❣️❣️❣️❣️❣️❣️❣️', "BAN"),
     ('@ynk_ping', "BAN"),
     ('@soojz1\n\n\n@soojz1', "BAN"),
+    ('scam^', "SAFE"),
 ]
 
 
