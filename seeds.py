@@ -136,6 +136,7 @@ examples = [
     ('@soojz1\n\n\n@soojz1', "BAN"),
     ('scam^', "SAFE"),
     ('11:48a.m SG custom human line no q', "SAFE"),
+    ('DISCOUNT ::::::: @Real_prinses', "BAN"),
 ]
 
 
