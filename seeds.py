@@ -137,6 +137,7 @@ examples = [
     ('scam^', "SAFE"),
     ('11:48a.m SG custom human line no q', "SAFE"),
     ('DISCOUNT ::::::: @Real_prinses', "BAN"),
+    ('admin ban this', "SAFE"),
 ]
 
 
