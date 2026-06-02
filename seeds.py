@@ -139,6 +139,7 @@ examples = [
     ('DISCOUNT ::::::: @Real_prinses', "BAN"),
     ('admin ban this', "SAFE"),
     ('@Meriol2', "BAN"),
+    ('@ping1Ling\n\n\n\n\n\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
 ]
 
 
