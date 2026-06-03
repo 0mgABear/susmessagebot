@@ -141,6 +141,7 @@ examples = [
     ('@Meriol2', "BAN"),
     ('@ping1Ling\n\n\n\n\n\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
     ('@ping1Ling\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
+    ('suggesttt sg to jb.. @xp_llin', "BAN"),
 ]
 
 
