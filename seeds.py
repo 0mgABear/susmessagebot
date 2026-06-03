@@ -140,6 +140,7 @@ examples = [
     ('admin ban this', "SAFE"),
     ('@Meriol2', "BAN"),
     ('@ping1Ling\n\n\n\n\n\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
+    ('@ping1Ling\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
 ]
 
 
