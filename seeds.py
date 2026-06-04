@@ -143,6 +143,7 @@ examples = [
     ('@ping1Ling\n\n\n\n\n\n\n\n@ping1Ling', "BAN"),
     ('suggesttt sg to jb.. @xp_llin', "BAN"),
     ('Suggesttt jb to sg .. @xp_llin', "BAN"),
+    ('SG NSFW LGBT SPA private social group. Were all here to enjoy good vibes and share info + stories (no drama, no racism). this is a space for everyone within our community who loves a little adventure 💦 spread 🫂 not hate\n\nChannel / Groups 👇👇👇\n\nhttps://sgbodymassages-n.t-spaa.com/group\n\nAll members here can now join this. 🇲🇾🇸🇬 🇨🇳', "BAN"),
 ]
 
 
