@@ -147,6 +147,7 @@ examples = [
     ('sugggestted? Jb stay sg. @xp_lin', "BAN"),
     ('@ping1Ling\n\n\n\n\n\n\n@ping1Ling', "BAN"),
     ('@x_i_n_y_i\n\n\n\n\n\n\n@x_i_n_y_i', "BAN"),
+    ('Only singaporean ! I have a simple task for S$200\nNo age preference \nPm', "BAN"),
 ]
 
 
