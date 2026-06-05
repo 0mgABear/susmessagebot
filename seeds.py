@@ -146,6 +146,7 @@ examples = [
     ('SG NSFW LGBT SPA private social group. Were all here to enjoy good vibes and share info + stories (no drama, no racism). this is a space for everyone within our community who loves a little adventure 💦 spread 🫂 not hate\n\nChannel / Groups 👇👇👇\n\nhttps://sgbodymassages-n.t-spaa.com/group\n\nAll members here can now join this. 🇲🇾🇸🇬 🇨🇳', "BAN"),
     ('sugggestted? Jb stay sg. @xp_lin', "BAN"),
     ('@ping1Ling\n\n\n\n\n\n\n@ping1Ling', "BAN"),
+    ('@x_i_n_y_i\n\n\n\n\n\n\n@x_i_n_y_i', "BAN"),
 ]
 
 
