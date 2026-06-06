@@ -150,6 +150,7 @@ examples = [
     ('Only singaporean ! I have a simple task for S$200\nNo age preference \nPm', "BAN"),
     ('Hi everyone,\n\nGi ving away 2 × 3 sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re inter ested, feeI free to D M.\n\nThanks.', "BAN"),
     ('Anyone int in 5.7k pm me', "BAN"),
+    ('Wan 2.2k fast job fst payout  pm if also want !', "BAN"),
 ]
 
 
