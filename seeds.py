@@ -151,6 +151,7 @@ examples = [
     ('Hi everyone,\n\nGi ving away 2 × 3 sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re inter ested, feeI free to D M.\n\nThanks.', "BAN"),
     ('Anyone int in 5.7k pm me', "BAN"),
     ('Wan 2.2k fast job fst payout  pm if also want !', "BAN"),
+    ('@rooob3r \n\nPlease reach at 8.30 am to take bus service number as 950 in Woodlands Temporary Bus Interchange if possible.', "BAN"),
 ]
 
 
