@@ -148,6 +148,7 @@ examples = [
     ('@ping1Ling\n\n\n\n\n\n\n@ping1Ling', "BAN"),
     ('@x_i_n_y_i\n\n\n\n\n\n\n@x_i_n_y_i', "BAN"),
     ('Only singaporean ! I have a simple task for S$200\nNo age preference \nPm', "BAN"),
+    ('Hi everyone,\n\nGi ving away 2 × 3 sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re inter ested, feeI free to D M.\n\nThanks.', "BAN"),
 ]
 
 
