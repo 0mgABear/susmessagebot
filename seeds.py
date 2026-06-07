@@ -153,6 +153,7 @@ examples = [
     ('Wan 2.2k fast job fst payout  pm if also want !', "BAN"),
     ('@rooob3r \n\nPlease reach at 8.30 am to take bus service number as 950 in Woodlands Temporary Bus Interchange if possible.', "BAN"),
     ('@Xp_Linn Jb to sg now…', "BAN"),
+    ('@Lee_Xin_Yi\n\n\n\n\n\n@Lee_Xin_Yi', "BAN"),
 ]
 
 
