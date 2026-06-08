@@ -158,6 +158,7 @@ examples = [
     ('@x_i_n_W_i_i\n\n\n\n\n\n\n\n@x_i_n_W_i_i', "BAN"),
     ('scam', "SAFE"),
     ('just hide ur passport n scan, cross within 10min', "SAFE"),
+    ('Any ppl wanna wrk 3.9k pm now urgent \nPm if can', "BAN"),
 ]
 
 
