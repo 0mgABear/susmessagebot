@@ -156,6 +156,7 @@ examples = [
     ('@Lee_Xin_Yi\n\n\n\n\n\n@Lee_Xin_Yi', "BAN"),
     ('Hi everyone,\n\nGi ving away 2 × 3 Sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re interes ted, feeI f r e e to D M.\n\nThanks.', "BAN"),
     ('@x_i_n_W_i_i\n\n\n\n\n\n\n\n@x_i_n_W_i_i', "BAN"),
+    ('scam', "SAFE"),
 ]
 
 
