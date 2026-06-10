@@ -161,6 +161,7 @@ examples = [
     ('Any ppl wanna wrk 3.9k pm now urgent \nPm if can', "BAN"),
     ('Jb to sg ppl? @w_Linn1', "BAN"),
     ('@Sakura_soh', "BAN"),
+    ('@x_linn1 \n\n@x_linn1', "BAN"),
 ]
 
 
