@@ -167,6 +167,7 @@ examples = [
     ('@Tiffyw here is the message', "SAFE"),
     ('about… @xxlinn1\n\n\nabout… @xxlinn1', "BAN"),
     ('unique.. @x_liinn', "BAN"),
+    ("🥰Free The latest viral porn videos All viral videos are here🤫. Let's expand the group. Please join\nUpdate videos every day💦👙. The latest porn Telegram group. The group link is in my bio💋", "BAN"),
 ]
 
 
