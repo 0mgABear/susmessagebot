@@ -162,6 +162,7 @@ examples = [
     ('Jb to sg ppl? @w_Linn1', "BAN"),
     ('@Sakura_soh', "BAN"),
     ('@x_linn1 \n\n@x_linn1', "BAN"),
+    ('✅✅✅✅Envíame un mensaje si necesitas ayuda para hackear o recuperar el servicio\n\n✅recuperación de dinero de estafa\n✅✅Hackeo clonación o espionaje de WhatsApp\n⤵️⤵️⤵️⤵️⤵️⤵️⤵️⤵️⤵️⤵️\n\n⚙️Hackeo y recuperación de Facebook\n\n⚙️Hackeo y recuperación de Instagram\n\n⚙️Si desea recuperar la contraseña de la cuenta perdida.\n\n⚙️O si quieres espiar a tu pareja sin que se dé cuenta\n\n⚙️hackeo o recuperacion de tiktok\n\n⚙️Hackeo o recuperación de Snapchat\n\n⚙️Recuperación o piratería de Gmail\n\n⚙️Recuperación o hackeo de cuenta bancaria perdida\n\n⚙️Recuperación de cuenta de Google\n\n⚙️cambio de grado escolar\n\n💳Tarjetas clonadas💳✔️\n\n🤖$200 por un saldo de $2500💳✔️\n🤖$300 por un saldo de $3500💳✔️\n🤖$400 por un saldo de $4500💳✔️\n🤖$500 por un saldo de $8500💳✔️\n🤖$1000 por un saldo de $10,500💳✔️\n👀Siempre estoy disponible, asequible, confiable y con un servicio rápido✅\n\n🧑\u200d💻 ENVÍAME UN MENSAJE PARA MÁS INFORMACIÓN SI NECESITAS AYUDA CON MI SERVICIO\n\nTAMBIÉN PUEDES ENVIARME UN MASAJE DIRECTO POR WHATSAPP\n👇👇👇👇\n\n+1 (581) 594-9264', "BAN"),
 ]
 
 
