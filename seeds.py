@@ -166,6 +166,7 @@ examples = [
     ('@Tiffyw', "SAFE"),
     ('@Tiffyw here is the message', "SAFE"),
     ('about… @xxlinn1\n\n\nabout… @xxlinn1', "BAN"),
+    ('unique.. @x_liinn', "BAN"),
 ]
 
 
