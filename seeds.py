@@ -169,6 +169,7 @@ examples = [
     ('unique.. @x_liinn', "BAN"),
     ("🥰Free The latest viral porn videos All viral videos are here🤫. Let's expand the group. Please join\nUpdate videos every day💦👙. The latest porn Telegram group. The group link is in my bio💋", "BAN"),
     ("•Private content 💦\n•Non-stop update 💫\n•And you won't find it anywhere else 😝\nHave you had many people join your group when?\nEnter now via the link in bio 🔥", "BAN"),
+    ('950 woodlands q and woodlands custom now pls', "BAN"),
 ]
 
 
