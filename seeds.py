@@ -172,6 +172,7 @@ examples = [
     ('950 woodlands q and woodlands custom now pls', "BAN"),
     ('@m_i_E_ping\n\n\n\n\n\n\n@m_i_E_ping\n\n\n\n\n@m_i_E_ping\n\n\n\n\n\n\n@m_i_E_ping\n\n\n@m_i_E_ping\n\n\n\n\n\n\n@m_i_E_ping\n\n\n@m_i_E_ping\n\n\n\n\n\n\n@m_i_E_ping', "BAN"),
     ('Any ppl wanna wrk? 4.9k Quick payout. pm', "BAN"),
+    ('Jb to sg regitt..! @Linn_Xy1', "BAN"),
 ]
 
 
