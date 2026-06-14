@@ -174,6 +174,7 @@ examples = [
     ('Any ppl wanna wrk? 4.9k Quick payout. pm', "BAN"),
     ('Jb to sg regitt..! @Linn_Xy1', "BAN"),
     ('how is Q for sg>jb now', "BAN"),
+    ('Wan fast wrk fast payout 1.9k pm if also want !', "BAN"),
 ]
 
 
