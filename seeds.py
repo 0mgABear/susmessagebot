@@ -178,6 +178,7 @@ examples = [
     ('✧ 𝑴𝒂𝒚𝒃𝒆 𝒀𝒐𝒖𝒓 𝑵𝒆𝒙𝒕 𝑭𝒂𝒗𝒐𝒖𝒓𝒊𝒕𝒆 𝑷𝒍𝒂𝒄𝒆 𝑰𝒔 𝑯𝒆𝒓𝒆 ✨\n\n𝑮𝒐𝒐𝒅 𝑽𝒊𝒃𝒆𝒔 • 𝑫𝒂𝒊𝒍𝒚 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 • 𝑵𝒊𝒄𝒆 𝑷𝒆𝒐𝒑𝒍𝒆\n\n↗ 𝑳𝒊𝒏𝒌 𝑰𝒏 𝑩𝒊𝒐', "BAN"),
     ('How is the queue in bj to sg @vty_imi', "BAN"),
     ('🥵 Babysitter stripped at work I f*cked her raw 🔥\nSecret archive DO NОT share link expires fast 🔥\n  \n👉 WATCH NOW 🔞    \n  \n 👉 WATCH NOW 🔞   \n  \n👉 SEE MORE 👀', "BAN"),
+    ('biG jam jb .. @LinnXy', "BAN"),
 ]
 
 
