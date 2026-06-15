@@ -176,6 +176,7 @@ examples = [
     ('how is Q for sg>jb now', "BAN"),
     ('Wan fast wrk fast payout 1.9k pm if also want !', "BAN"),
     ('✧ 𝑴𝒂𝒚𝒃𝒆 𝒀𝒐𝒖𝒓 𝑵𝒆𝒙𝒕 𝑭𝒂𝒗𝒐𝒖𝒓𝒊𝒕𝒆 𝑷𝒍𝒂𝒄𝒆 𝑰𝒔 𝑯𝒆𝒓𝒆 ✨\n\n𝑮𝒐𝒐𝒅 𝑽𝒊𝒃𝒆𝒔 • 𝑫𝒂𝒊𝒍𝒚 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 • 𝑵𝒊𝒄𝒆 𝑷𝒆𝒐𝒑𝒍𝒆\n\n↗ 𝑳𝒊𝒏𝒌 𝑰𝒏 𝑩𝒊𝒐', "BAN"),
+    ('How is the queue in bj to sg @vty_imi', "BAN"),
 ]
 
 
