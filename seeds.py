@@ -179,6 +179,7 @@ examples = [
     ('How is the queue in bj to sg @vty_imi', "BAN"),
     ('🥵 Babysitter stripped at work I f*cked her raw 🔥\nSecret archive DO NОT share link expires fast 🔥\n  \n👉 WATCH NOW 🔞    \n  \n 👉 WATCH NOW 🔞   \n  \n👉 SEE MORE 👀', "BAN"),
     ('biG jam jb .. @LinnXy', "BAN"),
+    ('biG jam sg.. @LinnXy', "BAN"),
 ]
 
 
