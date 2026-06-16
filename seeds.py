@@ -181,6 +181,7 @@ examples = [
     ('biG jam jb .. @LinnXy', "BAN"),
     ('biG jam sg.. @LinnXy', "BAN"),
     ('Zooiii.. @LinnXy', "BAN"),
+    ('Wan good job fast payout pm if also wan !', "BAN"),
 ]
 
 
