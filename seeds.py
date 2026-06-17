@@ -187,6 +187,7 @@ examples = [
     ('⚠️ NSFW: TEACHER spread her legs wide 👉 she begged for more d1ck 👅 \n⚠️ Will be deleted soon — Watch Uncut 🎬 \n \u200d \n\u200b 👉 WATCH NOW 🔞   \u200b \n\u200b \u200c \n\u200d👉 WATCH NOW 🔞   \u200d \n\u2060 \u200c \n\u200b👉 FULL 🍓 \u200d', "BAN"),
     ('how is bus q fr jb to sg?', "BAN"),
     ('🚨 CAUGHT: MILF touched herself naked 👉 she begged for more d1ck 👅 \n📂 Full uncensored tape — Unlock Video 📲 \n \u200d \n\u200b👉 SEE MORE 👀  \u200b \n\u200b \u200c \n\u200d 👉 WATCH NOW 🔞   \u200d \n\u2060 \u200c \n\u200b👉 FULL 🍓 \u200d', "BAN"),
+    ('@awtevyuabot', "BAN"),
 ]
 
 
