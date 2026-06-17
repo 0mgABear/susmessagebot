@@ -183,6 +183,7 @@ examples = [
     ('Zooiii.. @LinnXy', "BAN"),
     ('Wan good job fast payout pm if also wan !', "BAN"),
     ('📂 ARCHIVE: COUSIN flashed her t*ts 👉 I f*cked her on the desk 🍑 \n❌ Link expires in 60s — Tap to Watch ⏳ \n \u200d \n\u200b 👉 WATCH NOW 🔞   \u200b \n\u200b \u200c \n\u200d 👉 WATCH NOW 🔞   \u200d \n\u2060 \u200c \n\u200b👉 SEE MORE 👀   \u200d', "BAN"),
+    ("⚠️ NSFW: GYM GIRL wore absolutely nothing 👉 I destroyed her pussу 👀 \n👇 Download before it's gone — See What Happened 🔥 \n \u200d \n\u200b 👉 WATCH NOW 🔞   \u200b \n\u200b \u200c \n\u200d👉 SEE MORE 👀   \u200d \n\u2060 \u200c \n\u200b👉 SEE MORE 👀  \u200d", "BAN"),
 ]
 
 
