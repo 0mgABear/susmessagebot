@@ -8,3 +8,4 @@ Pillow
 pytesseract
 beautifulsoup4
 discord.py
+numpy<2.0
