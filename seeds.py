@@ -191,6 +191,7 @@ examples = [
     ('@Xy_Linn\n\n@Xy_Linn', "BAN"),
     ('📁 HIDDEN: STEP-SIS bent over naked 👉 I pounded her hard 👀 \n⚠️ Will be deleted soon — Play HD Video 👇 \n \u200d \n\u200b👉 SEE MORE 👀  \u200b \n\u200b \u200c \n\u200d 👉 WATCH NOW 🔞   \u200d \n\u2060 \u200c \n\u200b👉 WATCH NOW 🔞   \u200d', "BAN"),
     ('Hi everyone,\n\nGivi ng away 2 × 3sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condit ion.\n\nGreat for commuting or casuaI rides.\n\nIf you are interested, feeI free to D M.\n\nThanks.', "BAN"),
+    ('NLH POKER — East \n✅Safe & vetted group\n\n♠️ 1/1 NLH\n\n❌ No Entrance Fees\n😇 Chill Environment\n🌈 Beginner Friendly\n👨\u200d💼 Insurance no cap\n♟️ Proper Poker Set Up\n🍔 Free Drinks Food Beers Snack \n🚕 Transport Covered\n❄️ AC Environment  \n⚽️ Watch World Cup \n\n\n9.30pm', "BAN"),
 ]
 
 
