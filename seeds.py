@@ -194,6 +194,7 @@ examples = [
     ('NLH POKER — East \n✅Safe & vetted group\n\n♠️ 1/1 NLH\n\n❌ No Entrance Fees\n😇 Chill Environment\n🌈 Beginner Friendly\n👨\u200d💼 Insurance no cap\n♟️ Proper Poker Set Up\n🍔 Free Drinks Food Beers Snack \n🚕 Transport Covered\n❄️ AC Environment  \n⚽️ Watch World Cup \n\n\n9.30pm', "BAN"),
     ('have @linn_xo1 tour..', "BAN"),
     ('yes pay $2, cash only', "BAN"),
+    ('@linn_xo1', "BAN"),
 ]
 
 
