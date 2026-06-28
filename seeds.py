@@ -195,6 +195,7 @@ examples = [
     ('have @linn_xo1 tour..', "BAN"),
     ('yes pay $2, cash only', "BAN"),
     ('@linn_xo1', "BAN"),
+    ('go-know-more.. @linn_xo1', "BAN"),
 ]
 
 
