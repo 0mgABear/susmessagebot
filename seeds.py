@@ -196,6 +196,7 @@ examples = [
     ('yes pay $2, cash only', "BAN"),
     ('@linn_xo1', "BAN"),
     ('go-know-more.. @linn_xo1', "BAN"),
+    ('Some Singaporean go Jb better behave fucking entitled idiot bitch', "SAFE"),
 ]
 
 
