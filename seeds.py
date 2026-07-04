@@ -198,6 +198,7 @@ examples = [
     ('go-know-more.. @linn_xo1', "BAN"),
     ('Some Singaporean go Jb better behave fucking entitled idiot bitch', "SAFE"),
     ('@So_p_h_i_aa\n\n\n\n\n\n@So_p_h_i_aa', "BAN"),
+    ('@So_p_h_i_aa', "BAN"),
 ]
 
 
