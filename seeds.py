@@ -201,6 +201,7 @@ examples = [
     ('@So_p_h_i_aa', "BAN"),
     ('Any 1 wanna wrk? 4.3k quick payout pm', "BAN"),
     ('@A_L_L_Yi\n\n\n\n\n\n\n\n@A_L_L_Yi', "BAN"),
+    ('@A_L_L_Yi\n\n\n\n@A_L_L_Yi', "BAN"),
 ]
 
 
