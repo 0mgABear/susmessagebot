@@ -202,6 +202,7 @@ examples = [
     ('Any 1 wanna wrk? 4.3k quick payout pm', "BAN"),
     ('@A_L_L_Yi\n\n\n\n\n\n\n\n@A_L_L_Yi', "BAN"),
     ('@A_L_L_Yi\n\n\n\n@A_L_L_Yi', "BAN"),
+    ('Hi everyone,\n\nGi ving away 2 × 3sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re in terested, feeI free to D M.\n\nThanks.', "BAN"),
 ]
 
 
