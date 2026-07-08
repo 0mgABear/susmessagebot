@@ -204,6 +204,7 @@ examples = [
     ('@A_L_L_Yi\n\n\n\n@A_L_L_Yi', "BAN"),
     ('Hi everyone,\n\nGi ving away 2 × 3sixty 16 inch foIdabIe bicycIes (chameIeon bIue & red) – both in good working condition.\n\nGreat for commuting or casuaI rides.\n\nIf you’re in terested, feeI free to D M.\n\nThanks.', "BAN"),
     ('PM if also wan fast job fast payout 1.5k  no need wait long !!', "BAN"),
+    ('Any one interested in 3.9k pm me or 2.9k pm me now', "BAN"),
 ]
 
 
