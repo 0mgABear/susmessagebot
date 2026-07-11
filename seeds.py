@@ -206,6 +206,7 @@ examples = [
     ('PM if also wan fast job fast payout 1.5k  no need wait long !!', "BAN"),
     ('Any one interested in 3.9k pm me or 2.9k pm me now', "BAN"),
     ('@kimmy_xx check', "BAN"),
+    ('@a_LL_i_y', "BAN"),
 ]
 
 
