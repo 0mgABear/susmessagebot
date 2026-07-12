@@ -207,6 +207,7 @@ examples = [
     ('Any one interested in 3.9k pm me or 2.9k pm me now', "BAN"),
     ('@kimmy_xx check', "BAN"),
     ('@a_LL_i_y', "BAN"),
+    ('actually @xoxo_linn Funn', "BAN"),
 ]
 
 
