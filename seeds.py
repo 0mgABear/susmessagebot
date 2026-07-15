@@ -210,6 +210,7 @@ examples = [
     ('actually @xoxo_linn Funn', "BAN"),
     ('cassually @xoxo_linn clickk', "BAN"),
     ('Available now pm^', "BAN"),
+    ('Mmm.. @urjowaa jii', "BAN"),
 ]
 
 
