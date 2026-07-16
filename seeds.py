@@ -212,6 +212,7 @@ examples = [
     ('Available now pm^', "BAN"),
     ('Mmm.. @urjowaa jii', "BAN"),
     ('Looking for a profitable investing site pays quickly? 💸\nGet in touch with Chen6Yuxin to learn more.', "BAN"),
+    ('Come on, run and join the viral group 🔞FULL VIDEO 18+Singapore Link is in bio, join now before the link expires', "BAN"),
 ]
 
 
