@@ -211,6 +211,7 @@ examples = [
     ('cassually @xoxo_linn clickk', "BAN"),
     ('Available now pm^', "BAN"),
     ('Mmm.. @urjowaa jii', "BAN"),
+    ('Looking for a profitable investing site pays quickly? 💸\nGet in touch with Chen6Yuxin to learn more.', "BAN"),
 ]
 
 
