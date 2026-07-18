@@ -214,6 +214,7 @@ examples = [
     ('Looking for a profitable investing site pays quickly? 💸\nGet in touch with Chen6Yuxin to learn more.', "BAN"),
     ('Come on, run and join the viral group 🔞FULL VIDEO 18+Singapore Link is in bio, join now before the link expires', "BAN"),
     ('Pm now available', "BAN"),
+    ('@A_I_A_LLY\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@A_I_A_LLY', "BAN"),
 ]
 
 
