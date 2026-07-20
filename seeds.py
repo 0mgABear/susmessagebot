@@ -221,6 +221,7 @@ examples = [
     ('@A_I_A_LLY', "BAN"),
     ('Pm now available ^^', "BAN"),
     ('Pm now^', "BAN"),
+    ('FUCK', "BAN"),
 ]
 
 
