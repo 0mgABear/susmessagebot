@@ -219,6 +219,7 @@ examples = [
     ('I was surprised at how fast i got my profit back, I invested ₹1000 and I got a profit of ₹8,200 in lees than 6hours. She is a real professional and an honest one. All thanks to miss Karen Skidmore \n@earn_big_with_karen_skidmore', "BAN"),
     ('Pm now available for Mg fls', "BAN"),
     ('@A_I_A_LLY', "BAN"),
+    ('Pm now available ^^', "BAN"),
 ]
 
 
