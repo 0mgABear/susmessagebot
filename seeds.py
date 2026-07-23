@@ -226,6 +226,7 @@ examples = [
     ('Pm now', "BAN"),
     ('very obv. @Kia_Na3 Tuas', "BAN"),
     ('Pm Fst income fst payout 1k pm now if you also want !!!Zhixuan6007', "BAN"),
+    ('@admi', "BAN"),
 ]
 
 
