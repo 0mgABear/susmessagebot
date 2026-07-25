@@ -229,6 +229,7 @@ examples = [
     ('@admi', "BAN"),
     ('@A_I_A_LLY\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@A_I_A_LLY', "BAN"),
     ('@A_I_A_LLY\n\n\n\n\n\n\n\n\n\n\n@A_I_A_LLY', "BAN"),
+    ('abt often @Ki_ana3 comfort Jb to sg', "BAN"),
 ]
 
 
