@@ -231,6 +231,7 @@ examples = [
     ('@A_I_A_LLY\n\n\n\n\n\n\n\n\n\n\n@A_I_A_LLY', "BAN"),
     ('abt often @Ki_ana3 comfort Jb to sg', "BAN"),
     ("𝗚𝗶𝘃𝗶 𝗻𝗴 𝗮𝘄𝗮𝘆 2 × 3𝘀𝗶𝘅𝘁𝘆 16 𝗶𝗻𝗰𝗵 𝗳𝗼𝗜𝗱𝗮𝗯𝗜𝗲 𝗯𝗶𝗰𝘆𝗰𝗜𝗲𝘀 𝗮𝘀 𝗶𝘁'𝘀 𝗻𝗼 𝗜𝗼𝗻𝗴𝗲𝗿 𝗻𝗲𝗲𝗱 𝗲𝗱. 𝗣 𝗠 𝗺𝗲 𝗶𝗳 𝗸 𝗲 𝗲 𝗻.", "BAN"),
+    ('Anyone here want get quick 5.8k quick pay pm now anyone can do', "BAN"),
 ]
 
 
