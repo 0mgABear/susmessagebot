@@ -233,6 +233,7 @@ examples = [
     ("𝗚𝗶𝘃𝗶 𝗻𝗴 𝗮𝘄𝗮𝘆 2 × 3𝘀𝗶𝘅𝘁𝘆 16 𝗶𝗻𝗰𝗵 𝗳𝗼𝗜𝗱𝗮𝗯𝗜𝗲 𝗯𝗶𝗰𝘆𝗰𝗜𝗲𝘀 𝗮𝘀 𝗶𝘁'𝘀 𝗻𝗼 𝗜𝗼𝗻𝗴𝗲𝗿 𝗻𝗲𝗲𝗱 𝗲𝗱. 𝗣 𝗠 𝗺𝗲 𝗶𝗳 𝗸 𝗲 𝗲 𝗻.", "BAN"),
     ('Anyone here want get quick 5.8k quick pay pm now anyone can do', "BAN"),
     ('@D_U_CK_Y\n\n\n\n\n\n\n\n\n@D_U_CK_Y', "BAN"),
+    ('All service provided❤️😮\u200d💨\nLegit svc🍒😻\nPm for nudes 🍌🍊\nSex video content 🍒😋\nVip premium channel🍑💋\nFree girl booking😍👙\n\nJoin now on the private channel the link is in my bio', "BAN"),
 ]
 
 
