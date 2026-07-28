@@ -234,6 +234,7 @@ examples = [
     ('Anyone here want get quick 5.8k quick pay pm now anyone can do', "BAN"),
     ('@D_U_CK_Y\n\n\n\n\n\n\n\n\n@D_U_CK_Y', "BAN"),
     ('All service provided❤️😮\u200d💨\nLegit svc🍒😻\nPm for nudes 🍌🍊\nSex video content 🍒😋\nVip premium channel🍑💋\nFree girl booking😍👙\n\nJoin now on the private channel the link is in my bio', "BAN"),
+    ('hello， I lost a pocket. It include bank card, Chinese id card student card. My name is Li jing. Please contact me 85988244', "SAFE"),
 ]
 
 
