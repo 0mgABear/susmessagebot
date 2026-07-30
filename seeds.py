@@ -237,6 +237,7 @@ examples = [
     ('hello， I lost a pocket. It include bank card, Chinese id card student card. My name is Li jing. Please contact me 85988244', "SAFE"),
     ('I can’t believe how much I’ve earned with Mrs. Tina’s help. Over the last few months, my forex and crypto portfolio has grown by $12,000. It’s all thanks to her support and expertise!', "BAN"),
     ('Any1 wan quick fast 4.8k pm', "BAN"),
+    ('Let’s say.. @kk_ana1 Jb to ag', "BAN"),
 ]
 
 
