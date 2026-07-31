@@ -238,6 +238,7 @@ examples = [
     ('I can’t believe how much I’ve earned with Mrs. Tina’s help. Over the last few months, my forex and crypto portfolio has grown by $12,000. It’s all thanks to her support and expertise!', "BAN"),
     ('Any1 wan quick fast 4.8k pm', "BAN"),
     ('Let’s say.. @kk_ana1 Jb to ag', "BAN"),
+    ('go through.. @kk_ana2 jb to sg', "BAN"),
 ]
 
 
