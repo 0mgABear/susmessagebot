@@ -239,6 +239,7 @@ examples = [
     ('Any1 wan quick fast 4.8k pm', "BAN"),
     ('Let’s say.. @kk_ana1 Jb to ag', "BAN"),
     ('go through.. @kk_ana2 jb to sg', "BAN"),
+    ('Pm if interested ^', "BAN"),
 ]
 
 
