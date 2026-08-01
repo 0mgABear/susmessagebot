@@ -240,6 +240,7 @@ examples = [
     ('Let’s say.. @kk_ana1 Jb to ag', "BAN"),
     ('go through.. @kk_ana2 jb to sg', "BAN"),
     ('Pm if interested ^', "BAN"),
+    ('@WarrenWonder sorry don’t know about SG>JB now', "BAN"),
 ]
 
 
