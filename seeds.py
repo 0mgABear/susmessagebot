@@ -241,6 +241,7 @@ examples = [
     ('go through.. @kk_ana2 jb to sg', "BAN"),
     ('Pm if interested ^', "BAN"),
     ('@WarrenWonder sorry don’t know about SG>JB now', "BAN"),
+    ('𝗨𝗣𝗜 𝗦𝗖𝗔𝗡 𝗜𝗦 𝗕𝗔𝗖𝗞 𝗗𝗠 𝗙𝗢𝗥 𝗨𝗡𝗟𝗜𝗠𝗜𝗧𝗘𝗗 𝗪𝗢𝗥𝗞 @WS_HEGO\nFamPay wale door rahe', "BAN"),
 ]
 
 
