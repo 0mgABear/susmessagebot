@@ -245,6 +245,7 @@ examples = [
     ('hi my friend lost her digi cam around utown today, its a samsung digicam in a greenish/blue bmo pouch\n\npm @jaimeeesese if foundd', "SAFE"),
     ('Casual fun @kk_ana2 nothing more…. Jb to sg safe trip…', "BAN"),
     ('🍭 🧃. TAP. IN \n\n\n\n@amada4575\n\n\n\n\n\n@amada4575', "BAN"),
+    ('Confirmed, chopped + guaranteed', "BAN"),
 ]
 
 
