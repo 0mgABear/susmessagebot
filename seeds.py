@@ -243,6 +243,7 @@ examples = [
     ('@WarrenWonder sorry don’t know about SG>JB now', "BAN"),
     ('𝗨𝗣𝗜 𝗦𝗖𝗔𝗡 𝗜𝗦 𝗕𝗔𝗖𝗞 𝗗𝗠 𝗙𝗢𝗥 𝗨𝗡𝗟𝗜𝗠𝗜𝗧𝗘𝗗 𝗪𝗢𝗥𝗞 @WS_HEGO\nFamPay wale door rahe', "BAN"),
     ('hi my friend lost her digi cam around utown today, its a samsung digicam in a greenish/blue bmo pouch\n\npm @jaimeeesese if foundd', "SAFE"),
+    ('Casual fun @kk_ana2 nothing more…. Jb to sg safe trip…', "BAN"),
 ]
 
 
