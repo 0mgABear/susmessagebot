@@ -246,6 +246,7 @@ examples = [
     ('Casual fun @kk_ana2 nothing more…. Jb to sg safe trip…', "BAN"),
     ('🍭 🧃. TAP. IN \n\n\n\n@amada4575\n\n\n\n\n\n@amada4575', "BAN"),
     ('Confirmed, chopped + guaranteed', "BAN"),
+    ('casual fun alone. @kk_ana2 very reliable… Jb to sg', "BAN"),
 ]
 
 
