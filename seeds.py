@@ -249,6 +249,7 @@ examples = [
     ('casual fun alone. @kk_ana2 very reliable… Jb to sg', "BAN"),
     ('Retarded', "BAN"),
     ('How come you going to just no her @kikndai', "BAN"),
+    ('If life sucks? txt me I’ll do alot better. @kk_ana2 jb to sg.', "BAN"),
 ]
 
 
