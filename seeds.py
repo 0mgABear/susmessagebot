@@ -248,6 +248,7 @@ examples = [
     ('Confirmed, chopped + guaranteed', "BAN"),
     ('casual fun alone. @kk_ana2 very reliable… Jb to sg', "BAN"),
     ('Retarded', "BAN"),
+    ('How come you going to just no her @kikndai', "BAN"),
 ]
 
 
