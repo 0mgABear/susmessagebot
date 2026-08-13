@@ -252,6 +252,7 @@ examples = [
     ('If life sucks? txt me I’ll do alot better. @kk_ana2 jb to sg.', "BAN"),
     ('Anyone need Easy 9.5k SGD? 💰 PM if keen lah ✓”', "BAN"),
     ('Any1 wan a quick 4.5k PM✔️', "BAN"),
+    ('Got lobang wrk pm now if can do', "BAN"),
 ]
 
 
