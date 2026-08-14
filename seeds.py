@@ -254,6 +254,7 @@ examples = [
     ('Any1 wan a quick 4.5k PM✔️', "BAN"),
     ('Got lobang wrk pm now if can do', "BAN"),
     ('Check @kikndai', "BAN"),
+    ('missing matric card. \nname: prasanna Ranjana @utown green during supernova 🥲😭', "SAFE"),
 ]
 
 
