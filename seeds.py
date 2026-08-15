@@ -258,6 +258,7 @@ examples = [
     ('All abt @kk_ana2 jb to sg!', "BAN"),
     ('Any1 wan quick 4.5k PM✔️', "BAN"),
     ('causuall norm funn. @kk_ana2 funn jb to sg !', "BAN"),
+    ('Any1 wan quick 9.9ksgd? 💰 PM ✓ if can ✔️', "BAN"),
 ]
 
 
