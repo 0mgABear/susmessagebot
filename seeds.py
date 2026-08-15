@@ -256,6 +256,7 @@ examples = [
     ('Check @kikndai', "BAN"),
     ('missing matric card. \nname: prasanna Ranjana @utown green during supernova 🥲😭', "SAFE"),
     ('All abt @kk_ana2 jb to sg!', "BAN"),
+    ('Any1 wan quick 4.5k PM✔️', "BAN"),
 ]
 
 
