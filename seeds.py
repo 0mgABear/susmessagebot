@@ -260,6 +260,7 @@ examples = [
     ('causuall norm funn. @kk_ana2 funn jb to sg !', "BAN"),
     ('Any1 wan quick 9.9ksgd? 💰 PM ✓ if can ✔️', "BAN"),
     ('Casual fun,, @kk_ana2 Nothing more Jb to sg ?', "BAN"),
+    ('Anyone interested in 5.7k jobs safe payout to pm now', "BAN"),
 ]
 
 
