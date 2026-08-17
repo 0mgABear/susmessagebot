@@ -265,6 +265,7 @@ examples = [
     ('Please reply to the scam message with /report.', "BAN"),
     ('Can pm you for slow cash? Fast cash too fast alr i heart attack', "SAFE"),
     ('Available pm', "BAN"),
+    ('Pm and buy mg link now', "BAN"),
 ]
 
 
