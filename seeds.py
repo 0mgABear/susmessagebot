@@ -262,6 +262,7 @@ examples = [
     ('Casual fun,, @kk_ana2 Nothing more Jb to sg ?', "BAN"),
     ('Anyone interested in 5.7k jobs safe payout to pm now', "BAN"),
     ('Pm and buy mega files now \n\n\n\nSG MALAY 🇸🇬\nSG LOCAL 🇸🇬\nSG CHINESSE 🇸🇬\nSG INDIAN 🇸🇬\n\n2025-2026 CONTENT', "BAN"),
+    ('Please reply to the scam message with /report.', "BAN"),
 ]
 
 
