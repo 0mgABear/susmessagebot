@@ -263,6 +263,7 @@ examples = [
     ('Anyone interested in 5.7k jobs safe payout to pm now', "BAN"),
     ('Pm and buy mega files now \n\n\n\nSG MALAY 🇸🇬\nSG LOCAL 🇸🇬\nSG CHINESSE 🇸🇬\nSG INDIAN 🇸🇬\n\n2025-2026 CONTENT', "BAN"),
     ('Please reply to the scam message with /report.', "BAN"),
+    ('Can pm you for slow cash? Fast cash too fast alr i heart attack', "SAFE"),
 ]
 
 
