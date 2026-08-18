@@ -266,6 +266,7 @@ examples = [
     ('Can pm you for slow cash? Fast cash too fast alr i heart attack', "SAFE"),
     ('Available pm', "BAN"),
     ('Pm and buy mg link now', "BAN"),
+    ('Casual fun! @xki_ana nothing more Jb to sg ?', "BAN"),
 ]
 
 
