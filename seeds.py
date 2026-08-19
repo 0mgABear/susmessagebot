@@ -269,6 +269,7 @@ examples = [
     ('Casual fun! @xki_ana nothing more Jb to sg ?', "BAN"),
     ('Pm if need fast cxxh', "BAN"),
     ('slowly loosing it. @xki_ana Need comfort? Jb to sg', "BAN"),
+    ('How human @kk_liii traffic in jb', "BAN"),
 ]
 
 
