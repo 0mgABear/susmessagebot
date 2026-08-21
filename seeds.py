@@ -273,6 +273,7 @@ examples = [
     ('Casual Funn, @xki_ana Nothing more.. Jb to sg', "BAN"),
     ('How human  @kk_liii traffic in jb \n\n\nHow human  @kk_liii traffic in jb it been a while i drive @kk_liii  . Fuel check', "BAN"),
     ('Casually all about jb to sg @kx_ana1 Jb !', "BAN"),
+    ('Anyone looking for🤗🤗🤗\n=100=1k\n200=2k \n300=3k\n400=4k\n500=5k\nPm @Zhixuan6007\nAble to work from home ..\nInterested pm me👇👇', "BAN"),
 ]
 
 
