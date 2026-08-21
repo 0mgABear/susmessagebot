@@ -272,6 +272,7 @@ examples = [
     ('How human @kk_liii traffic in jb', "BAN"),
     ('Casual Funn, @xki_ana Nothing more.. Jb to sg', "BAN"),
     ('How human  @kk_liii traffic in jb \n\n\nHow human  @kk_liii traffic in jb it been a while i drive @kk_liii  . Fuel check', "BAN"),
+    ('Casually all about jb to sg @kx_ana1 Jb !', "BAN"),
 ]
 
 
