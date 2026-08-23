@@ -276,6 +276,7 @@ examples = [
     ('Anyone looking for🤗🤗🤗\n=100=1k\n200=2k \n300=3k\n400=4k\n500=5k\nPm @Zhixuan6007\nAble to work from home ..\nInterested pm me👇👇', "BAN"),
     ('Anyone need Easy 8.5k SGD? 💰 PM if keen lah ✓”', "BAN"),
     ('Anyone willing to get Quick 750SGD pm now if can do you will be glad to you did', "BAN"),
+    ('同城嫖娼｜一个机器人｜全国城市｜平台担保交易，LS人工审核，完整交易流程，拒绝一切套路！', "BAN"),
 ]
 
 
