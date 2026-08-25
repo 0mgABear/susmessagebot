@@ -280,6 +280,7 @@ examples = [
     ('F•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura\n\n\n\n\nF•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura', "BAN"),
     ('F•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura', "BAN"),
     ('Earn up to SGD 4.9K in just 5–10 minutes 💰 DM me for details ✓', "BAN"),
+    ('All about @kx_ana1 Jb to sg, Fuel check..', "BAN"),
 ]
 
 
