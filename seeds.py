@@ -279,6 +279,7 @@ examples = [
     ('同城嫖娼｜一个机器人｜全国城市｜平台担保交易，LS人工审核，完整交易流程，拒绝一切套路！', "BAN"),
     ('F•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura\n\n\n\n\nF•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura', "BAN"),
     ('F•v•c”K / me \U0001fadc @djShakura\n\n\n\n\n\n\n\n@djShakura\n\n\n\n\n\n@djShakura', "BAN"),
+    ('Earn up to SGD 4.9K in just 5–10 minutes 💰 DM me for details ✓', "BAN"),
 ]
 
 
