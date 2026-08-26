@@ -282,6 +282,7 @@ examples = [
     ('Earn up to SGD 4.9K in just 5–10 minutes 💰 DM me for details ✓', "BAN"),
     ('All about @kx_ana1 Jb to sg, Fuel check..', "BAN"),
     ('Got lobang wrk now pm if you can', "BAN"),
+    ('M • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakuraI’m', "BAN"),
 ]
 
 
