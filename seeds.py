@@ -284,6 +284,7 @@ examples = [
     ('Got lobang wrk now pm if you can', "BAN"),
     ('M • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakuraI’m', "BAN"),
     ('Pm now if interested latest update 2025/2026 are available now just pm so cheap and discount', "BAN"),
+    ('casually about @kx_ana1 Jb to sg ?', "BAN"),
 ]
 
 
