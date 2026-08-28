@@ -287,6 +287,7 @@ examples = [
     ('casually about @kx_ana1 Jb to sg ?', "BAN"),
     ('Check my story if can do pm', "BAN"),
     ('M • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura', "BAN"),
+    ('Why are u posting children pics here', "SAFE"),
 ]
 
 
