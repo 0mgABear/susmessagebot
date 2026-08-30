@@ -289,6 +289,7 @@ examples = [
     ('M • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura', "BAN"),
     ('Why are u posting children pics here', "SAFE"),
     ('@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY', "BAN"),
+    ('Anyone wanna have fun with me and my gf? We’re from sg but in jb until tmr. Staying at R&F. Hit me up😜', "BAN"),
 ]
 
 
