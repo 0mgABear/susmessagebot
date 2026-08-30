@@ -288,6 +288,7 @@ examples = [
     ('Check my story if can do pm', "BAN"),
     ('M • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura\n\n\n\n\n\nM • £•£•T 🦋 @djShakura\n\n\n\n\n\n\n\nF•v•c•k m• e 😋 @djShakura', "BAN"),
     ('Why are u posting children pics here', "SAFE"),
+    ('@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY', "BAN"),
 ]
 
 
