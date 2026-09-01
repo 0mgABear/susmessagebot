@@ -291,6 +291,7 @@ examples = [
     ('@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY\n\n@Join_grup_lucahvirallllMY', "BAN"),
     ('Anyone wanna have fun with me and my gf? We’re from sg but in jb until tmr. Staying at R&F. Hit me up😜', "BAN"),
     ('Send text here if keen av @sakuraa_girl\n\n\n\n\n\n\n\n\n\n\n\n\nSend text here if keen av @sakuraa_girl', "BAN"),
+    ('Jb to sg @Xy_Ana3 any updates?', "BAN"),
 ]
 
 
