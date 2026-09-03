@@ -294,6 +294,7 @@ examples = [
     ('Jb to sg @Xy_Ana3 any updates?', "BAN"),
     ('@linni_24 pm\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n@linni_24 pm', "BAN"),
     ('@xp_yun1 thank you.', "BAN"),
+    ('Open 🤍@localyuikii', "BAN"),
 ]
 
 
