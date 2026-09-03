@@ -293,6 +293,7 @@ examples = [
     ('Send text here if keen av @sakuraa_girl\n\n\n\n\n\n\n\n\n\n\n\n\nSend text here if keen av @sakuraa_girl', "BAN"),
     ('Jb to sg @Xy_Ana3 any updates?', "BAN"),
     ('@linni_24 pm\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n\n@linni_24 pm\n\n\n\n\n\n\n@linni_24 pm', "BAN"),
+    ('@xp_yun1 thank you.', "BAN"),
 ]
 
 
