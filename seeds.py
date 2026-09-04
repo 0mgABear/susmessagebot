@@ -296,6 +296,7 @@ examples = [
     ('@xp_yun1 thank you.', "BAN"),
     ('Open 🤍@localyuikii', "BAN"),
     ('thank youu. @xp_yun1', "BAN"),
+    ('How human traffic send text here av @kk_lit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffic send text here av @kk_lit', "BAN"),
 ]
 
 
