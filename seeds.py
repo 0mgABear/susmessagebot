@@ -302,6 +302,7 @@ examples = [
     ("Jb to sg crowd building. Don't come.", "BAN"),
     ('Hello everyone 👋, I have a good and reliable platform that offers high daily returns of 5%-10%-15%-25% depending on the investment plan.\nThe minimum deposit is $500\nIf you’re interested, kindly message me saying: “INTERESTED”', "BAN"),
     ('Check my story if can do the wrk pm now for info', "BAN"),
+    ('Tnx; @xp_yun1\n\n\n         @xp_yun1', "BAN"),
 ]
 
 
