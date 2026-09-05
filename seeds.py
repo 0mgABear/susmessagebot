@@ -299,6 +299,7 @@ examples = [
     ('How human traffic send text here av @kk_lit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffic send text here av @kk_lit', "BAN"),
     ('Send text here if interested @mglink_24', "BAN"),
     ('thanks too.. @xp_yun1', "BAN"),
+    ("Jb to sg crowd building. Don't come.", "BAN"),
 ]
 
 
