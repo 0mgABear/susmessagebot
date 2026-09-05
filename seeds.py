@@ -300,6 +300,7 @@ examples = [
     ('Send text here if interested @mglink_24', "BAN"),
     ('thanks too.. @xp_yun1', "BAN"),
     ("Jb to sg crowd building. Don't come.", "BAN"),
+    ('Hello everyone 👋, I have a good and reliable platform that offers high daily returns of 5%-10%-15%-25% depending on the investment plan.\nThe minimum deposit is $500\nIf you’re interested, kindly message me saying: “INTERESTED”', "BAN"),
 ]
 
 
