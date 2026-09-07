@@ -304,6 +304,7 @@ examples = [
     ('Check my story if can do the wrk pm now for info', "BAN"),
     ('Tnx; @xp_yun1\n\n\n         @xp_yun1', "BAN"),
     ('opnnnow awak', "BAN"),
+    ('Thank You ; @xp_yun1', "BAN"),
 ]
 
 
