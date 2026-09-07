@@ -305,6 +305,7 @@ examples = [
     ('Tnx; @xp_yun1\n\n\n         @xp_yun1', "BAN"),
     ('opnnnow awak', "BAN"),
     ('Thank You ; @xp_yun1', "BAN"),
+    ('Here ? @D_sakuraaa\n\n\n\n\n\n\n\n\n\n\nHere ? @D_sakuraaa\n\n\n\n\nHere ? @D_sakuraaa\n\n\n\n\n\n\n\n\n\n\nHere ? @D_sakuraaa', "BAN"),
 ]
 
 
