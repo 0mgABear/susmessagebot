@@ -308,6 +308,7 @@ examples = [
     ('Here ? @D_sakuraaa\n\n\n\n\n\n\n\n\n\n\nHere ? @D_sakuraaa\n\n\n\n\nHere ? @D_sakuraaa\n\n\n\n\n\n\n\n\n\n\nHere ? @D_sakuraaa', "BAN"),
     ('Weekend meetup ? Pm @kylani12', "BAN"),
     ('Hello, if any seen a bunch of keys, can let me know? Lost last Friday @FASS. Key chain is someone’s face', "SAFE"),
+    ('AAny1 wan quick 4.9ksgd? 💰 PM ✓ if can ✔️', "BAN"),
 ]
 
 
