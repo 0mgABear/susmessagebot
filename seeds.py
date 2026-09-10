@@ -312,6 +312,7 @@ examples = [
     ('thank you. @sii_Yun', "BAN"),
     ('try now', "BAN"),
     ('thank you.. @sii_Yun', "BAN"),
+    ('Check out @Zhixpui', "BAN"),
 ]
 
 
