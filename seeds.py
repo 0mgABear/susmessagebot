@@ -311,6 +311,7 @@ examples = [
     ('AAny1 wan quick 4.9ksgd? 💰 PM ✓ if can ✔️', "BAN"),
     ('thank you. @sii_Yun', "BAN"),
     ('try now', "BAN"),
+    ('thank you.. @sii_Yun', "BAN"),
 ]
 
 
