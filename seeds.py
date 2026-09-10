@@ -310,6 +310,7 @@ examples = [
     ('Hello, if any seen a bunch of keys, can let me know? Lost last Friday @FASS. Key chain is someone’s face', "SAFE"),
     ('AAny1 wan quick 4.9ksgd? 💰 PM ✓ if can ✔️', "BAN"),
     ('thank you. @sii_Yun', "BAN"),
+    ('try now', "BAN"),
 ]
 
 
