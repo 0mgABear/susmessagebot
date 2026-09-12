@@ -318,6 +318,7 @@ examples = [
     ('know abt, @sii_Yun Jb to sg', "BAN"),
     ('thank you… @sii_Yun', "BAN"),
     ('How human traffick send text here av @kl_kit\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffick send text here av @kl_kit', "BAN"),
+    ('直接面基同城单身女生', "BAN"),
 ]
 
 
