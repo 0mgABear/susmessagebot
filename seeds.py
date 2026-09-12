@@ -316,6 +316,7 @@ examples = [
     ('Promo Promo Promo \n\n• ₹1,000 to earn ₹10,500\n • ₹2,000 to earn ₹18,500\n • ₹3,000 to earn ₹28,600\n • ₹4,000 to earn ₹36,000\n • ₹5,000 to earn ₹44,500\n • ₹6,000 to earn ₹55,000\n • ₹7,000 to earn ₹62,500\n • ₹8,000 to earn ₹74,000\n • ₹9,000 to earn ₹81,500\n • ₹10,000 to earn ₹100,000\nNo extra charges needed \nJoin now to start earning only for serious people \n@Click_to_message_ADMIN_now\n@Click_to_message_ADMIN_now', "BAN"),
     ('How human traffick send text here av @kk_lit\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffick send text here av @kk_lit', "BAN"),
     ('know abt, @sii_Yun Jb to sg', "BAN"),
+    ('thank you… @sii_Yun', "BAN"),
 ]
 
 
