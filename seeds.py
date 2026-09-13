@@ -320,6 +320,7 @@ examples = [
     ('How human traffick send text here av @kl_kit\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffick send text here av @kl_kit', "BAN"),
     ('直接面基同城单身女生', "BAN"),
     ('Thank you. @sii_Yun', "BAN"),
+    ('Sent ! @sakurAa_gi\n\n\n\n\n\n\n\n\n@sakurAa_gi\n\n\n\n\nSent ! @sakurAa_gi\n\n\n\n\n\n\n\n\n@sakurAa_gi', "BAN"),
 ]
 
 
