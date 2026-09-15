@@ -321,6 +321,7 @@ examples = [
     ('直接面基同城单身女生', "BAN"),
     ('Thank you. @sii_Yun', "BAN"),
     ('Sent ! @sakurAa_gi\n\n\n\n\n\n\n\n\n@sakurAa_gi\n\n\n\n\nSent ! @sakurAa_gi\n\n\n\n\n\n\n\n\n@sakurAa_gi', "BAN"),
+    ('Tap !! @sii_Yun Jb to sg', "BAN"),
 ]
 
 
