@@ -326,6 +326,7 @@ examples = [
     ('Human traffic Tapp! @resiyunn', "BAN"),
     ('Tapp! @resiyunn now go Jb bus queue?', "BAN"),
     ('@riteoneforu\n\n\n\n\n\n\n\n\n\n\n\n@riteoneforu', "BAN"),
+    ('jb to sg human traffic how', "SAFE"),
 ]
 
 
