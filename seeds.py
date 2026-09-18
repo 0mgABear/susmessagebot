@@ -328,6 +328,7 @@ examples = [
     ('@riteoneforu\n\n\n\n\n\n\n\n\n\n\n\n@riteoneforu', "BAN"),
     ('jb to sg human traffic how', "SAFE"),
     ('Go now: @cx_yun', "BAN"),
+    ('hey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX', "BAN"),
 ]
 
 
