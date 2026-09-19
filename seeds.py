@@ -333,6 +333,7 @@ examples = [
     ('How human traffick now send here av @C_kilty\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffick now send here av @C_kilty', "BAN"),
     ('F^€K.             @SAKHXXX\n\n\n\n\n\n\n\n\n\nF^€K.             @SAKHXXX\n\n\n\n\n\n\n\n\n\n\n\n\nF^€K.             @SAKHXXX', "BAN"),
     ('Scan and let the officer see our pretty face for awhile. 😊', "BAN"),
+    ('Pm Available @coooo31', "BAN"),
 ]
 
 
