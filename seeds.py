@@ -331,6 +331,7 @@ examples = [
     ('hey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX\n\n\nhey ? @SAKHXXX\n\n\n\n\n\nhey ? @SAKHXXX', "BAN"),
     ('Hi anyone knows hows the human traffic SG>JB now ?', "BAN"),
     ('How human traffick now send here av @C_kilty\n\n\n\n\n\n\n\n\n\n\n\n\nHow human traffick now send here av @C_kilty', "BAN"),
+    ('F^€K.             @SAKHXXX\n\n\n\n\n\n\n\n\n\nF^€K.             @SAKHXXX\n\n\n\n\n\n\n\n\n\n\n\n\nF^€K.             @SAKHXXX', "BAN"),
 ]
 
 
