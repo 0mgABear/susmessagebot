@@ -335,6 +335,7 @@ examples = [
     ('Scan and let the officer see our pretty face for awhile. 😊', "BAN"),
     ('Pm Available @coooo31', "BAN"),
     ('@SAKXLyllpq\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@SAKXLyllpq', "BAN"),
+    ('kimak my card', "BAN"),
 ]
 
 
