@@ -336,6 +336,7 @@ examples = [
     ('Pm Available @coooo31', "BAN"),
     ('@SAKXLyllpq\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@SAKXLyllpq', "BAN"),
     ('kimak my card', "BAN"),
+    ('@Sa_k_ur_aa_gi_r_l\n\n\n\n\n\n\n\n\n\n@Sa_k_ur_aa_gi_r_l', "BAN"),
 ]
 
 
