@@ -341,6 +341,7 @@ examples = [
     ('See her\n\n@torra_hg', "BAN"),
     ('I think sg to jb @sg_sii_YUN see secure! ?', "BAN"),
     ('Any ppl need 3700sgd pm now @janelira if interested', "BAN"),
+    ('JB ➡️ SG work opportunity. Boys & girls welcome. Serious people only. PM @mightJR96 for details.', "BAN"),
 ]
 
 
