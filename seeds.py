@@ -339,6 +339,7 @@ examples = [
     ('@Sa_k_ur_aa_gi_r_l\n\n\n\n\n\n\n\n\n\n@Sa_k_ur_aa_gi_r_l', "BAN"),
     ('@SAkURaa_GiRl\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@SAkURaa_GiRl', "BAN"),
     ('See her\n\n@torra_hg', "BAN"),
+    ('I think sg to jb @sg_sii_YUN see secure! ?', "BAN"),
 ]
 
 
