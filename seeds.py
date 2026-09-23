@@ -342,6 +342,7 @@ examples = [
     ('I think sg to jb @sg_sii_YUN see secure! ?', "BAN"),
     ('Any ppl need 3700sgd pm now @janelira if interested', "BAN"),
     ('JB ➡️ SG work opportunity. Boys & girls welcome. Serious people only. PM @mightJR96 for details.', "BAN"),
+    ('DON’T SCROLL PASS THIS‼️‼️‼️\n\nDaily job opportunity \nAvailable for only Singaporeans \n$180\nPM TO KNOW HOW', "BAN"),
 ]
 
 
