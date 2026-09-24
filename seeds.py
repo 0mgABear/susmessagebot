@@ -344,6 +344,7 @@ examples = [
     ('JB ➡️ SG work opportunity. Boys & girls welcome. Serious people only. PM @mightJR96 for details.', "BAN"),
     ('DON’T SCROLL PASS THIS‼️‼️‼️\n\nDaily job opportunity \nAvailable for only Singaporeans \n$180\nPM TO KNOW HOW', "BAN"),
     ('@C_kilty\n\n\n\n\n\n\n\n\n           \n\n\n               @C_kilty\n\n\n\n\n\n\n\n\n\n\n\n@C_kilty', "BAN"),
+    ('OPEN::  @sii_YUn\n\n\n\n\n\n\n\nOPEN::  @sii_YUn', "BAN"),
 ]
 
 
