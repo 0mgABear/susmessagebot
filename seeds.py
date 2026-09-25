@@ -347,6 +347,7 @@ examples = [
     ('OPEN::  @sii_YUn\n\n\n\n\n\n\n\nOPEN::  @sii_YUn', "BAN"),
     ('OPEN::  @SIII_YuNN \n\n\n\n\n\n\n\nOPEN::  @SIII_YuNN', "BAN"),
     ('Urgent job — 3.1k payout\nEasy work, steady payout.\nInterested, PM now lah.”', "BAN"),
+    ('How’s the q sg to jb now?', "BAN"),
 ]
 
 
