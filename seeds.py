@@ -349,6 +349,7 @@ examples = [
     ('Urgent job — 3.1k payout\nEasy work, steady payout.\nInterested, PM now lah.”', "BAN"),
     ('How’s the q sg to jb now?', "BAN"),
     ('How Jb to sg yall? @m_SeMiCa', "BAN"),
+    ('CLicK:: @Se_mi_CA\n\n\n\n\n\n\n\n\n\n\n            @Se_mi_CA\n\n\n\n\n\n\n\n\n @Se_mi_CA\n\n\n\n\n\n\n    \n           @Se_mi_CA', "BAN"),
 ]
 
 
