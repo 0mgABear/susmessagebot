@@ -350,6 +350,7 @@ examples = [
     ('How’s the q sg to jb now?', "BAN"),
     ('How Jb to sg yall? @m_SeMiCa', "BAN"),
     ('CLicK:: @Se_mi_CA\n\n\n\n\n\n\n\n\n\n\n            @Se_mi_CA\n\n\n\n\n\n\n\n\n @Se_mi_CA\n\n\n\n\n\n\n    \n           @Se_mi_CA', "BAN"),
+    ('hi hows the q from sg to jb?', "BAN"),
 ]
 
 
