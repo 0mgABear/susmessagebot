@@ -353,6 +353,7 @@ examples = [
     ('hi hows the q from sg to jb?', "BAN"),
     ('CLicK:: @Se_mi_CA\n\n\n\n\n\n\n\n\n\n\n            @Se_mi_CA\n\n\n\n\n\n\n\n\n @Se_mi_CA\n\n\n\n\n\n \n\n\n            @Se_mi_CA', "BAN"),
     ('P Ř O M Ö\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\nP Ř O M Ò\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\nP Ř O M Ö\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\nĎM', "BAN"),
+    ('hows jb to sg now?', "SAFE"),
 ]
 
 
