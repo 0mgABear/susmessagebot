@@ -356,6 +356,7 @@ examples = [
     ('hows jb to sg now?', "SAFE"),
     ('How’s jb to Sg now?', "SAFE"),
     ("How's the queue from JB to sg now?", "SAFE"),
+    ('how jb to sg human traffic', "SAFE"),
 ]
 
 
