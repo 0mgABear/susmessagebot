@@ -358,6 +358,7 @@ examples = [
     ("How's the queue from JB to sg now?", "SAFE"),
     ('how jb to sg human traffic', "SAFE"),
     ('Any one interested in 3.9k pm me now please', "BAN"),
+    ('@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr', "BAN"),
 ]
 
 
