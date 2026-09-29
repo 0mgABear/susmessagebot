@@ -360,6 +360,7 @@ examples = [
     ('Any one interested in 3.9k pm me now please', "BAN"),
     ('@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr', "BAN"),
     ('@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr', "BAN"),
+    ('Anyone know hows the human traffic at woodland and ciq?', "BAN"),
 ]
 
 
