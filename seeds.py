@@ -361,6 +361,7 @@ examples = [
     ('@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n@Swaguu_wyr', "BAN"),
     ('@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr\n\n\n\n\n\n\n\n\n\n\n@Swaguu_wyr', "BAN"),
     ('Anyone know hows the human traffic at woodland and ciq?', "BAN"),
+    ('@Cxly_plly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Cxly_plly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Cxly_plly', "BAN"),
 ]
 
 
