@@ -363,6 +363,7 @@ examples = [
     ('Anyone know hows the human traffic at woodland and ciq?', "BAN"),
     ('@Cxly_plly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Cxly_plly\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Cxly_plly', "BAN"),
     ('Go now:: @xp_lil1\n\n\n\n       Go now:: @xp_lil1\n\n\nGo now:: @xp_lil1\n\n\n\n        Go now:: @xp_lil1\n\n\nGo now:: @xp_lil1\n\n\n\n         Go now:: @xp_lil1\n\n\n\nGo now:: @xp_lil1\n\n\n\n          Go now:: @xp_lil1\n\n\n\nGo now:: @xp_lil1\n\n\n\n      \n       Go now:: @xp_lil1\n\n\n\n\n\nGo now:: @xp_lil1', "BAN"),
+    ('@se_xyfvker.                  @se_xyfvker\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@se_xyfvker.                  @se_xyfvker\n\n\n\n\n\n\n\n\n\n\n\n\n\n@se_xyfvker.                  @se_xyfvker\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@se_xyfvker.                  @se_xyfvker', "BAN"),
 ]
 
 
