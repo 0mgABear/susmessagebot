@@ -369,6 +369,7 @@ examples = [
     ('SUB av:.   @M_dionp\n\n\n\n\n              \n\n\n                SUB av:.   @M_dionp\n\n\n\n\n\n\nSUB av:.   @M_dionp\n\n\n\n\n\n\n                SUB av:.   @M_dionp\n\n\n\n\n\n\n\nSUB av:.   @M_dionp', "BAN"),
     ('OPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA', "BAN"),
     ('OPEN::  @kitt_ki2\n\n\n\n\n      OPEN::  @kitt_ki2\n\n\n\n\nOPEN::  @kitt_ki2\n\n\n\n\n        OPEN::  @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2\n\n\n\n\n  \n       OPEN:: @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2', "BAN"),
+    ("Dm for Tg Account's", "BAN"),
 ]
 
 
