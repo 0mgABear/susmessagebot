@@ -370,6 +370,7 @@ examples = [
     ('OPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA\n\n\n\n\nOPEN::: \n          @YuN_MIcA', "BAN"),
     ('OPEN::  @kitt_ki2\n\n\n\n\n      OPEN::  @kitt_ki2\n\n\n\n\nOPEN::  @kitt_ki2\n\n\n\n\n        OPEN::  @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2\n\n\n\n\n  \n       OPEN:: @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2', "BAN"),
     ("Dm for Tg Account's", "BAN"),
+    ('SG to JB Ciq, human traffic how?  Seems a bit crowded at woodlands 950 stop leh.', "SAFE"),
 ]
 
 
