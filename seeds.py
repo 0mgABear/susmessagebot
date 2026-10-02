@@ -371,6 +371,7 @@ examples = [
     ('OPEN::  @kitt_ki2\n\n\n\n\n      OPEN::  @kitt_ki2\n\n\n\n\nOPEN::  @kitt_ki2\n\n\n\n\n        OPEN::  @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2\n\n\n\n\n  \n       OPEN:: @kitt_ki2\n\n\n\n\nOPEN:: @kitt_ki2', "BAN"),
     ("Dm for Tg Account's", "BAN"),
     ('SG to JB Ciq, human traffic how?  Seems a bit crowded at woodlands 950 stop leh.', "SAFE"),
+    ('FREE BJ:…..   @M_dionp       FREE BJ:…..   @M_dionp\n\n\n\n\n\nFREE BJ:…..   @M_dionp        FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp              FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp               FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\n\n          FREE BJ:…..   @M_dionp', "BAN"),
 ]
 
 
