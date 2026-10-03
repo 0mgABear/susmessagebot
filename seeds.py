@@ -372,6 +372,7 @@ examples = [
     ("Dm for Tg Account's", "BAN"),
     ('SG to JB Ciq, human traffic how?  Seems a bit crowded at woodlands 950 stop leh.', "SAFE"),
     ('FREE BJ:…..   @M_dionp       FREE BJ:…..   @M_dionp\n\n\n\n\n\nFREE BJ:…..   @M_dionp        FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp              FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp               FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\n\n          FREE BJ:…..   @M_dionp', "BAN"),
+    ('@RL_SAKURAA.             @RL_SAKURAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@RL_SAKURAA.             @RL_SAKURAA', "BAN"),
 ]
 
 
