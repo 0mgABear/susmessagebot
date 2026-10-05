@@ -374,6 +374,7 @@ examples = [
     ('FREE BJ:…..   @M_dionp       FREE BJ:…..   @M_dionp\n\n\n\n\n\nFREE BJ:…..   @M_dionp        FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp              FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\nFREE BJ:…..   @M_dionp               FREE BJ:…..   @M_dionp\n\n\n\n\n\n\n\n\n\n          FREE BJ:…..   @M_dionp', "BAN"),
     ('@RL_SAKURAA.             @RL_SAKURAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@RL_SAKURAA.             @RL_SAKURAA', "BAN"),
     ('@RL_xlly\n\n\n\n\n@RL_xlly\n\n\n\n\n\n@RL_xlly\n\n\n\n\n\n\n\n\n@RL_xlly\n\n\n\n\n\n\n@RL_xlly', "BAN"),
+    ('S A k u r a a\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA', "BAN"),
 ]
 
 
