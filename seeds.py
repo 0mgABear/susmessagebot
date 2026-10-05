@@ -375,6 +375,7 @@ examples = [
     ('@RL_SAKURAA.             @RL_SAKURAA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@RL_SAKURAA.             @RL_SAKURAA', "BAN"),
     ('@RL_xlly\n\n\n\n\n@RL_xlly\n\n\n\n\n\n@RL_xlly\n\n\n\n\n\n\n\n\n@RL_xlly\n\n\n\n\n\n\n@RL_xlly', "BAN"),
     ('S A k u r a a\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA\n\n\n\n\n\n@RL_SAKURAA', "BAN"),
+    ('Name SAKURAA\n\nAge 25\n\n\nLocation: Singapore \n\n\n@RL_SAKURAA', "BAN"),
 ]
 
 
