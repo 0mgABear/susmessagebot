@@ -378,6 +378,7 @@ examples = [
     ('Name SAKURAA\n\nAge 25\n\n\nLocation: Singapore \n\n\n@RL_SAKURAA', "BAN"),
     ('Open:: @xq_lilly\n\n\n\n\n\n\n\n\n          Open:: @xq_lilly\n\n\n\n\n\n\n\n\nOpen:: @xq_lilly\n\n\n\n\n\n\n\n\n          Open:: @xq_lilly\n\n\n\n\n\n\n\n\nOpen:: @xq_lilly', "BAN"),
     ('@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
+    ('Any one interested in 1.6k  pm me now please', "BAN"),
 ]
 
 
