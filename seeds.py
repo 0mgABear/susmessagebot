@@ -380,6 +380,7 @@ examples = [
     ('@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
     ('Any one interested in 1.6k  pm me now please', "BAN"),
     ('@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
+    ('@fr_bjxllyc\n\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
 ]
 
 
