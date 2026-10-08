@@ -382,6 +382,7 @@ examples = [
     ('@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
     ('@fr_bjxllyc\n\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc\n\n\n\n\n\n\n\n@fr_bjxllyc', "BAN"),
     ('Good service: @bunni_cllyp\n\n\n\n\n\nGood service: @bunni_cllyp\n\n\n\n\n\nGood service: @bunni_cllyp\n\n\n\n\nGood service: @bunni_cllyp\n\n\n\n\n\nGood service: @bunni_cllyp\n\n\n\n\nGood service: @bunni_cllyp\n\n\n\n\nGood service: @bunni_cllyp', "BAN"),
+    ('Check out: @bunni_cllyp', "BAN"),
 ]
 
 
