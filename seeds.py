@@ -388,6 +388,7 @@ examples = [
     ('@twoloveed', "BAN"),
     ('Hi !!\nI want to share an opportunity that earn passive income daily and see if you can share with your community. $300 minimum to start...\nIf you want to know more, just let me know in the mailbox.\n\nHave a blessed day', "BAN"),
     ('Check story @bunni_cllyp', "BAN"),
+    ('legit rabak all service pack', "BAN"),
 ]
 
 
