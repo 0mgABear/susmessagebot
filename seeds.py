@@ -390,6 +390,7 @@ examples = [
     ('Check story @bunni_cllyp', "BAN"),
     ('legit rabak all service pack', "BAN"),
     ('Hello am new here @bunni_cllyp', "BAN"),
+    ('@bbl_xlysk\n\n\n\n\n\n\n\n\n\n@bbl_xlysk\n\n\n\n\n\n\n\n\n\n@bbl_xlysk', "BAN"),
 ]
 
 
