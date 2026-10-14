@@ -395,6 +395,7 @@ examples = [
     ('@tkp_lly_77', "BAN"),
     ('@nelly_cllyp', "BAN"),
     ('add me am horney us California', "BAN"),
+    ('@Sakuraaxo', "BAN"),
 ]
 
 
