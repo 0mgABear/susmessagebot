@@ -392,6 +392,7 @@ examples = [
     ('Hello am new here @bunni_cllyp', "BAN"),
     ('@bbl_xlysk\n\n\n\n\n\n\n\n\n\n@bbl_xlysk\n\n\n\n\n\n\n\n\n\n@bbl_xlysk', "BAN"),
     ('@tkp_lly_77\n\n\n\n\n\n\n\n\n\n\n\n@tkp_lly_77\n\n\n\n\n\n\n\n@tkp_lly_77', "BAN"),
+    ('@tkp_lly_77', "BAN"),
 ]
 
 
