@@ -394,6 +394,7 @@ examples = [
     ('@tkp_lly_77\n\n\n\n\n\n\n\n\n\n\n\n@tkp_lly_77\n\n\n\n\n\n\n\n@tkp_lly_77', "BAN"),
     ('@tkp_lly_77', "BAN"),
     ('@nelly_cllyp', "BAN"),
+    ('add me am horney us California', "BAN"),
 ]
 
 
