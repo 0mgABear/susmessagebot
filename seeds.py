@@ -398,6 +398,7 @@ examples = [
     ('@Sakuraaxo', "BAN"),
     ('PM me with A-series student ID to verify yourself. Thanks!', "BAN"),
     ('Check: @lilmei_cllyp', "BAN"),
+    ('Next :: @Yiming193\n\n\n\n   \n\n\n    Next ::@Yiming193\n\n\n\n\n\nNext ::@Yiming193\n\n\n\n\n     \n\n       Next ::@Yiming193\n\n\n\n\n\n\nNext ::@Yiming193\n\n\n\n\n\n      \n    \n        Next ::@Yiming193\n\n\n\n\n\n\nNext :: @Yiming193', "BAN"),
 ]
 
 
