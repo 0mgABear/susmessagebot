@@ -403,6 +403,7 @@ examples = [
     ('@zadiesfuu\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n@zadiesfuu', "BAN"),
     ('TRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7', "BAN"),
     ('hello the person who picked up my black cardholder/ wallet containing nric (by the name of Jennifer Wu) bank cards and drivers license last fri, please return it to me/ security \U0001fae9🙏 \nat least return my cards and u can keep the wallet', "SAFE"),
+    ('OPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\n\nOPEN : @Qp_liply7', "BAN"),
 ]
 
 
