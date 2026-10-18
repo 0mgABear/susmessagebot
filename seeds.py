@@ -401,6 +401,7 @@ examples = [
     ('Next :: @Yiming193\n\n\n\n   \n\n\n    Next ::@Yiming193\n\n\n\n\n\nNext ::@Yiming193\n\n\n\n\n     \n\n       Next ::@Yiming193\n\n\n\n\n\n\nNext ::@Yiming193\n\n\n\n\n\n      \n    \n        Next ::@Yiming193\n\n\n\n\n\n\nNext :: @Yiming193', "BAN"),
     ('@Sakuraaxo\n\n@Sakuraaxo\n\n@Sakuraaxo\n\n@Sakuraaxo\n\n@Sakuraaxo', "BAN"),
     ('@zadiesfuu\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n@zadiesfuu', "BAN"),
+    ('TRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7\n\n\n\n\n\n\n\n\nTRY OUT :: @Qp_liply7', "BAN"),
 ]
 
 
