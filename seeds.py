@@ -406,6 +406,7 @@ examples = [
     ('OPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\n\nOPEN : @Qp_liply7\n\n\n\n\n\n\n\nOPEN : @Qp_liply7', "BAN"),
     ('FIND: @uwuceng\n\n\n\n\n\n\n\n\n\n\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 FIND: @uwuceng\n\n\n\n\n\n\n\n\nFIND: @uwuceng\n\n\n\n\n\n\n\n\n\xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 \xa0 FIND: @uwuceng', "BAN"),
     ('📝 Message:\n@p4tk_xpy\n\n\n\n\n\n\n\n\n\n\n\n@p4tk_xpy\n\n\n\n\n\n\n\n\n\n@p4tk_xpy', "BAN"),
+    ('@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu', "BAN"),
 ]
 
 
