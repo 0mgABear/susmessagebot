@@ -408,6 +408,7 @@ examples = [
     ('📝 Message:\n@p4tk_xpy\n\n\n\n\n\n\n\n\n\n\n\n@p4tk_xpy\n\n\n\n\n\n\n\n\n\n@p4tk_xpy', "BAN"),
     ('@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu\n\n\n\n\n@zadiesfuu\n\n\n\n\n\n\n\n\n\n\n@zadiesfuu', "BAN"),
     ('@kiara24784                @kiara24784\n\n\n\n\n      @kiara24784        @kiara24784\n\n\n\n\n@kiara24784\n\n\n\n\n@kiara24784              @kiara24784\n\n\n\n\n\n@kiara24784      @kiara24784      \n\n\n\n\n\n@kiara24784        @kiara24784', "BAN"),
+    ('@kiara24784              @kiara24784\n\n\n\n   @kiara24784      @kiara24784\n\n\n\n\n\n\n       @kiara24784         @kiara24784\n\n\n\n\n@kiara24784           @kiara24784\n\n\n\n\n\n\n@kiara24784\n\n\n\n\n\n\n@kiara24784\n\n\n\n\n\n@kiara24784         @kiara24784 \n\n\n\n\n           @kiara24784         @kiara24784\n\n\n\n\n\n@kiara24784                @kiara24784', "BAN"),
 ]
 
 
