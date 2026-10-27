@@ -416,6 +416,7 @@ examples = [
     ('sub: @gogirlnika\n\n\n\n\n\n\n          sub: @gogirlnika\n\n\n\n\n\nsub: @gogirlnika\n\n\n\n\n\n        sub: @gogirlnika\n\n\n\n\n\nsub: @gogirlnika', "BAN"),
     ('Smooth human traffic. 1145  board bus 170 from Kranji and now board bus to JB checkpoint', "BAN"),
     ('@Yu_cllyp', "BAN"),
+    ('Check out @local_han\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han\n\n\n\nCheck out @local_han\n\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han', "BAN"),
 ]
 
 
