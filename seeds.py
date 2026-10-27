@@ -420,6 +420,7 @@ examples = [
     ('Check out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\n\nCheck out @local_hanaa\n\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa', "BAN"),
     ('📝 Message:\n@Xtk8_xdy                       @Xtk8_xdy                        \n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                   @Xtk8_xdy \n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy', "BAN"),
     ('Check if keen pm @neiafiles', "BAN"),
+    ('@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah', "BAN"),
 ]
 
 
