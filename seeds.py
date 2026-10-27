@@ -418,6 +418,7 @@ examples = [
     ('@Yu_cllyp', "BAN"),
     ('Check out @local_han\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han\n\n\n\nCheck out @local_han\n\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han\n\n\n\n\nCheck out @local_han', "BAN"),
     ('Check out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\n\nCheck out @local_hanaa\n\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa\n\n\nCheck out @local_hanaa', "BAN"),
+    ('📝 Message:\n@Xtk8_xdy                       @Xtk8_xdy                        \n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                   @Xtk8_xdy \n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy', "BAN"),
 ]
 
 
