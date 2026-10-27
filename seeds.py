@@ -413,6 +413,7 @@ examples = [
     ('If free pm', "BAN"),
     ('@emmafiles12\n\nMelayu 🇲🇾\nInd 🇮🇳 \nlocal🇸🇬\nlatest contents 🔗 🇸🇬🇲🇾\navailable pm if keen ! \n\n@emmafiles12', "BAN"),
     ('@SOPHEAFILES01\n\n🇲🇾 ᴍᴇʟᴀʏᴜ\n🇮🇳 ɪɴᴅ • 2025/2026\n🇸🇬 ʟᴏᴄᴀʟ\n🇨🇳 ᴄʜɪ\n\n🔗 ʟᴀᴛᴇsᴛ ᴄᴏɴᴛᴇɴᴛs 🇸🇬🇲🇾\n📩 ᴘᴍ ɪғ ᴋᴇᴇɴ!\n\n@SOPHEAFILES01', "BAN"),
+    ('sub: @gogirlnika\n\n\n\n\n\n\n          sub: @gogirlnika\n\n\n\n\n\nsub: @gogirlnika\n\n\n\n\n\n        sub: @gogirlnika\n\n\n\n\n\nsub: @gogirlnika', "BAN"),
 ]
 
 
