@@ -421,6 +421,7 @@ examples = [
     ('📝 Message:\n@Xtk8_xdy                       @Xtk8_xdy                        \n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                   @Xtk8_xdy \n\n\n@Xtk8_xdy                    @Xtk8_xdy\n\n\n\n\n\n\n\n\n\n@Xtk8_xdy                    @Xtk8_xdy', "BAN"),
     ('Check if keen pm @neiafiles', "BAN"),
     ('@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah\n\n\n\n\n\n\n\n\n@Sxx_laah.            @Sxx_laah', "BAN"),
+    ('You can still earn with geniusether. io\n\nTheir minimum deposit is just $30 whereby you will earn $33 after 24hours  in their first plan \ngeniusether. io\n\nYou can also earn a referral commission on each person that uses your referral link\n\nYou can use  my referral link\n You can make your research about them \nThey have been existing for a long time now', "BAN"),
 ]
 
 
