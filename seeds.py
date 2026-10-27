@@ -411,6 +411,7 @@ examples = [
     ('@kiara24784              @kiara24784\n\n\n\n   @kiara24784      @kiara24784\n\n\n\n\n\n\n       @kiara24784         @kiara24784\n\n\n\n\n@kiara24784           @kiara24784\n\n\n\n\n\n\n@kiara24784\n\n\n\n\n\n\n@kiara24784\n\n\n\n\n\n@kiara24784         @kiara24784 \n\n\n\n\n           @kiara24784         @kiara24784\n\n\n\n\n\n@kiara24784                @kiara24784', "BAN"),
     ('@admin', "BAN"),
     ('If free pm', "BAN"),
+    ('@emmafiles12\n\nMelayu 🇲🇾\nInd 🇮🇳 \nlocal🇸🇬\nlatest contents 🔗 🇸🇬🇲🇾\navailable pm if keen ! \n\n@emmafiles12', "BAN"),
 ]
 
 
