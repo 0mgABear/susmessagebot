@@ -425,6 +425,7 @@ examples = [
     ('sub: @gogirl3nika\n\n\n\n\n\n\n          sub: @gogirl3nika\n\n\n\n\n\nsub: @gogirl3nika\n\n\n\n\n\n        sub: @gogirl3nika\n\n\n\n\n\nsub: @gogirl3nika', "BAN"),
     ('@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA', "BAN"),
     ('Pm me', "BAN"),
+    ('hi if anyones found a matric card blonde girl surname lim near nus src track pls pm me ty', "SAFE"),
 ]
 
 
