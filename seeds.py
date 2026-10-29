@@ -428,6 +428,7 @@ examples = [
     ('hi if anyones found a matric card blonde girl surname lim near nus src track pls pm me ty', "SAFE"),
     ('⚠️ Suspicious message detected and removed.\n\n👤 User: omor\n🆔 ID: 8920050753\n\n📝 Message:\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
     ('@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
+    ('📝 Message:\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n@Xtf6_tdy                            @Xtf6_tdy\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n\n\n\n\n\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n@Xtf6_tdy\n\n\n@Xtf6_tdy\n\n@Xtf6_tdy\n\n\n\n\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n\n\n\n\n@Xtf6_tdy', "BAN"),
 ]
 
 
