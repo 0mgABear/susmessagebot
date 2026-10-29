@@ -426,6 +426,7 @@ examples = [
     ('@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA\n\n\n\n\n\n\n\n@xxnn_SaLkurA.          @xxnn_SaLkurA', "BAN"),
     ('Pm me', "BAN"),
     ('hi if anyones found a matric card blonde girl surname lim near nus src track pls pm me ty', "SAFE"),
+    ('⚠️ Suspicious message detected and removed.\n\n👤 User: omor\n🆔 ID: 8920050753\n\n📝 Message:\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
 ]
 
 
