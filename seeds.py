@@ -434,6 +434,7 @@ examples = [
     ('🆔📝 Message:\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu. ...', "BAN"),
     ('@Tan_XiuLing \n\n \n       @Tan_XiuLing \n\n\n       @Tan_XiuLing \n\n\n       @Tan_XiuLing \n\n\n       @Tan_XiuLing', "BAN"),
     ('@promo_sakurah.      @promo_sakurah\n\n\n\n\n\n@promo_sakurah.      @promo_sakurah\n\n\n\n\n\n\n@promo_sakurah.      @promo_sakurah', "BAN"),
+    ('@xoxo_pearll.      @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.      @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.      @xoxo_pearll', "BAN"),
 ]
 
 
