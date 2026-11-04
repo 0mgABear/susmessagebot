@@ -432,6 +432,7 @@ examples = [
     ('Just check out @mochapq', "BAN"),
     ('@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu', "BAN"),
     ('🆔📝 Message:\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu. ...', "BAN"),
+    ('@Tan_XiuLing \n\n \n       @Tan_XiuLing \n\n\n       @Tan_XiuLing \n\n\n       @Tan_XiuLing \n\n\n       @Tan_XiuLing', "BAN"),
 ]
 
 
