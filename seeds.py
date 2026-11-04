@@ -429,6 +429,7 @@ examples = [
     ('⚠️ Suspicious message detected and removed.\n\n👤 User: omor\n🆔 ID: 8920050753\n\n📝 Message:\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
     ('@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
     ('📝 Message:\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n@Xtf6_tdy                            @Xtf6_tdy\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n\n\n\n\n\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n@Xtf6_tdy\n\n\n@Xtf6_tdy\n\n@Xtf6_tdy\n\n\n\n\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n\n\n\n\n@Xtf6_tdy', "BAN"),
+    ('Just check out @mochapq', "BAN"),
 ]
 
 
