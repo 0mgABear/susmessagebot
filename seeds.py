@@ -430,6 +430,7 @@ examples = [
     ('@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu\n\n\n\n\n\n\n@mxnn_llu.                  @mxnn_llu', "BAN"),
     ('📝 Message:\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n@Xtf6_tdy                            @Xtf6_tdy\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n\n\n\n\n\n\n@Xtf6_tdy                             @Xtf6_tdy\n\n\n@Xtf6_tdy\n\n\n@Xtf6_tdy\n\n@Xtf6_tdy\n\n\n\n\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n@Xtf6_tdy                           @Xtf6_tdy\n\n\n\n\n\n\n\n\n\n\n\n@Xtf6_tdy', "BAN"),
     ('Just check out @mochapq', "BAN"),
+    ('@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu\n\n\n\n\n\n\n\n\n\n@re_SAKu.             @re_SAKu', "BAN"),
 ]
 
 
