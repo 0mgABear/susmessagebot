@@ -437,6 +437,7 @@ examples = [
     ('@xoxo_pearll.      @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.      @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.      @xoxo_pearll', "BAN"),
     ('Need svc or to join channel for exclusive content and daily videos \n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784', "BAN"),
     ('@xoxo_pearll.         @xoxo_pearll\n\n\n\n\n\n\n\n\n@xoxo_pearll.         @xoxo_pearll\n\n\n\n\n\n\n\n\n@xoxo_pearll.         @xoxo_pearll\n\n\n\n@xoxo_pearll.         @xoxo_pearll\n\n\n\n\n\n\n\n\n@xoxo_pearll.         @xoxo_pearll\n\n\n\n\n\n\n\n\n@xoxo_pearll.         @xoxo_pearll', "BAN"),
+    ('@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784', "BAN"),
 ]
 
 
