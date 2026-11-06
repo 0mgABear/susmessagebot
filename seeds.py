@@ -442,6 +442,7 @@ examples = [
     ('Idk if someone can @localjesi', "BAN"),
     ('Come \n   @localjesi', "BAN"),
     ('Pls everyone can pls stay @localjesi', "BAN"),
+    ('@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll', "BAN"),
 ]
 
 
