@@ -444,6 +444,7 @@ examples = [
     ('Pls everyone can pls stay @localjesi', "BAN"),
     ('@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll\n\n\n\n\n@xoxo_pearll.    @xoxo_pearll', "BAN"),
     ('Tap……. @Qp_lily8       Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8         Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8        Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8       Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8      Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8       Tap……. @Qp_lily8', "BAN"),
+    ('How’s the human traffic at 2nd link?', "BAN"),
 ]
 
 
