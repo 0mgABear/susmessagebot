@@ -440,6 +440,7 @@ examples = [
     ('@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784\n\n\n\n\n\n@kiara24784               @kiara24784        \n\n\n\n@kiara24784             @kiara24784        \n\n\n\n\n@kiara24784', "BAN"),
     ('@SOPHEAFILES01\n\nMelayu 🇲🇾\n\u3000\u3000\u3000\u3000 Ind 🇮🇳.  2025/2026 \n\u3000\u3000\u3000 local🇸🇬. \nChi 🇨🇳\n\nlatest contents 🔗 🇸🇬🇲🇾\n\navailable pm if keen !   @SOPHEAFILES01', "BAN"),
     ('Idk if someone can @localjesi', "BAN"),
+    ('Come \n   @localjesi', "BAN"),
 ]
 
 
