@@ -446,6 +446,7 @@ examples = [
     ('Tap……. @Qp_lily8       Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8         Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\nTap……. @Qp_lily8          Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8        Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8       Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8      Tap……. @Qp_lily8\n\n\n\n\n\nTap……. @Qp_lily8       Tap……. @Qp_lily8', "BAN"),
     ('How’s the human traffic at 2nd link?', "BAN"),
     ('@dorsdots please note that photos are not allowed by law in the checkpoint premises.', "SAFE"),
+    ('Somebody can \n     @localjesi', "BAN"),
 ]
 
 
