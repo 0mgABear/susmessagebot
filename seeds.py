@@ -450,6 +450,7 @@ examples = [
     ('📝 Message:\n@Xaz_Qr                               @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr                               @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr                                @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr\n\n@Xaz_Qr                                 @Xaz_Qr', "BAN"),
     ('@localjesi', "BAN"),
     ('Either \n     @localjesi', "BAN"),
+    ('Either \n     @localjesi Now go', "BAN"),
 ]
 
 
