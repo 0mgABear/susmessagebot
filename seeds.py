@@ -448,6 +448,7 @@ examples = [
     ('@dorsdots please note that photos are not allowed by law in the checkpoint premises.', "SAFE"),
     ('Somebody can \n     @localjesi', "BAN"),
     ('📝 Message:\n@Xaz_Qr                               @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr                               @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr                                @Xaz_Qr\n\n\n\n\n\n\n\n\n\n\n\n\n\n@Xaz_Qr\n\n@Xaz_Qr                                 @Xaz_Qr', "BAN"),
+    ('@localjesi', "BAN"),
 ]
 
 
