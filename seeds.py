@@ -451,6 +451,7 @@ examples = [
     ('@localjesi', "BAN"),
     ('Either \n     @localjesi', "BAN"),
     ('Either \n     @localjesi Now go', "BAN"),
+    ('@Locaro1', "BAN"),
 ]
 
 
