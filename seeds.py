@@ -454,6 +454,7 @@ examples = [
     ('@Locaro1', "BAN"),
     ('Just try @sunikkasg \n\n\n\n\n\n           Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n           Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n           Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n          Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n            Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n            Just try @sunikkasg \n\n\n\n\nJust try @sunikkasg \n\n\n\n\n           Just try @sunikkasg', "BAN"),
     ('@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa', "BAN"),
+    ('click @sayhitoanika\n\n\n\n\n\n\n\n      \n\n               @sayhitoanika\n\n\n\n\n\n\n\n\n@sayhitoanika\n\n\n\n\n\n\n\n\n\n              @sayhitoanika\n\n\n\n\n\n\n\n\n@sayhitoanika \n\n\n\n\n\n\n\n\n              @sayhitoanika\n\n\n\n\n\n\n\n@sayhitoanika', "BAN"),
 ]
 
 
