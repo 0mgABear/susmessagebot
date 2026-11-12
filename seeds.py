@@ -457,6 +457,7 @@ examples = [
     ('click @sayhitoanika\n\n\n\n\n\n\n\n      \n\n               @sayhitoanika\n\n\n\n\n\n\n\n\n@sayhitoanika\n\n\n\n\n\n\n\n\n\n              @sayhitoanika\n\n\n\n\n\n\n\n\n@sayhitoanika \n\n\n\n\n\n\n\n\n              @sayhitoanika\n\n\n\n\n\n\n\n@sayhitoanika', "BAN"),
     ('Urgent wrk pm 3.7k pm now for more information', "BAN"),
     ('@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa', "BAN"),
+    ('click @xoxonika1\n\n\n\n\n\n\n\n      \n\n               @xoxonika1\n\n\n\n\n\n\n\n\n@xoxonika1\n\n\n\n\n\n\n\n\n\n              @xoxonika1\n\n\n\n\n\n\n\n\n@xoxonika1\n\n\n\n\n\n\n\n\n              @xoxonika1\n\n\n\n\n\n\n\n@xoxonika1', "BAN"),
 ]
 
 
