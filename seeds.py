@@ -458,6 +458,7 @@ examples = [
     ('Urgent wrk pm 3.7k pm now for more information', "BAN"),
     ('@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa\n\n\n\n\n\n@Urgirl_sakuraa.   @Urgirl_sakuraa', "BAN"),
     ('click @xoxonika1\n\n\n\n\n\n\n\n      \n\n               @xoxonika1\n\n\n\n\n\n\n\n\n@xoxonika1\n\n\n\n\n\n\n\n\n\n              @xoxonika1\n\n\n\n\n\n\n\n\n@xoxonika1\n\n\n\n\n\n\n\n\n              @xoxonika1\n\n\n\n\n\n\n\n@xoxonika1', "BAN"),
+    ('@Ryan0w3\n\nMelayu 🇲🇾\n\u3000\u3000\u3000\u3000 Ind 🇮🇳.  2025/2026 \n\u3000\u3000\u3000 local🇸🇬. \nChi 🇨🇳\n\nlatest contents 🔗 🇸🇬🇲🇾\n\navailable pm if keen !   @Ryan0w3', "BAN"),
 ]
 
 
