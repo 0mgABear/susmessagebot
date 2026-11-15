@@ -463,6 +463,7 @@ examples = [
     ('@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo\n\n@air_tel_lo.           @air_tel_lo\n\n\n\n\n@air_tel_lo.           @air_tel_lo', "BAN"),
     ('@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n@xo_saku_ra.           @xo_saku_ra', "BAN"),
     ('Click @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0 \n\n\n\n\n\n\n\n\n\n\n\n            @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n\n         @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0', "BAN"),
+    ('@Xoxo_ming8\n\n\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8', "BAN"),
 ]
 
 
