@@ -464,6 +464,7 @@ examples = [
     ('@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@xo_saku_ra.           @xo_saku_ra\n\n@xo_saku_ra.           @xo_saku_ra', "BAN"),
     ('Click @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0 \n\n\n\n\n\n\n\n\n\n\n\n            @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n\n         @xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n@xoxonika0\n\n\n\n\n\n\n\n\n\n\n\n          @xoxonika0', "BAN"),
     ('@Xoxo_ming8\n\n\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8\n\n\n\n\n@Xoxo_ming8', "BAN"),
+    ('Let’s pm now \nSg chi 🇸🇬\nMalay🇲🇾\nLocal🇸🇬\nIndia 🇮🇳 \n\n@zason_lee_73', "BAN"),
 ]
 
 
