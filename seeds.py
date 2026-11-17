@@ -467,6 +467,7 @@ examples = [
     ('Let’s pm now \nSg chi 🇸🇬\nMalay🇲🇾\nLocal🇸🇬\nIndia 🇮🇳 \n\n@zason_lee_73', "BAN"),
     ('@Ryan0w4\n\nMelayu 🇲🇾\n\u3000\u3000\u3000\u3000 Ind 🇮🇳.  2025/2026 \n\u3000\u3000\u3000 local🇸🇬. \nChi 🇨🇳\n\nlatest contents 🔗 🇸🇬🇲🇾\n\navailable pm if keen !   @Ryan0w4', "BAN"),
     ('CLICK @patronika\n\n\n\n\n\n\n\n\n \n\n              CLICK @patronika\n\n\n\n\n\n\n\n\n\n\n\n\n\nCLICK @patronika\n\n\n\n\n\n\n\n\n\n\n              CLICK @patronika\n\n\n\n\n\n\n\n\n\n\nCLICK @patronika\n\n\n\n\n\n\n\n\n\n\n\n             CLICK @patronika\n\n\n\n\n\n\n\n\n\n\n\nCLICK @patronika\n\n\n\n\n\n\n\n\n\n\n\n           CLICK @patronika', "BAN"),
+    ('Find:: @meownikka\n\n\n\n\n\n\n\n\n\n\n\n@meownikka\n\n\n\n\n\n\n\n\n\n\n\n            @meownikka\n\n\n\n\n\n\n\n\n\n\n\n@meownikka\n\n\n\n\n\n\n\n\n\n\n\n          @meownikka\n\n\n\n\n\n\n\n\n\n\n\n@meownikka\n\n\n\n\n\n\n\n\n\n\n\n          @meownikka\n\n\n\n\n\n\n\n\n\n\n\n@meownikka\n\n\n\n\n\n\n\n\n\n\n\n\n         @meownikka\n\n\n\n\n\n\n\n\n\n\n\n@meownikka\n\n\n\n\n\n\n\n\n\n\n\n          @meownikka', "BAN"),
 ]
 
 
