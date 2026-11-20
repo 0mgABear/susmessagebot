@@ -482,6 +482,7 @@ examples = [
     ('@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka', "BAN"),
     ('@x_kylani1\n\n\n\n@x_kylani1\n\n\n\n@x_kylani1\n\n\n\n\n@x_kylani1\n\n\n\n@x_kylani1', "BAN"),
     ('@erilly_rul8\n\n\n\n\n\n\n\n\n\n@erilly_rul8\n\n\n\n\n\n\n\n\n\n\n\n@erilly_rul8\n\n\n\n\n\n\n\n\n\n\n\n@erilly_rul8', "BAN"),
+    ('TAP @anikawya\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n           @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n           @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n            @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n             @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n              @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya', "BAN"),
 ]
 
 
