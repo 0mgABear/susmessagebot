@@ -474,6 +474,7 @@ examples = [
     ('@Sere_neKoh             @Sere_neKoh\n\n\n\n\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh\n\n\n\n@Sere_neKoh             @Sere_neKoh\n\n\n\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh\n\n\n\n@Sere_neKoh             @Sere_neKoh\n\n\n\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh\n@Sere_neKoh             @Sere_neKoh', "BAN"),
     ('@Ur_S_A_ku_raa.   @Ur_S_A_ku_raa', "BAN"),
     ('Any ppl wanna get Quick 2.2k pm', "BAN"),
+    ('@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa', "BAN"),
 ]
 
 
