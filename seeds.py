@@ -476,6 +476,7 @@ examples = [
     ('Any ppl wanna get Quick 2.2k pm', "BAN"),
     ('@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa', "BAN"),
     ('@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa', "BAN"),
+    ('Let’s pm now \nSg chi 🇸🇬\nMalay🇲🇾\nLocal🇸🇬\nIndia 🇮🇳 \n\n@jasmine_leehh', "BAN"),
 ]
 
 
