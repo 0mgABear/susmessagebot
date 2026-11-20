@@ -480,6 +480,7 @@ examples = [
     ('@Xoxo_ming8     @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8      @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8     @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8      @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8', "BAN"),
     ('SG to JB @x_kylani1', "BAN"),
     ('@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka\n\n\n\n\n@xp_ailaka         @xp_ailaka', "BAN"),
+    ('@x_kylani1\n\n\n\n@x_kylani1\n\n\n\n@x_kylani1\n\n\n\n\n@x_kylani1\n\n\n\n@x_kylani1', "BAN"),
 ]
 
 
