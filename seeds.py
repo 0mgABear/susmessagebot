@@ -478,6 +478,7 @@ examples = [
     ('@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa\n\n@Ur_S_A_ku_raa.     @Ur_S_A_ku_raa', "BAN"),
     ('Let’s pm now \nSg chi 🇸🇬\nMalay🇲🇾\nLocal🇸🇬\nIndia 🇮🇳 \n\n@jasmine_leehh', "BAN"),
     ('@Xoxo_ming8     @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8      @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8     @Xoxo_ming8\n\n\n\n\n\n@Xoxo_ming8      @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8\n\n\n\n\n@Xoxo_ming8       @Xoxo_ming8', "BAN"),
+    ('SG to JB @x_kylani1', "BAN"),
 ]
 
 
