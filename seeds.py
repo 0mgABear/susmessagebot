@@ -485,6 +485,7 @@ examples = [
     ('TAP @anikawya\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n           @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n           @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n            @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n             @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya\n\n\n\n\n\n\n\n\n\n\n              @anikawya\n\n\n\n\n\n\n\n\n\n\n@anikawya', "BAN"),
     ('Sg to jb @zzyp_clp', "BAN"),
     ('Hoe is the bus passenger Q from sg to jb now?', "BAN"),
+    ('@supernikka1\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n\n@supernikka1\n\n\n\n\n\n\n\n\n\n@supernikka1', "BAN"),
 ]
 
 
